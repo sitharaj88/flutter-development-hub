@@ -1,0 +1,282 @@
+.page {
+  background:
+    radial-gradient(circle at top left, rgba(12, 196, 226, 0.12), transparent 26%),
+    radial-gradient(circle at 85% 8%, rgba(255, 141, 74, 0.2), transparent 22%),
+    linear-gradient(180deg, #f8f3ea 0%, #efe6d8 100%);
+}
+
+.hero,
+.section,
+.band,
+.executiveStrip {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  padding-top: 5.2rem;
+  padding-bottom: 3rem;
+}
+
+.heroCopy h1 {
+  max-width: 11ch;
+  margin: 0.7rem 0 1rem;
+  font-size: clamp(2.35rem, 4.4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.heroCopy p {
+  max-width: 44rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #43536a;
+}
+
+.kicker,
+.bandLabel,
+.sectionHeader span,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.8rem;
+  border: 1px solid rgba(14, 28, 45, 0.12);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+
+.kicker,
+.bandLabel,
+.sectionHeader span {
+  color: #0f4c5c;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.eyebrow {
+  color: #7f4c22;
+  background: rgba(255, 141, 74, 0.12);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.primaryAction {
+  border: none;
+  background: linear-gradient(135deg, #ff8d4a 0%, #ff6b3d 100%);
+  box-shadow: 0 20px 48px rgba(255, 104, 66, 0.25);
+}
+
+.secondaryAction {
+  border-color: rgba(16, 27, 46, 0.16);
+  color: #101b2e;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.heroPanel {
+  display: grid;
+  gap: 1rem;
+}
+
+.metricCard,
+.card,
+.trackItem,
+.executiveItem,
+.pillarCard {
+  border: 1px solid rgba(16, 27, 46, 0.1);
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 20px 60px rgba(16, 27, 46, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.metricCard {
+  padding: 1.35rem;
+}
+
+.metricCard span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7b8d;
+}
+
+.metricCard strong {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #101b2e;
+}
+
+.executiveStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.executiveItem {
+  padding: 1rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #20324a;
+}
+
+.section {
+  padding-bottom: 4rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1.4rem;
+}
+
+.sectionHeader h2,
+.band h2 {
+  margin-top: 0.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.cardGrid,
+.trackList,
+.pillarGrid,
+.processGrid,
+.offerGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.cardGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pillarGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.processGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.offerGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.pillarCard {
+  padding: 1.35rem;
+}
+
+.processCard,
+.offerCard,
+.ctaCard {
+  padding: 1.35rem;
+  border: 1px solid rgba(16, 27, 46, 0.1);
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 20px 60px rgba(16, 27, 46, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.card h3,
+.pillarCard h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.card p,
+.pillarCard p,
+.processCard p,
+.offerCard p,
+.ctaCard p {
+  margin: 0;
+  color: #4e5d72;
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+
+.processIndex {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: #e55b31;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 1.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.trackList {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.trackItem {
+  padding: 1.25rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #1d2c3f;
+}
+
+.textLink {
+  display: inline-flex;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #e55b31;
+}
+
+.ctaSection {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem 5rem;
+}
+
+.ctaCard h2 {
+  margin: 0.9rem 0 1rem;
+  font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 996px) {
+  .hero,
+  .band,
+  .cardGrid,
+  .pillarGrid,
+  .processGrid,
+  .offerGrid,
+  .trackList,
+  .executiveStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3.4rem;
+  }
+
+  .heroCopy h1 {
+    max-width: 100%;
+  }
+}

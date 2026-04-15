@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ifm-color-primary: #ff6a3d;
+  --ifm-color-primary-dark: #f65828;
+  --ifm-color-primary-darker: #ec4e1d;
+  --ifm-color-primary-darkest: #c43d12;
+  --ifm-color-primary-light: #ff815c;
+  --ifm-color-primary-lighter: #ff8d70;
+  --ifm-color-primary-lightest: #ffb194;
+  --ifm-background-color: #fbf7ef;
+  --ifm-color-emphasis-700: #20324a;
+  --ifm-font-family-base: 'Plus Jakarta Sans', sans-serif;
+  --ifm-heading-font-family: 'Sora', sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-navbar-background-color: rgba(251, 247, 239, 0.82);
+  --ifm-navbar-link-color: #122238;
+  --ifm-footer-background-color: #101b2e;
+  --ifm-code-font-size: 88%;
+  --ifm-global-radius: 18px;
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.68;
+  --ifm-h1-font-size: clamp(2.2rem, 4vw, 3.5rem);
+  --ifm-h2-font-size: clamp(1.7rem, 2.9vw, 2.35rem);
+  --ifm-h3-font-size: 1.2rem;
+  --ifm-heading-line-height: 1.08;
+  --ifm-leading: 1.68;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #101b2e;
+}
+
+body {
+  color: #223248;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  text-rendering: optimizeLegibility;
+}
+
+.navbar {
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(16, 27, 46, 0.08);
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.navbar__item.navbar__link,
+.navbar__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.navbar__title,
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.035em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #15253b;
+}
+
+p,
+li {
+  font-size: 0.96rem;
+}
+
+.theme-doc-markdown {
+  max-width: 50rem;
+}
+
+.theme-doc-markdown h1 {
+  margin-bottom: 1.1rem;
+}
+
+.theme-doc-markdown h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.theme-doc-markdown h3 {
+  margin-top: 1.7rem;
+  margin-bottom: 0.65rem;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  color: #425066;
+  font-size: 0.97rem;
+}
+
+.theme-doc-markdown p {
+  margin-bottom: 1rem;
+}
+
+.theme-doc-markdown ul,
+.theme-doc-markdown ol {
+  margin-bottom: 1.15rem;
+}
+
+.menu__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+pre code {
+  font-size: 0.9rem;
+}
+
+div[class^='codeBlockContainer'] pre,
+.prism-code {
+  border-radius: 16px;
+}
+
+.menu__link--active,
+.breadcrumbs__link,
+.pagination-nav__label {
+  font-weight: 700;
+}
+
+.pagination-nav__label {
+  font-family: var(--ifm-heading-font-family);
+}
+
+.hero__subtitle,
+.footer__title {
+  letter-spacing: -0.02em;
+}
+
+.card {
+  border-radius: 18px;
+}
+
+.footer a:hover,
+.navbar__link:hover {
+  text-decoration: none;
+}

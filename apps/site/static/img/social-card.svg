@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#101B2E"/>
+  <circle cx="1036" cy="106" r="194" fill="#0CC4E2" fill-opacity="0.16"/>
+  <circle cx="170" cy="514" r="224" fill="#FF8D4A" fill-opacity="0.18"/>
+  <rect x="72" y="72" width="1056" height="486" rx="40" fill="#F7F0E3"/>
+  <text x="132" y="226" fill="#101B2E" font-family="Arial, sans-serif" font-size="42" font-weight="700">Sitharaj</text>
+  <text x="132" y="314" fill="#101B2E" font-family="Arial, sans-serif" font-size="78" font-weight="700">Flutter Development</text>
+  <text x="132" y="402" fill="#101B2E" font-family="Arial, sans-serif" font-size="78" font-weight="700">&amp; Training</text>
+  <text x="132" y="476" fill="#425066" font-family="Arial, sans-serif" font-size="34">Practical learning, product delivery, and modern Flutter docs.</text>
+</svg>

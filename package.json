@@ -1,0 +1,14 @@
+{
+  "name": "flutter-development-portal",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace @sitharaj/site run start",
+    "build": "npm --workspace @sitharaj/site run build",
+    "typecheck": "npm --workspace @sitharaj/site run typecheck",
+    "serve": "npm --workspace @sitharaj/site run serve"
+  }
+}
+
