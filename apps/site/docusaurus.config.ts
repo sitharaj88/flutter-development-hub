@@ -2,8 +2,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const url = process.env.DOCUSAURUS_URL ?? 'https://www.sitharaj.in';
-const baseUrl = process.env.DOCUSAURUS_BASE_URL ?? '/training/flutter-development/';
+const url = process.env.DOCUSAURUS_URL ?? 'https://sitharaj88.github.io';
+const baseUrl = process.env.DOCUSAURUS_BASE_URL ?? '/flutter-development-hub/';
 
 const config: Config = {
   title: 'Flutter Development by Sitharaj',
@@ -12,7 +12,7 @@ const config: Config = {
   url,
   baseUrl,
   organizationName: 'sitharaj',
-  projectName: 'flutter-development',
+  projectName: 'flutter-development-hub',
   trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

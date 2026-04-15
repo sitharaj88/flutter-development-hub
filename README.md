@@ -25,14 +25,19 @@ npm run build
 
 The site is configured to default to:
 
-- `url`: `https://www.sitharaj.in`
-- `baseUrl`: `/training/flutter-development/`
+- `url`: `https://sitharaj88.github.io`
+- `baseUrl`: `/flutter-development-hub/`
 
 You can override these during build or deployment with environment variables:
 
 - `DOCUSAURUS_URL`
 - `DOCUSAURUS_BASE_URL`
 - `GITHUB_PAGES=true`
+
+If you later switch back to a custom domain such as `https://www.sitharaj.in`, update:
+
+- `url` to your custom domain
+- `baseUrl` to `/` if the site is hosted at the domain root
 
 ## Brochure Integration
 
@@ -45,4 +50,3 @@ Then update any CTA copy or button labels as needed.
 ## Content Alignment
 
 I could not fetch the current live page or brochure content from this environment, so the new site ships with strong starter copy and structure. Once you add the brochure or paste the exact copy, we can tighten messaging, pricing, durations, and curriculum details to match your existing brand precisely.
-
