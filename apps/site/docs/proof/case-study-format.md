@@ -1,30 +1,48 @@
 ---
 title: Case Study Format
-description: A reusable structure for future case studies, outcomes, and trust-building content.
+description: A reusable structure for future case studies across training and development work.
 ---
 
 # Case Study Format
 
-Even before client stories are available, it helps to define how proof will be presented.
+Case studies are one of the strongest proof assets in the portal. This format keeps them structured, credible, and reusable.
 
-## A strong case study structure
+## Recommended structure
 
-- context: who the audience or organization was and what they needed
-- challenge: where the friction or opportunity existed
-- intervention: what the training or engineering engagement changed
-- result: what improved in clarity, speed, confidence, or delivery quality
-- takeaway: what made the engagement effective
+### Context
 
-## Good evidence to collect
+- who the learner, team, company, or institution was
+- what stage they were at
+- what the engagement was expected to achieve
 
-- quotes from decision-makers or participants
-- before-and-after process improvements
-- screenshots, diagrams, or codebase improvements where appropriate
-- concrete milestones like launches, internal enablement, or team adoption progress
+### Challenge
 
-## Why this format works
+- where the friction existed
+- what was unclear, slow, or unstable
+- what gap the training or development work needed to solve
 
-- it supports both training and development stories
-- it keeps proof focused on transformation rather than vague praise
-- it creates reusable content for the homepage, proof pages, and proposals
+### Intervention
 
+- what was taught, built, reviewed, or restructured
+- what format was used
+- what changed in process, code, learning, or delivery practice
+
+### Result
+
+- what improved in clarity, speed, confidence, or product execution
+- what visible assets or outcomes were produced
+- what signals make the result believable
+
+### Takeaway
+
+- what made the engagement effective
+- what should be repeated in future work
+- what the next phase could be
+
+## Strong evidence formats
+
+- short written testimonials
+- implementation snapshots
+- before-and-after process descriptions
+- learner or team capability improvements
+- code, architecture, or app artifacts where appropriate

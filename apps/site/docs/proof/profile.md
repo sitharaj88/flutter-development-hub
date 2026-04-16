@@ -5,24 +5,37 @@ description: The trust-building profile behind the training and engineering prac
 
 # Profile
 
-This page should function as the high-trust introduction behind the portal. It is where visitors decide whether the training and engineering practice feels credible, experienced, and worth a conversation.
+Sitharaj Seenivasan is the person behind this Flutter training and development portal. The practice is built around clear teaching, practical engineering, and delivery-minded execution.
 
-## What this page should communicate
+## What this profile should communicate
 
-- a clear professional background and direction of work
-- experience across Flutter training, engineering delivery, and mentoring
-- comfort working with both learners and serious product teams
-- a practical style that values clarity, execution, and reusable standards
+- a real person with a clear technical focus
+- comfort working across training, mentoring, and delivery conversations
+- a practical style that values clarity, momentum, and maintainable engineering
+- an approach that supports both learners and serious product teams
 
-## Strong profile elements
+## Professional positioning
 
-- a concise founder or trainer story
-- the kinds of projects and organizations you support
-- the way you blend training, mentoring, and delivery discipline
-- the values that shape the work: quality, clarity, and momentum
+- Flutter trainer and technical guide
+- product engineering and delivery-focused practitioner
+- mentor for learners, teams, and institutions that want practical outcomes
+- docs-first builder who values reusable systems and clear knowledge assets
 
-## How this helps the portal
+## Working style
 
-- it raises trust for corporate and institutional conversations
-- it makes the training offer feel more grounded and specific
-- it gives visitors a human reason to believe the site is more than polished copy
+- explain difficult ideas in a clear and calm way
+- connect training to implementation instead of stopping at theory
+- structure engagements so they leave behind reusable material and stronger habits
+- focus on quality, clarity, and steady momentum rather than hype
+
+## Public contact points
+
+- Email: `sitharaj.info@gmail.com`
+- GitHub: `sitharaj88`
+- LinkedIn: `sitharaj08`
+
+## Why this page matters
+
+- it gives companies and institutions a credible human point of contact
+- it makes the portal feel grounded and accountable
+- it helps the training and development offer feel personal without becoming informal

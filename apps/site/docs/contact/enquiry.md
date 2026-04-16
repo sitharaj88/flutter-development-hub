@@ -1,30 +1,39 @@
 ---
 title: Enquiry
-description: The contact paths visitors should use to start a conversation.
+description: The main contact paths for training, consulting, and Flutter development discussions.
 ---
 
 # Enquiry
 
-The contact experience should be simple and intentional.
+The contact experience should be simple, direct, and professional.
 
-## Main enquiry paths
+## Main contact
+
+- Email: `sitharaj.info@gmail.com`
+
+## Public profiles
+
+- GitHub: [`sitharaj88`](https://github.com/sitharaj88)
+- LinkedIn: [`sitharaj08`](https://www.linkedin.com/in/sitharaj08)
+
+## Best enquiry paths
 
 - corporate training enquiries
-- Flutter consulting and delivery discussions
+- Flutter consulting and product development discussions
 - college workshop and bootcamp requests
-- capability-building conversations for teams adopting Flutter
+- mentoring or guided capability-building conversations
 
-## Recommended next steps
+## What to include in your message
 
-- email enquiry
-- brochure request
-- consultation call booking
-- a simple lead form when you are ready to add one
-
-## Good enquiry information to request
-
-- organization or audience type
-- training or delivery goal
-- expected timeline
+- who you are or what organization you represent
+- whether the need is training, consulting, development, or a hybrid engagement
+- expected audience type such as students, teams, or institutions
+- preferred timeline
 - preferred format such as online, onsite, or hybrid
-- whether the need is strategy, training, implementation, or a combination
+
+## Good subject lines
+
+- Flutter Corporate Training Enquiry
+- Flutter Development Discussion
+- College Workshop Request
+- Mentoring and Capability Building Enquiry

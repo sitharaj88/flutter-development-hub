@@ -1,28 +1,42 @@
 ---
 title: Resources Overview
-description: The knowledge layer of the Flutter portal.
+description: The knowledge layer of the portal for learning, engineering, and delivery support.
 ---
 
 # Resources Overview
 
-Resources make the site useful beyond a brochure. They also set up a long-term content engine for trust and discoverability.
+The resources section is where the portal becomes more than a brochure. It gives visitors, learners, and teams something genuinely useful before they ever contact you.
 
-## Resource types
+## What this section should do
 
-- learning paths for students and self-paced learners
-- engineering standards for teams
-- architecture notes and onboarding guides
-- practical references that support training and delivery
+- help students navigate the training journey more clearly
+- help teams see engineering depth and practical standards
+- support delivery work with reusable references and guidance
+- make the site more credible, searchable, and worth returning to
 
-## Why resources matter
+## Core resource categories
 
-- they show depth without forcing everything onto the homepage
-- they help visitors evaluate your expertise before contacting you
-- they create reusable content that supports both marketing and teaching
+- learning paths and structured study sequences
+- engineering standards and delivery conventions
+- onboarding notes and reusable knowledge references
+- checklists, process notes, and practical technical guidance
 
-## Strong resource directions
+## Why resources matter commercially
 
-- corporate onboarding notes
-- training handbooks and learning sequences
-- engineering standards and starter conventions
-- reusable technical references that support both delivery and education
+- they show depth before a sales conversation
+- they reduce friction in training and consulting discussions
+- they help people understand how you think, not only what you offer
+- they create a long-term content foundation that compounds over time
+
+## What a strong resource section should feel like
+
+- practical, not academic
+- clear enough for learners
+- credible enough for technical teams
+- structured enough to support future workshops, proposals, and delivery work
+
+## Best next pages
+
+- review the Flutter learning path
+- read the engineering standards direction
+- use the knowledge system page to understand how the whole portal fits together

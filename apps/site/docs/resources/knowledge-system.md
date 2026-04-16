@@ -1,30 +1,38 @@
 ---
 title: Knowledge System
-description: How the portal becomes a reusable operating system for training, delivery, and growth.
+description: How the portal becomes a reusable operating system for training, consulting, and growth.
 ---
 
 # Knowledge System
 
-The most interesting version of this site is not just a collection of pages. It is a knowledge system that supports marketing, delivery, training, and future products at the same time.
+The most valuable version of this portal is not just a set of pages. It is a reusable knowledge system for training, consulting, engineering delivery, and future products.
 
 ## What the system should contain
 
-- public-facing pages for trust, positioning, and enquiry
-- structured docs that support evaluation and learning
-- reusable standards that make future delivery faster
-- demo apps and starter kits that prove capability in code
+- public-facing positioning and trust pages
+- structured training material and teaching references
+- engineering standards and reusable delivery notes
+- proof pages, case studies, and code-based artifacts
+- apps, starter kits, and internal tools that support the business
 
 ## Why this matters
 
 - every engagement becomes easier to explain
-- training assets become easier to reuse across batches and clients
-- engineering knowledge starts compounding instead of being recreated each time
-- the repository becomes a strategic asset rather than a brochure
+- training material becomes easier to reuse across multiple batches
+- engineering knowledge compounds instead of being recreated each time
+- the repository becomes a long-term strategic asset
 
-## What to add over time
+## What this system supports
+
+- corporate training and capability building
+- consulting and architecture discussions
+- college and bootcamp program delivery
+- demo apps, showcase work, and reusable templates
+
+## High-value additions over time
 
 - workshop playbooks
-- onboarding guides
-- architecture starter templates
-- internal evaluation forms and delivery checklists
-
+- onboarding checklists
+- proposal-ready case studies
+- architecture starter references
+- evaluation rubrics and capstone review templates

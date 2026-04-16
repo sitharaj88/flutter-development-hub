@@ -6,7 +6,7 @@ const url = process.env.DOCUSAURUS_URL ?? 'https://sitharaj88.github.io';
 const baseUrl = process.env.DOCUSAURUS_BASE_URL ?? '/flutter-development-hub/';
 
 const config: Config = {
-  title: 'Flutter Development by Sitharaj',
+  title: 'Flutter Development by Sitharaj Seenivasan',
   tagline: 'Training, product engineering, mentoring, and real Flutter delivery.',
   favicon: 'img/logo-mark.svg',
   url,
@@ -75,7 +75,17 @@ const config: Config = {
           position: 'left'
         },
         {
-          href: 'mailto:hello@sitharaj.in?subject=Flutter%20Training%20Enquiry',
+          href: 'https://github.com/sitharaj88',
+          label: 'GitHub',
+          position: 'right'
+        },
+        {
+          href: 'https://www.linkedin.com/in/sitharaj08',
+          label: 'LinkedIn',
+          position: 'right'
+        },
+        {
+          href: 'mailto:sitharaj.info@gmail.com?subject=Flutter%20Training%20Enquiry',
           label: 'Contact',
           position: 'right'
         }
@@ -119,12 +129,14 @@ const config: Config = {
         {
           title: 'Connect',
           items: [
-            {label: 'Email', href: 'mailto:hello@sitharaj.in'},
-            {label: 'Training Enquiry', href: 'mailto:hello@sitharaj.in?subject=Flutter%20Training%20Enquiry'}
+            {label: 'Email', href: 'mailto:sitharaj.info@gmail.com'},
+            {label: 'GitHub', href: 'https://github.com/sitharaj88'},
+            {label: 'LinkedIn', href: 'https://www.linkedin.com/in/sitharaj08'},
+            {label: 'Training Enquiry', href: 'mailto:sitharaj.info@gmail.com?subject=Flutter%20Training%20Enquiry'}
           ]
         }
       ],
-      copyright: `Copyright ${new Date().getFullYear()} Sitharaj. Built with Docusaurus.`
+      copyright: `Copyright ${new Date().getFullYear()} Sitharaj Seenivasan.`
     },
     prism: {
       additionalLanguages: ['dart', 'json', 'bash', 'yaml'],
