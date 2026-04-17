@@ -82,18 +82,60 @@ Row(
 
 ### Navigation
 
+Modern Flutter apps use declarative routing with GoRouter:
+
 ```dart
-// Push to a new screen
-Navigator.of(context).push(
-  MaterialPageRoute(builder: (context) => const DetailScreen()),
+// GoRouter setup — the standard for Flutter apps
+final router = GoRouter(
+  routes: [
+    GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+    GoRoute(path: '/profile/:id', builder: (context, state) {
+      final id = state.pathParameters['id']!;
+      return ProfileScreen(userId: id);
+    }),
+    GoRoute(path: '/settings', builder: (context, state) => const SettingsScreen()),
+  ],
 );
 
-// Pop back
-Navigator.of(context).pop();
+// In your MaterialApp
+MaterialApp.router(routerConfig: router);
 
-// Named routes (for larger apps)
-Navigator.of(context).pushNamed('/details', arguments: item);
+// Navigate programmatically
+context.go('/profile/42');
+context.push('/settings');
+context.pop();
 ```
+
+:::tip GoRouter vs Navigator
+Navigator 1.0 (`push`/`pop`) is still valid for simple apps, but GoRouter is the standard for production Flutter — it handles deep linking, URL-based routing, redirects, and nested navigation out of the box.
+:::
+
+### Material 3 and theming
+
+Flutter now defaults to Material 3 design. Use `ColorScheme.fromSeed` for a consistent, modern look:
+
+```dart
+MaterialApp(
+  title: 'My App',
+  theme: ThemeData(
+    useMaterial3: true,
+    colorSchemeSeed: Colors.deepPurple,
+  ),
+  home: const HomeScreen(),
+);
+```
+
+Key Material 3 widgets:
+
+| Widget | Replaces | Usage |
+|--------|----------|-------|
+| `FilledButton` | `ElevatedButton` (for primary actions) | High-emphasis button |
+| `FilledButton.tonal` | — | Medium-emphasis button |
+| `OutlinedButton` | — | Low-emphasis button |
+| `SegmentedButton` | Toggle buttons | Multi-choice selection |
+| `NavigationBar` | `BottomNavigationBar` | Bottom navigation (M3 style) |
+| `NavigationDrawer` | `Drawer` | Side navigation (M3 style) |
+| `SearchAnchor` | Custom search | Built-in search UI |
 
 ### Forms and validation
 

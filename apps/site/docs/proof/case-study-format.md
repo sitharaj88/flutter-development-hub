@@ -1,48 +1,80 @@
 ---
 title: Case Study Format
-description: A reusable structure for future case studies across training and development work.
+description: A structured template for documenting Flutter training and consulting outcomes.
+keywords: [case study, Flutter success story, training outcomes, consulting results]
 ---
 
 # Case Study Format
 
-Case studies are one of the strongest proof assets in the portal. This format keeps them structured, credible, and reusable.
+Case studies are the strongest proof assets in the portal. This template ensures they are structured, measurable, and credible.
 
-## Recommended structure
+## Template structure
 
-### Context
+### 1. Context
 
-- who the learner, team, company, or institution was
-- what stage they were at
-- what the engagement was expected to achieve
+| Field | Description |
+|-------|------------|
+| **Client/audience** | Who — team, institution, student cohort, or company |
+| **Starting point** | Their experience level and current situation |
+| **Engagement type** | Training, consulting, rescue, blended support |
+| **Duration** | Timeline of the engagement |
+| **Goal** | What the engagement was expected to achieve |
 
-### Challenge
+### 2. Challenge
 
-- where the friction existed
-- what was unclear, slow, or unstable
-- what gap the training or development work needed to solve
+Describe the specific problems:
+- What was broken, slow, or unclear?
+- What technical or organizational gap existed?
+- What was the cost of not solving this problem?
 
-### Intervention
+### 3. Approach
 
-- what was taught, built, reviewed, or restructured
-- what format was used
-- what changed in process, code, learning, or delivery practice
+| Element | Detail |
+|---------|--------|
+| **Format** | Workshop, sprint, enablement program, etc. |
+| **Curriculum** | Which modules or topics were covered |
+| **Tools introduced** | Specific packages, patterns, or practices |
+| **Artifacts delivered** | Standards doc, project template, CI/CD config, etc. |
+| **Methodology** | How theory connected to practice |
 
-### Result
+### 4. Results
 
-- what improved in clarity, speed, confidence, or product execution
-- what visible assets or outcomes were produced
-- what signals make the result believable
+Quantify outcomes wherever possible:
 
-### Takeaway
+| Metric | Before | After |
+|--------|--------|-------|
+| Onboarding time | 3 weeks | 1 week |
+| Test coverage | 0% | 65% |
+| Build time | Manual, 2 hrs | CI/CD, 15 min |
+| Code review quality | Ad hoc | Structured with checklist |
 
-- what made the engagement effective
-- what should be repeated in future work
-- what the next phase could be
+### 5. Evidence
 
-## Strong evidence formats
+| Evidence type | Example |
+|--------------|---------|
+| **Quote/testimonial** | Direct quote from team lead, student, or coordinator |
+| **Artifacts** | Architecture diagram, CI/CD config, project structure screenshot |
+| **Before/after** | Code quality comparison, process diagram comparison |
+| **Metrics** | Sprint velocity, bug rate, test coverage numbers |
+| **Deliverables** | Standards document, onboarding guide, template repo |
 
-- short written testimonials
-- implementation snapshots
-- before-and-after process descriptions
-- learner or team capability improvements
-- code, architecture, or app artifacts where appropriate
+### 6. Key takeaway
+
+One or two sentences summarizing what made this engagement effective and what should be repeated.
+
+## Example outline
+
+> **Client:** Engineering team at a fintech startup (8 developers)
+>
+> **Challenge:** Inconsistent codebase, no testing, developers siloed on features, 3-week onboarding for new hires
+>
+> **Approach:** 6-week enablement program — architecture standards, Riverpod state management, testing workshop, CI/CD setup
+>
+> **Results:** Shared conventions adopted, 60% test coverage on business logic, onboarding reduced to 5 days, 2 developers independently shipped features in week 5
+>
+> **Takeaway:** Combining standards adoption with guided sprint work produced faster results than classroom-only training
+
+## Next steps
+
+- [**Outcomes**](/docs/proof/outcomes) — Measurement framework for results
+- [**Profile**](/docs/proof/profile) — The practitioner behind the work

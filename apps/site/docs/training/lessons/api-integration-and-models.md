@@ -1,58 +1,151 @@
 ---
 title: API Integration and Models
-description: A lesson on connecting Flutter apps to backend data in a clean and understandable way.
+description: Connecting Flutter apps to backend data with dio, typed models, and proper error handling.
+keywords: [Flutter API, dio, JSON, data model, REST API, Flutter networking]
 ---
 
 # API Integration and Models
 
-This lesson turns apps from static demos into something much more realistic.
+This lesson takes apps from static demos to real data-connected applications.
 
 ## Lesson goal
 
-- fetch data from an API
-- turn raw data into readable app models
-- handle loading and error states correctly
-- understand why data structure matters as much as data display
+- fetch data from a REST API with `dio`
+- convert JSON into typed Dart models
+- handle loading, success, and error states
+- keep networking out of the UI layer
 
-## What to teach
+## Fetching data with dio
 
-- request and response flow
-- JSON parsing
-- model classes
-- repository-style thinking
-- safe UI behavior while data is loading or failing
+```dart
+import 'package:dio/dio.dart';
 
-## Plain-language explanation
+class ApiClient {
+  final Dio _dio = Dio(BaseOptions(
+    baseUrl: 'https://api.example.com',
+    connectTimeout: const Duration(seconds: 10),
+  ));
 
-Data usually arrives in a raw format.
+  Future<List<Map<String, dynamic>>> fetchProducts() async {
+    final response = await _dio.get('/products');
+    return List<Map<String, dynamic>>.from(response.data);
+  }
+}
+```
 
-The app should convert that raw data into clearer models before the UI depends on it.
+## Data model
 
-That makes the code:
+```dart
+class Product {
+  final String id;
+  final String name;
+  final double price;
+  final String? imageUrl;
 
-- easier to read
-- easier to test
-- easier to maintain
+  const Product({
+    required this.id,
+    required this.name,
+    required this.price,
+    this.imageUrl,
+  });
 
-## Practice ideas
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      id: json['id'] as String,
+      name: json['name'] as String,
+      price: (json['price'] as num).toDouble(),
+      imageUrl: json['image_url'] as String?,
+    );
+  }
+}
+```
 
-- fetch and show a list of products or posts
-- build a profile screen using API data
-- map JSON into a Dart class and display it in UI
+## Putting it together
 
-## Good teaching prompts
+```dart
+Future<List<Product>> getProducts() async {
+  try {
+    final jsonList = await apiClient.fetchProducts();
+    return jsonList.map(Product.fromJson).toList();
+  } on DioException catch (e) {
+    throw Exception('Failed to load products: ${e.message}');
+  }
+}
+```
 
-- what happens before the data arrives?
-- what happens if the request fails?
-- should the UI read raw JSON directly?
-- where should parsing logic live?
+## Displaying with loading and error states
 
-## What learners should be able to do after this lesson
+```dart
+class ProductListScreen extends StatefulWidget {
+  const ProductListScreen({super.key});
 
-- understand the path from API to model to UI
-- avoid mixing networking directly into presentation code
-- build more realistic data-backed flows
+  @override
+  State<ProductListScreen> createState() => _ProductListScreenState();
+}
 
-## Teaching outcome
+class _ProductListScreenState extends State<ProductListScreen> {
+  late Future<List<Product>> _products;
 
-- learners gain the confidence to build connected apps rather than static layouts
+  @override
+  void initState() {
+    super.initState();
+    _products = getProducts();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Products')),
+      body: FutureBuilder<List<Product>>(
+        future: _products,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Center(child: Text('Error: ${snapshot.error}'));
+          }
+          final products = snapshot.data!;
+          return ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (context, index) {
+              final product = products[index];
+              return ListTile(
+                title: Text(product.name),
+                trailing: Text('\$${product.price.toStringAsFixed(2)}'),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+```
+
+## The data flow
+
+```
+API (JSON) → ApiClient (dio) → Model (fromJson) → Repository → UI
+```
+
+| Layer | Responsibility |
+|-------|---------------|
+| `ApiClient` | HTTP calls, headers, timeouts |
+| `Model` | JSON → Dart conversion |
+| `Repository` | Business logic, caching |
+| `UI` | Display and user interaction |
+
+## Common mistakes
+
+- Making API calls directly from widgets
+- Using raw `Map<String, dynamic>` in UI code
+- Not handling errors — only coding the happy path
+- Forgetting to handle loading state before data arrives
+
+## Practice exercises
+
+1. Fetch a list of items from a public API and display them in a `ListView`
+2. Create a `fromJson` factory for a model with at least 4 fields
+3. Add loading and error states to an API-backed screen
+4. Move the API call into a separate `ApiClient` class

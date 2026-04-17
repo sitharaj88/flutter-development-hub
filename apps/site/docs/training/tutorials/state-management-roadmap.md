@@ -1,74 +1,196 @@
 ---
 title: State Management Roadmap
-description: A deeper tutorial on how to think about state as apps grow in complexity.
+description: A progressive approach to state management in Flutter — from local state to Riverpod.
+keywords: [Flutter state management, Riverpod, setState, state architecture, Flutter state]
 ---
 
 # State Management Roadmap
 
-State management should be taught as a progression, not as a one-size-fits-all trick.
+State management should be taught as a **progression**, not a one-size-fits-all choice.
 
 ## Lesson objective
 
-By the end of this lesson, a learner should be able to:
+By the end of this tutorial, a learner should be able to:
 
 - explain what state is in practical Flutter terms
-- distinguish local state from shared app state
-- choose a state approach based on complexity
-- avoid overengineering too early
+- distinguish local state from shared application state
+- progress from `setState` to Riverpod confidently
+- avoid overengineering state too early
 
-## Roadmap
+## What is state?
 
-- start with local state for simple UI behavior
-- move into shared state when multiple screens depend on the same information
-- choose patterns based on complexity, not hype
+State is **information that can change** while the app is running:
 
-## Plain-language explanation
+| Example | Scope |
+|---------|-------|
+| Checkbox checked/unchecked | Local (single widget) |
+| Password visibility toggle | Local |
+| Selected tab index | Local or shared |
+| Logged-in user | Shared (whole app) |
+| Shopping cart contents | Shared (multiple screens) |
+| API loading/success/error | Shared (feature-level) |
 
-State is simply information that can change while the app is running.
+## Stage 1: Local state with `setState`
 
-Examples:
+For simple, widget-scoped UI state:
 
-- a checkbox value
-- the selected tab
-- the current filter
-- the logged-in user
-- the contents of a cart
-- the loading state of an API request
+```dart
+class PasswordField extends StatefulWidget {
+  const PasswordField({super.key});
 
-Once learners see state that way, state management becomes much less mysterious.
+  @override
+  State<PasswordField> createState() => _PasswordFieldState();
+}
 
-## Teaching emphasis
+class _PasswordFieldState extends State<PasswordField> {
+  bool _obscured = true;
 
-- why state exists
-- how poor state choices create confusing bugs
-- how architecture and state influence each other
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      obscureText: _obscured,
+      decoration: InputDecoration(
+        labelText: 'Password',
+        suffixIcon: IconButton(
+          icon: Icon(_obscured ? Icons.visibility : Icons.visibility_off),
+          onPressed: () => setState(() => _obscured = !_obscured),
+        ),
+      ),
+    );
+  }
+}
+```
 
-## A useful teaching progression
+**When to use:** Toggle visibility, expand/collapse, tab selection — state that only this widget cares about.
 
-### Step 1: local state
+## Stage 2: Lifted state
 
-Use local widget state for:
+When a parent and multiple children share the same value:
 
-- expanding or collapsing a section
-- toggling password visibility
-- switching tabs inside a small screen
+```dart
+class FilterableList extends StatefulWidget {
+  const FilterableList({super.key});
 
-### Step 2: lifted state
+  @override
+  State<FilterableList> createState() => _FilterableListState();
+}
 
-Move state upward when multiple child widgets depend on the same value.
+class _FilterableListState extends State<FilterableList> {
+  String _query = '';
 
-### Step 3: shared application state
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SearchBar(
+          onChanged: (value) => setState(() => _query = value),
+        ),
+        Expanded(
+          child: ProductList(query: _query),
+        ),
+      ],
+    );
+  }
+}
+```
 
-Introduce stronger patterns when multiple screens or major flows depend on:
+**When to use:** Search + list, filters + results — parent owns state, children receive it.
 
-- authentication
-- cart
-- theme
-- remote data state
+## Stage 3: Riverpod for shared state
+
+When state is needed across multiple screens or features:
+
+```dart
+// Define a provider
+@riverpod
+class Cart extends _$Cart {
+  @override
+  List<CartItem> build() => [];
+
+  void add(Product product) {
+    state = [...state, CartItem(product: product, quantity: 1)];
+  }
+
+  void remove(String productId) {
+    state = state.where((item) => item.product.id != productId).toList();
+  }
+
+  double get total => state.fold(0, (sum, item) => sum + item.price);
+}
+```
+
+```dart
+// Use in any widget
+class CartBadge extends ConsumerWidget {
+  const CartBadge({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final itemCount = ref.watch(cartProvider).length;
+
+    return Badge(
+      label: Text('$itemCount'),
+      child: const Icon(Icons.shopping_cart),
+    );
+  }
+}
+```
+
+**When to use:** Authentication, cart, theme, any state accessed from multiple screens.
+
+## Stage 4: Sealed classes for complex state
+
+Model explicit state transitions with Dart 3 sealed classes:
+
+```dart
+sealed class ProductsState {}
+class ProductsLoading extends ProductsState {}
+class ProductsLoaded extends ProductsState {
+  final List<Product> products;
+  ProductsLoaded(this.products);
+}
+class ProductsEmpty extends ProductsState {}
+class ProductsError extends ProductsState {
+  final String message;
+  ProductsError(this.message);
+}
+```
+
+```dart
+// Exhaustive handling in the UI
+Widget build(BuildContext context, WidgetRef ref) {
+  final state = ref.watch(productsProvider);
+
+  return switch (state) {
+    ProductsLoading()  => const CircularProgressIndicator(),
+    ProductsLoaded(:final products) => ProductGrid(products: products),
+    ProductsEmpty()    => const Text('No products found'),
+    ProductsError(:final message) => ErrorView(message: message),
+  };
+}
+```
+
+## Decision guide
+
+| Situation | Approach |
+|-----------|----------|
+| Toggle, animation, form field | `setState` |
+| Parent + children share one value | Lifted state |
+| Multiple screens need same data | Riverpod provider |
+| Complex async state (loading/error/success) | Riverpod + sealed class |
+| Global app config (theme, locale) | Riverpod provider |
 
 ## Common mistakes
 
-- choosing a complex state solution before understanding the actual problem
-- storing too much unrelated state in one place
-- mixing UI state and business state carelessly
-- rebuilding large parts of the app unnecessarily
+- Using Riverpod for a simple toggle that only one widget uses
+- Using `setState` for data that three screens need
+- Storing both UI state and business state in one provider
+- Not handling loading and error states explicitly
+- Rebuilding the entire widget tree when only a small piece of state changed
+
+## Practice exercises
+
+1. Build a theme toggle using `setState` — dark/light mode switch
+2. Build a search + filtered list using lifted state in a parent widget
+3. Convert the search to a Riverpod provider and use it from two screens
+4. Model an API fetch with sealed classes: `Loading`, `Success`, `Error`

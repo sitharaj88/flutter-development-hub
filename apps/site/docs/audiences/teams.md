@@ -1,48 +1,51 @@
 ---
 title: For Teams
-description: A corporate path for organizations building, adopting, or scaling Flutter delivery.
+description: Capability building for organizations adopting, scaling, or improving Flutter delivery.
+keywords: [Flutter team training, corporate Flutter, engineering enablement, Flutter consulting]
 ---
 
 # For Teams
 
-Teams care less about generic course completion and more about whether training improves delivery quality, engineering judgment, and execution speed.
+Teams need more than course completion — they need **training that improves delivery quality, engineering judgment, and execution speed**.
 
-## What this path is designed to support
+## Who this is for
 
-- teams adopting Flutter for new product work
-- teams that need stronger architecture and implementation discipline
-- teams with delivery pressure, uneven knowledge, or onboarding gaps
-- organizations that want capability building tied to real engineering needs
+| Scenario | What we focus on |
+|----------|------------------|
+| **Adopting Flutter** | Foundations + architecture + first production app guidance |
+| **Scaling an existing project** | Standards, code review culture, onboarding speed |
+| **Uneven team knowledge** | Targeted upskilling to close specific gaps |
+| **Technical rescue** | Codebase stabilization, architectural refactoring, process improvement |
+| **Product delivery pressure** | Blended training + hands-on sprint support |
 
-## What teams usually need
+## What teams get
 
-- a training plan aligned to current product and team maturity
-- practical guidance, not only classroom explanation
-- stronger engineering standards around structure, state, API integration, and testing
-- delivery support that helps the team apply what they learn
+- **Architecture guidance** — Feature-based structure, Riverpod state management, repository pattern
+- **Modern standards** — Dart 3 conventions, Material 3, code generation with freezed, linting with very_good_analysis
+- **Testing discipline** — Unit, widget, integration, and golden tests with CI/CD pipeline setup
+- **Delivery framework** — CI/CD with GitHub Actions, environment management, release automation
+- **Reusable artifacts** — Standards document, project template, onboarding guide the team keeps after the engagement
 
-## Team-ready engagement themes
+## Engagement formats
 
-- Flutter onboarding for engineering teams
-- architecture and state management deep dives
-- feature delivery support and code review guidance
-- rescue or stabilization work for teams with growing codebase complexity
+| Format | Duration | Best for |
+|--------|----------|----------|
+| **Workshop** | 1–3 days | Awareness, specific topic deep-dives |
+| **Sprint support** | 2–4 weeks | Guided delivery with mentoring |
+| **Enablement program** | 4–12 weeks | Full team capability transformation |
+| **Advisory** | Ongoing | Architecture reviews, code quality audits |
 
-## What good team outcomes look like
+## What strong team outcomes look like
 
-- clearer project structure and better separation of concerns
-- fewer copy-paste patterns and less UI-heavy business logic
-- faster onboarding for new Flutter developers
-- more confidence around delivery, debugging, and release readiness
+- Consistent project structure and shared engineering conventions
+- New developers productive within the **first week** using established patterns
+- Fewer "one developer knows everything" bottlenecks
+- Automated testing pipeline catching regressions before they ship
+- Team operates **independently** after the engagement ends
 
-## Best-fit scenarios
+## Next steps
 
-- startups scaling a product with Flutter
-- internal engineering teams moving from experimentation to delivery
-- organizations wanting a blend of training and hands-on technical guidance
-- product teams that need a trusted external partner to sharpen execution
-
-## Suggested next step
-
-- review the corporate programs, services, engineering standards, and engagement process
-- start an enquiry with current team goals, maturity level, and expected timeline
+- [🛠️ Engineering Standards](/docs/resources/engineering-standards) — See the conventions your team will adopt
+- [📋 Corporate Programs](/docs/training/corporate-programs) — Review team-ready training formats
+- [🤝 Engagement Models](/docs/flutter-development/engagement-models) — Choose the right working structure
+- [✉️ Enquiry](/docs/contact/enquiry) — Start a conversation with team goals and timeline

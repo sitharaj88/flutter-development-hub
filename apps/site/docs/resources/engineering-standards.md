@@ -25,7 +25,7 @@ Use **feature-based folder organization**:
 | Files | `snake_case` | `user_profile_screen.dart` |
 | Classes | `PascalCase` | `UserProfileScreen` |
 | Variables | `camelCase` | `userName`, `isLoading` |
-| Constants | `camelCase` or `SCREAMING_SNAKE` | `maxRetryCount`, `API_BASE_URL` |
+| Constants | `camelCase` | `maxRetryCount`, `apiBaseUrl` |
 | Screens | Suffix with `Screen` | `LoginScreen`, `HomeScreen` |
 | Widgets | Descriptive, noun-based | `UserCard`, `PriceTag` |
 | Models | Domain noun | `User`, `Product`, `Order` |
@@ -37,10 +37,50 @@ Use **feature-based folder organization**:
 | Principle | Guideline |
 |-----------|----------|
 | Scope | Keep state as local as possible |
-| Immutability | Use immutable models with `copyWith` |
+| Immutability | Use immutable models with `copyWith` (preferably via `freezed`) |
 | Separation | Business logic out of `build()` methods |
-| Pattern | Choose one pattern per project (Riverpod, Bloc, Provider) |
+| Pattern | **Riverpod** recommended for new projects; Bloc as enterprise alternative |
+| State modeling | Use Dart 3 sealed classes for exhaustive state representation |
 | Testing | State logic must be testable without widgets |
+
+## Linting and analysis
+
+Every project must have strict linting configured:
+
+```yaml
+# analysis_options.yaml
+include: package:very_good_analysis/analysis_options.yaml
+
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    avoid_print: true
+    require_trailing_commas: true
+```
+
+Run analysis as part of every PR: `flutter analyze --fatal-infos`
+
+## Code generation
+
+Use code generation to eliminate boilerplate:
+
+| Tool | Purpose | Command |
+|------|---------|--------|
+| `freezed` | Immutable models with `copyWith`, `==`, JSON | `dart run build_runner build` |
+| `json_serializable` | JSON serialization only | `dart run build_runner build` |
+| `riverpod_generator` | Type-safe provider generation | `dart run build_runner build` |
+| `auto_route_generator` | Type-safe route generation | `dart run build_runner build` |
+
+## Dart 3 conventions
+
+| Feature | When to use |
+|---------|------------|
+| **Sealed classes** | State representation, API results, exhaustive type sets |
+| **Records** | Returning multiple values, lightweight data without classes |
+| **Patterns** | Switch expressions, JSON destructuring, list matching |
+| **Class modifiers** (`final`, `base`, `interface`) | Library API design, controlling inheritance |
+| **Switch expressions** | Replace verbose `switch` statements with expressions |
 
 ## Code quality expectations
 
@@ -72,13 +112,28 @@ class CartScreen extends StatefulWidget {
 | Business logic | Calculations, validation, state transitions | All logic classes |
 | Repositories | API integration, error handling | Critical paths |
 | Widgets | Key interactions, state changes | Main screens |
+| Integration | Complete user flows | Happy path + key error paths |
+| Golden | Visual regression of key components | Design-system components |
 
 ## API and data patterns
 
 - Use the **repository pattern** to abstract data sources
-- Handle loading, success, and error states explicitly
+- Handle loading, success, error, and empty states explicitly using **sealed classes**
 - Never call APIs directly from widgets
 - Use `try/catch` at the repository level, not in UI code
+- Use `dio` for HTTP with interceptors for auth tokens and logging
+- Use `freezed` models for API responses in production code
+
+## Performance standards
+
+| Area | Standard |
+|------|----------|
+| Frame rate | 60fps minimum on target devices |
+| Widget rebuilds | Only affected subtrees should rebuild |
+| `const` usage | All static widget subtrees must use `const` |
+| Image handling | Cached, appropriately sized, with loading placeholders |
+| List views | Always use `ListView.builder` for dynamic lists |
+| Impeller | Default renderer — verify smooth rendering on target platforms |
 
 :::caution Anti-patterns to avoid
 - Calling `setState` from API callbacks in large screens

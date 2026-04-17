@@ -38,7 +38,13 @@ These are starting structures and can be customized to the audience and timeline
 
 ## Is this only for mobile apps?
 
-No. The training can include responsive thinking for larger-screen experiences and broader product engineering conversations where Flutter is being used beyond basic mobile app delivery.
+No. Flutter is a **multi-platform framework** that targets six platforms from a single codebase:
+
+- **iOS** and **Android** (mobile)
+- **Web** (compiled to WebAssembly for near-native performance)
+- **macOS**, **Windows**, and **Linux** (desktop)
+
+The training covers cross-platform thinking and responsive design so learners can build for any target platform. Flutter's desktop and web support are fully stable as of 2024–2025.
 
 ## Can you support a real product or internal project?
 

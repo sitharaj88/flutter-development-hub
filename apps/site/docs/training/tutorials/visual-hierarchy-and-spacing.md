@@ -1,72 +1,156 @@
 ---
 title: Visual Hierarchy and Spacing
-description: A deeper tutorial on making app screens easier to scan and understand.
+description: Making Flutter app screens easier to scan with intentional hierarchy, spacing, and Material 3 typography.
+keywords: [Flutter UI design, visual hierarchy, spacing, Material 3 typography, layout]
 ---
 
 # Visual Hierarchy and Spacing
 
-Good interface design often looks simple, but that simplicity is created through clear visual hierarchy and disciplined spacing.
+Good design looks simple, but that simplicity is created through **clear visual hierarchy** and **disciplined spacing**.
 
 ## Lesson objective
 
-By the end of this lesson, a learner should be able to:
+By the end of this tutorial, a learner should be able to:
 
-- explain what visual hierarchy means
-- use spacing to group and separate information
-- make screens easier to scan
+- use heading hierarchy and typography to guide the eye
+- apply consistent spacing with a spacing scale
+- group related content and separate distinct sections
 - identify why a layout feels cluttered even when the code works
 
-## What to teach
+## Visual hierarchy rules
 
-- what should stand out first
-- how headings, labels, and supporting text relate
-- why spacing creates order and calm
-- how poor spacing makes good code feel weak
+| Principle | Technique | Example |
+|-----------|-----------|--------|
+| **One focal point** | Largest text or boldest element | Screen title |
+| **Grouped content** | Smaller spacing within groups | Form fields |
+| **Separated sections** | Larger spacing between groups | Sections on a page |
+| **Muted secondary info** | Lighter color, smaller text | Timestamps, captions |
+| **One primary action** | Filled button, prominent placement | "Submit" button |
 
-## Plain-language explanation
+## Material 3 typography hierarchy
 
-Visual hierarchy answers this question:
+```dart
+Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Text(
+      'Product Details',
+      style: Theme.of(context).textTheme.headlineMedium,
+    ),
+    const SizedBox(height: 8),
+    Text(
+      'Premium Wireless Headphones',
+      style: Theme.of(context).textTheme.titleLarge,
+    ),
+    const SizedBox(height: 4),
+    Text(
+      '\$249.99',
+      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+        color: Theme.of(context).colorScheme.primary,
+      ),
+    ),
+    const SizedBox(height: 16),
+    Text(
+      'Noise-cancelling headphones with 30-hour battery life '
+      'and premium audio quality.',
+      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+        color: Theme.of(context).colorScheme.onSurfaceVariant,
+      ),
+    ),
+  ],
+)
+```
 
-- what should the user notice first?
+## Spacing scale
 
-Spacing answers another question:
+Use consistent spacing values instead of random pixel counts:
 
-- which items belong together, and which should feel separate?
+```dart
+// Define a spacing scale
+abstract class AppSpacing {
+  static const double xs = 4;
+  static const double sm = 8;
+  static const double md = 16;
+  static const double lg = 24;
+  static const double xl = 32;
+  static const double xxl = 48;
+}
+```
 
-These two ideas make even simple screens feel more professional.
+```dart
+// ❌ Random spacing — inconsistent feel
+Padding(padding: EdgeInsets.only(top: 13, left: 7, bottom: 22))
 
-## A practical teaching rule
+// ✅ Scale-based spacing — consistent rhythm
+Padding(padding: EdgeInsets.symmetric(
+  horizontal: AppSpacing.md,
+  vertical: AppSpacing.lg,
+))
+```
 
-If everything looks equally loud, nothing feels important.
+## Card with proper hierarchy
 
-That is why stronger hierarchy usually needs:
+```dart
+Card(
+  child: Padding(
+    padding: const EdgeInsets.all(AppSpacing.md),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Primary info — catches the eye first
+        Text('Flutter Workshop', style: textTheme.titleMedium),
+        const SizedBox(height: AppSpacing.xs),
 
-- one clear primary heading
-- one obvious primary action
-- supporting text that does not fight for attention
-- consistent spacing between related blocks
+        // Secondary info — supports the title
+        Text(
+          'March 15–17, 2025 • Online',
+          style: textTheme.bodyMedium?.copyWith(
+            color: colorScheme.onSurfaceVariant,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.sm),
 
-## Good classroom comparison
+        // Tertiary info — least prominent
+        Text(
+          '24 seats remaining',
+          style: textTheme.bodySmall?.copyWith(
+            color: colorScheme.outline,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.md),
 
-Show two versions of the same form:
+        // Action — clear and prominent
+        FilledButton(
+          onPressed: () {},
+          child: const Text('Register'),
+        ),
+      ],
+    ),
+  ),
+)
+```
 
-- version one with cramped spacing, equal text sizes, and weak grouping
-- version two with heading hierarchy, breathing room, and clearer action emphasis
+## Spacing within vs. between
 
-Then ask learners:
-
-- which version is easier to scan?
-- where does the eye go first?
-- which fields feel related?
-
-## Practical comparison ideas
-
-- compare tight, cluttered screens with clean, spaced layouts
-- show how spacing improves dashboards, forms, and lists
+| Context | Spacing | Value |
+|---------|---------|-------|
+| Between label and input | Tight | `4–8 px` |
+| Between form fields | Medium | `16 px` |
+| Between sections | Large | `24–32 px` |
+| Page padding | Consistent | `16–24 px` |
+| Between cards in a list | Medium | `12–16 px` |
 
 ## Common mistakes
 
-- using inconsistent spacing values all over the screen
-- making labels, headings, and body text feel visually equal
-- placing unrelated items too close together
-- adding more color when structure was the real problem
+- Using inconsistent spacing values (`13px` here, `17px` there)
+- Making headings, labels, and body text the same size and weight
+- Placing unrelated items too close together (false grouping)
+- Adding color or decoration when spacing was the real problem
+- Using `SizedBox(height: 10)` everywhere instead of a spacing scale
+
+## Practice exercises
+
+1. Take a screen with uniform text sizes and add a clear heading → title → body hierarchy
+2. Create a spacing constants class and apply it to a form screen
+3. Compare two versions of the same card: one with random spacing, one with a consistent scale
+4. Build a settings screen where sections are visually grouped using spacing alone (no dividers)

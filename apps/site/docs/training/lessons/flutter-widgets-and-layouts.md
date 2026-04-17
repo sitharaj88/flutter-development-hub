@@ -1,62 +1,172 @@
 ---
 title: Flutter Widgets and Layouts
-description: A lesson on the widget tree and the core layout patterns used in Flutter apps.
+description: Building Flutter screens with the widget tree, core layout patterns, and Material 3 components.
+keywords: [Flutter widgets, Flutter layout, widget tree, Row, Column, Material 3]
 ---
 
 # Flutter Widgets and Layouts
 
-This is often the moment Flutter becomes exciting. Learners see how code turns into visible screens.
+Everything in Flutter is built from widgets. This lesson teaches how to compose them into real screens.
 
 ## Lesson goal
 
-- understand that everything in Flutter is built from widgets
-- learn how layout widgets combine to create screens
-- build cleaner UI by composing small pieces
-- stop seeing Flutter screens as one giant block of nested code
+- understand the widget tree and composition
+- build layouts with `Row`, `Column`, `Stack`, and `Expanded`
+- use Material 3 components for professional UI
+- extract reusable widgets from repeated patterns
 
-## What to teach
+## Basic widget composition
 
-- stateless and stateful widgets
-- `Row`, `Column`, `Stack`, `Container`, `Expanded`, and `Padding`
-- parent-child relationships in the widget tree
-- composing a screen from smaller reusable parts
+```dart
+class ProfileCard extends StatelessWidget {
+  final String name;
+  final String email;
 
-## Plain-language explanation
+  const ProfileCard({super.key, required this.name, required this.email});
 
-The easiest way to teach Flutter UI is:
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            CircleAvatar(child: Text(name[0])),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(name, style: Theme.of(context).textTheme.titleMedium),
+                  Text(
+                    email,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
 
-- start from what the screen looks like
-- break the screen into visible sections
-- map each section to widgets
+## Core layout widgets
 
-That helps learners read Flutter visually rather than only syntactically.
+| Widget | Purpose | Key behavior |
+|--------|---------|-------------|
+| `Column` | Vertical layout | Children stack top-to-bottom |
+| `Row` | Horizontal layout | Children flow left-to-right |
+| `Stack` | Overlapping layout | Children layered on top of each other |
+| `Expanded` | Fill remaining space | Takes up available room in Row/Column |
+| `SizedBox` | Fixed spacing | Precise gaps between elements |
+| `Padding` | Inner spacing | Space between a widget and its container |
 
-## Practical build ideas
+## Dashboard layout example
 
-- profile card
-- product list screen
-- dashboard header with cards
-- onboarding or welcome screen
+```dart
+class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
 
-## Good teaching prompts
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Dashboard')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Overview', style: Theme.of(context).textTheme.headlineSmall),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(child: _StatCard(label: 'Courses', value: '12')),
+                const SizedBox(width: 12),
+                Expanded(child: _StatCard(label: 'Students', value: '248')),
+                const SizedBox(width: 12),
+                Expanded(child: _StatCard(label: 'Hours', value: '86')),
+              ],
+            ),
+            const SizedBox(height: 24),
+            Text('Recent Activity', style: Theme.of(context).textTheme.titleLarge),
+            const SizedBox(height: 12),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) => ListTile(
+                  leading: const Icon(Icons.article),
+                  title: Text('Activity item ${index + 1}'),
+                  subtitle: const Text('2 hours ago'),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
-- what is the top-level screen shell?
-- what are the main sections?
-- which parts repeat and should become reusable widgets?
-- where does spacing and alignment matter most?
+class _StatCard extends StatelessWidget {
+  final String label;
+  final String value;
 
-## Common mistakes to discuss
+  const _StatCard({required this.label, required this.value});
 
-- putting too much UI into one widget
-- ignoring spacing and alignment consistency
-- not reusing repeated UI blocks
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Text(value, style: Theme.of(context).textTheme.headlineMedium),
+            const SizedBox(height: 4),
+            Text(label, style: Theme.of(context).textTheme.bodySmall),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
 
-## What learners should be able to do after this lesson
+## Widget extraction rule
 
-- explain what a widget tree is
-- build a simple screen from smaller parts
-- understand why layout structure affects maintainability
+When you see **repeated patterns**, extract a widget:
 
-## Teaching outcome
+```dart
+// ❌ Repeated code
+Card(child: Padding(padding: EdgeInsets.all(16), child: Text('Item 1')))
+Card(child: Padding(padding: EdgeInsets.all(16), child: Text('Item 2')))
+Card(child: Padding(padding: EdgeInsets.all(16), child: Text('Item 3')))
 
-- learners can build organized layouts and explain how the widget tree works
+// ✅ Extracted reusable widget
+class ItemCard extends StatelessWidget {
+  final String title;
+  const ItemCard({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Text(title),
+      ),
+    );
+  }
+}
+```
+
+## Practice exercises
+
+1. Build a profile card with avatar, name, email, and a trailing icon
+2. Create a dashboard layout with a stats row and a scrollable list
+3. Extract a repeated card pattern into a reusable widget
+4. Use `Stack` to overlay a badge on top of an avatar

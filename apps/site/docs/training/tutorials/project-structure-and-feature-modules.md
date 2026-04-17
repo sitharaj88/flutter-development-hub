@@ -1,69 +1,179 @@
 ---
 title: Project Structure and Feature Modules
-description: A deeper tutorial on organizing Flutter projects for clarity and growth.
+description: Organizing Flutter projects by feature for clarity, scalability, and team collaboration.
+keywords: [Flutter project structure, feature modules, folder organization, clean architecture]
 ---
 
 # Project Structure and Feature Modules
 
-As soon as an app grows past a demo, folder structure starts affecting delivery speed and code quality.
+As soon as an app grows past a demo, folder structure directly affects delivery speed and code quality.
 
 ## Lesson objective
 
-By the end of this lesson, a learner should be able to:
+By the end of this tutorial, a learner should be able to:
 
-- explain why project structure matters
-- organize code by feature more intentionally
-- separate UI, data, and logic more clearly
+- organize Flutter code by feature instead of file type
+- separate UI, data, and logic within each feature
+- set up a scalable project structure from the start
 - understand how structure affects team collaboration
 
-## Topics
+## The problem: type-based structure
 
-- organizing by feature instead of random file type sprawl
-- keeping data, UI, and logic understandable
-- naming conventions and predictable structure
+Beginners often organize by file type:
 
-## Plain-language explanation
+```
+lib/
+├── models/
+│   ├── user.dart
+│   ├── product.dart
+│   └── order.dart
+├── screens/
+│   ├── login_screen.dart
+│   ├── product_list_screen.dart
+│   └── order_screen.dart
+├── widgets/
+│   ├── user_avatar.dart
+│   ├── product_card.dart
+│   └── order_summary.dart
+└── services/
+    ├── auth_service.dart
+    ├── product_service.dart
+    └── order_service.dart
+```
 
-Project structure answers this question:
+**Why this breaks down:** To work on the "products" feature, you need to touch 4 different folders. Related files are scattered.
 
-- where should new code go so the app stays understandable?
+## The solution: feature-based structure
 
-If learners do not have a structure, projects usually drift into:
+```
+lib/
+├── app/
+│   ├── app.dart
+│   ├── router.dart
+│   └── theme.dart
+├── features/
+│   ├── auth/
+│   │   ├── data/
+│   │   │   ├── auth_repository.dart
+│   │   │   └── auth_api_client.dart
+│   │   ├── models/
+│   │   │   └── user.dart
+│   │   ├── providers/
+│   │   │   └── auth_provider.dart
+│   │   └── ui/
+│   │       ├── login_screen.dart
+│   │       └── widgets/
+│   │           └── login_form.dart
+│   ├── products/
+│   │   ├── data/
+│   │   │   └── product_repository.dart
+│   │   ├── models/
+│   │   │   └── product.dart
+│   │   ├── providers/
+│   │   │   └── products_provider.dart
+│   │   └── ui/
+│   │       ├── product_list_screen.dart
+│   │       ├── product_detail_screen.dart
+│   │       └── widgets/
+│   │           ├── product_card.dart
+│   │           └── product_grid.dart
+│   └── cart/
+│       ├── data/
+│       ├── models/
+│       ├── providers/
+│       └── ui/
+└── shared/
+    ├── models/
+    │   └── api_exception.dart
+    ├── providers/
+    │   └── dio_provider.dart
+    └── widgets/
+        ├── app_bar.dart
+        └── error_view.dart
+```
 
-- random folders
-- duplicated files
-- unclear responsibilities
-- slower onboarding and review
+## Layer responsibilities
 
-## Why feature modules help
+| Layer | Folder | Contains |
+|-------|--------|----------|
+| **UI** | `ui/` | Screens, widgets, page-level layout |
+| **Providers** | `providers/` | Riverpod providers — state and business logic |
+| **Data** | `data/` | Repositories, API clients — data access |
+| **Models** | `models/` | Data classes (often with `freezed`) |
 
-Feature-based structure is useful because it groups related parts together.
+## Shared code
 
-For example:
+Code used across multiple features goes in `shared/`:
 
-- `auth/`
-- `dashboard/`
-- `courses/`
-- `profile/`
+```dart
+// lib/shared/widgets/error_view.dart
+class ErrorView extends StatelessWidget {
+  final String message;
+  final VoidCallback? onRetry;
 
-Inside each feature, the learner can place:
+  const ErrorView({super.key, required this.message, this.onRetry});
 
-- screens
-- widgets
-- models
-- repository or service code
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(message, style: Theme.of(context).textTheme.bodyLarge),
+          if (onRetry != null) ...[
+            const SizedBox(height: 16),
+            FilledButton.icon(
+              onPressed: onRetry,
+              icon: const Icon(Icons.refresh),
+              label: const Text('Retry'),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+```
 
-That often reads better than scattering everything by file type across the whole app.
+## Scaffolding with very_good_cli
 
-## Value for teams
+Start with a well-structured project from the beginning:
 
-- onboarding becomes faster
-- code review becomes clearer
-- features are easier to change without unintended breakage
+```bash
+# Install the CLI
+dart pub global activate very_good_cli
+
+# Create a new project with opinionated structure
+very_good create flutter_app my_app
+```
+
+This generates a project with:
+- Feature-based folder structure
+- `very_good_analysis` linting rules
+- Test scaffolding
+- CI/CD configuration
+
+## Rules of thumb
+
+| Guideline | Reason |
+|-----------|--------|
+| One feature = one folder | Everything related is together |
+| Features don't import from each other's `data/` | Keeps coupling low |
+| Shared code must be truly shared | Don't move code to `shared/` preemptively |
+| Keep `main.dart` minimal | App setup only, delegate to `app/` |
+| Don't create folders you don't need yet | Add structure as complexity grows |
 
 ## Common mistakes
 
-- creating folders for the sake of looking advanced
-- splitting files too aggressively before the project needs it
-- mixing unrelated features in one generic `widgets` or `helpers` area
-- using structure names that the team cannot explain clearly
+- Creating deep folder hierarchies for a 3-screen app
+- Putting everything in `shared/` because it's "reusable"
+- Mixing feature-specific widgets into a global `widgets/` folder
+- Using folder names that the team can't explain clearly
+- Importing across features at the data layer (creates hidden coupling)
+
+## Practice exercises
+
+1. Restructure a flat `lib/` folder into feature-based modules
+2. Move a shared widget from a feature folder to `shared/widgets/`
+3. Create a new feature module with `data/`, `models/`, `providers/`, `ui/` layers
+4. Set up a project using `very_good_cli` and explore the generated structure

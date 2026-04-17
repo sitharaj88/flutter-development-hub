@@ -143,16 +143,76 @@ class ApiProductRepository implements ProductRepository {
 
 ## State management options
 
-| Solution | Complexity | Best for |
-|----------|-----------|----------|
-| `setState` | Low | Simple local UI state |
-| `InheritedWidget` | Medium | Understanding how Flutter state works |
-| **Provider** | Medium | Small–medium apps, good for learning |
-| **Riverpod** | Medium–High | Medium–large apps, strong typing |
-| **Bloc/Cubit** | High | Enterprise apps, strict patterns |
+| Solution | Complexity | Best for | Status (2026) |
+|----------|-----------|----------|--------------|
+| `setState` | Low | Simple local UI state | Always valid |
+| `InheritedWidget` | Medium | Understanding how Flutter state works | Foundational |
+| **Riverpod** | Medium | Recommended default — strong typing, code-gen, testable | **Recommended** |
+| **Bloc/Cubit** | Medium–High | Enterprise apps, strict event-driven patterns | Mature alternative |
+| Provider | Medium | Legacy — still works but Riverpod supersedes it | Maintenance mode |
+
+### Riverpod — the recommended approach
+
+Riverpod with code generation (`riverpod_generator`) is the modern standard:
+
+```dart
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+part 'products_provider.g.dart';
+
+// Auto-generates the provider — type-safe, testable, cacheable
+@riverpod
+Future<List<Product>> products(ProductsRef ref) async {
+  final repository = ref.watch(productRepositoryProvider);
+  return repository.getAll();
+}
+
+@riverpod
+class Cart extends _$Cart {
+  @override
+  List<CartItem> build() => [];
+
+  void add(Product product) {
+    state = [...state, CartItem(product: product, quantity: 1)];
+  }
+
+  void remove(String productId) {
+    state = state.where((item) => item.product.id != productId).toList();
+  }
+
+  double get total => state.fold(0.0, (sum, item) => sum + item.totalPrice);
+}
+```
+
+### Sealed classes for state representation
+
+Use Dart 3 sealed classes to model UI states with compiler-checked exhaustiveness:
+
+```dart
+sealed class ProductsState {}
+class ProductsLoading extends ProductsState {}
+class ProductsLoaded extends ProductsState {
+  final List<Product> products;
+  ProductsLoaded(this.products);
+}
+class ProductsError extends ProductsState {
+  final String message;
+  ProductsError(this.message);
+}
+
+// The compiler ensures you handle all states
+Widget buildProductList(ProductsState state) => switch (state) {
+  ProductsLoading()             => const Center(child: CircularProgressIndicator()),
+  ProductsLoaded(:final products) => ListView.builder(
+    itemCount: products.length,
+    itemBuilder: (_, i) => ProductCard(products[i]),
+  ),
+  ProductsError(:final message)   => Center(child: Text('Error: $message')),
+};
+```
 
 :::tip Start simple
-Don't introduce Riverpod or Bloc on day one. Start with `setState`, understand why it becomes painful, then introduce solutions that fix the actual problem.
+Don't introduce Riverpod or Bloc on day one. Start with `setState`, understand why it becomes painful, then introduce solutions that fix the actual problem. But when you're ready for a state solution, Riverpod is the default recommendation.
 :::
 
 ## Common mistakes

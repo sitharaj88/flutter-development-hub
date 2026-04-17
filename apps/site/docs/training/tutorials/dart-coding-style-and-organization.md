@@ -1,65 +1,190 @@
 ---
 title: Dart Coding Style and Organization
-description: A detailed tutorial on writing readable Dart and organizing code sensibly.
+description: Writing clean, readable Dart with modern conventions, effective linting, and sensible code organization.
+keywords: [Dart style guide, Dart conventions, code organization, linting, very_good_analysis]
 ---
 
 # Dart Coding Style and Organization
 
-Teaching Dart well means teaching style, not only syntax. Learners should see early that readable code is part of professional development.
+Readable code is professional code. This tutorial covers the conventions that make Dart projects clean and maintainable.
 
-## Good style habits
+## Naming conventions
 
-- choose names that explain intent
-- prefer short, focused functions
-- avoid deeply nested logic when clearer steps are possible
-- keep model, utility, and feature code organized sensibly
+| Element | Convention | Example |
+|---------|-----------|---------|
+| Classes, enums, typedefs | `UpperCamelCase` | `ProductRepository`, `AuthState` |
+| Variables, functions, parameters | `lowerCamelCase` | `fetchProducts`, `isLoading` |
+| Constants | `lowerCamelCase` | `defaultPadding`, `maxRetries` |
+| Libraries, files | `snake_case` | `product_repository.dart` |
+| Private members | Leading underscore | `_isInitialized`, `_cache` |
 
-## Example of naming improvement
+:::warning Constants are camelCase in Dart
+Unlike Java or C, Dart uses `lowerCamelCase` for constants — not `SCREAMING_SNAKE_CASE`.
+```dart
+// ❌ Wrong
+const MAX_RETRY_COUNT = 3;
 
-Weak:
+// ✅ Correct
+const maxRetryCount = 3;
+```
+:::
+
+## Naming for clarity
 
 ```dart
+// ❌ Unclear names
 String doStuff(String s) {
   return s.trim().toLowerCase();
 }
-```
 
-Stronger:
+List<dynamic> get(String t) { ... }
 
-```dart
+// ✅ Names that explain intent
 String normalizeEmail(String email) {
   return email.trim().toLowerCase();
 }
+
+Future<List<Product>> fetchProductsByCategory(String category) { ... }
 ```
 
-The second version communicates both purpose and context much better.
+## Linting with very_good_analysis
 
-## Why this matters
+Set up strict linting from the start:
 
-- better readability improves learning speed
-- code review becomes easier
-- larger Flutter projects stay healthier when the language layer is clean
+```yaml
+# analysis_options.yaml
+include: package:very_good_analysis/analysis_options.yaml
 
-## Good discussion topics
+linter:
+  rules:
+    public_member_api_docs: false  # Optional: relax for app code
+```
 
-- when brevity hurts clarity
-- where helpers should live
-- how naming decisions affect maintainability
+This enforces:
+- `prefer_const_constructors`
+- `always_use_package_imports`
+- `avoid_dynamic_calls`
+- `unawaited_futures`
+- And 100+ other production-quality rules
 
-## Useful teaching habits
+## Code organization within a file
 
-- ask learners to rename unclear variables and functions
-- review code for readability before reviewing advanced correctness
-- show how small naming and structure choices improve understanding
+```dart
+// 1. Imports (sorted: dart, package, relative)
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../models/product.dart';
+import 'widgets/product_card.dart';
+
+// 2. Part directives (for code generation)
+part 'products_provider.g.dart';
+
+// 3. Constants
+const _defaultPageSize = 20;
+
+// 4. Main class/function
+@riverpod
+class Products extends _$Products {
+  @override
+  Future<List<Product>> build() => _fetch();
+
+  Future<List<Product>> _fetch() async { ... }
+}
+```
+
+## Function design
+
+```dart
+// ❌ One function doing too much
+Future<void> handleLogin(String email, String password) async {
+  final trimmed = email.trim().toLowerCase();
+  if (!trimmed.contains('@')) throw Exception('Invalid');
+  final response = await dio.post('/auth', data: {'email': trimmed, 'password': password});
+  final token = response.data['token'];
+  await secureStorage.write(key: 'token', value: token);
+  await loadUserProfile();
+  navigateToHome();
+}
+
+// ✅ Small, focused functions
+String normalizeEmail(String email) => email.trim().toLowerCase();
+
+void validateEmail(String email) {
+  if (!email.contains('@')) throw const FormatException('Invalid email');
+}
+
+Future<String> authenticate(String email, String password) async {
+  final response = await dio.post('/auth', data: {
+    'email': email,
+    'password': password,
+  });
+  return response.data['token'] as String;
+}
+
+Future<void> persistToken(String token) async {
+  await secureStorage.write(key: 'token', value: token);
+}
+```
+
+## Modern Dart 3 style
+
+```dart
+// Use switch expressions instead of if/else chains
+String statusLabel(OrderStatus status) => switch (status) {
+  OrderStatus.pending => 'Pending',
+  OrderStatus.shipped => 'Shipped',
+  OrderStatus.delivered => 'Delivered',
+  OrderStatus.cancelled => 'Cancelled',
+};
+
+// Use records for multiple return values
+(String name, int age) parseProfile(Map<String, dynamic> json) {
+  return (json['name'] as String, json['age'] as int);
+}
+
+// Use patterns for destructuring
+final (name, age) = parseProfile(data);
+```
+
+## Import organization
+
+```dart
+// ✅ Sorted by: dart → package → relative
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../shared/models/api_exception.dart';
+import '../models/product.dart';
+```
+
+Use `package:` imports for your own app code (not relative) when `always_use_package_imports` is enabled.
+
+## Common mistakes
+
+- Using `SCREAMING_SNAKE_CASE` for constants (Dart uses camelCase)
+- Mixing relative and package imports inconsistently
+- Writing functions longer than ~30 lines without splitting
+- Using `dynamic` when a typed parameter or generic would work
+- Not enabling a linter — relying on manual code review for style
+- Putting unrelated utilities in a single `helpers.dart` file
 
 ## Review questions
 
 - What makes Dart code easier to review?
-- Why is organization part of quality, not just style?
-- How do naming and file structure affect long-term maintainability?
+- Why is consistent naming more important than clever naming?
+- How does file structure affect long-term maintainability?
+- When should you split a function into smaller ones?
 
-## Practice ideas
+## Practice exercises
 
-1. Rename unclear variables and functions in a short example.
-2. Split one long function into two or three clearer ones.
-3. Decide where a helper belongs in a small project structure.
+1. Rename unclear variables and functions in a provided code snippet
+2. Set up `very_good_analysis` in a new Flutter project and fix all warnings
+3. Refactor a 50-line function into 3–4 smaller focused functions
+4. Organize imports in a file following the dart → package → relative convention

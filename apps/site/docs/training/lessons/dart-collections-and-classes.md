@@ -1,6 +1,7 @@
 ---
 title: Dart Collections and Classes
-description: A lesson on modeling real application data in Dart.
+description: Modeling real application data with Dart collections, classes, and modern Dart 3 features.
+keywords: [Dart collections, Dart classes, data modeling, lists, maps, Dart 3]
 ---
 
 # Dart Collections and Classes
@@ -10,49 +11,133 @@ This lesson connects programming basics to app development by showing how real a
 ## Lesson goal
 
 - understand lists, sets, and maps in Dart
-- know when to use a class instead of loose variables
-- model app data in a more maintainable way
+- model app data using classes and constructors
+- use Dart 3 features (records, sealed classes) for expressive data modeling
 
-## What to teach
+## Collections
 
-- lists for repeated values
-- maps for key-value data
-- classes for structured models
-- constructors and object creation
-- simple methods inside classes
+### Lists — ordered, repeatable values
 
-## Plain-language explanation
+```dart
+final products = ['Laptop', 'Phone', 'Tablet'];
+final prices = [999.99, 699.99, 449.99];
 
-Collections help store groups of values.
+// Typed list
+final List<String> tags = ['sale', 'new', 'featured'];
 
-Classes help represent meaningful things such as:
+// Useful operations
+final uppercased = products.map((p) => p.toUpperCase()).toList();
+final expensive = prices.where((p) => p > 500).toList();
+final total = prices.fold(0.0, (sum, price) => sum + price);
+```
 
-- users
-- products
-- orders
-- courses
+### Maps — key-value pairs
 
-That is the shift from generic coding to app-oriented thinking.
+```dart
+final settings = {
+  'theme': 'dark',
+  'language': 'en',
+  'notifications': 'true',
+};
 
-## Real app examples
+// Access and update
+final theme = settings['theme']; // 'dark'
+settings['language'] = 'fr';
+```
 
-- list of products
-- map of settings or profile values
-- `User`, `Product`, or `Order` classes
-- converting raw data into structured objects
+### Sets — unique values only
 
-## Practice ideas
+```dart
+final categories = {'electronics', 'clothing', 'food'};
+categories.add('electronics'); // No duplicate — still 3 items
+```
 
-- create a `Student` class with name, email, and grade
-- build a list of products and display useful information
-- compare a map-based and class-based approach to storing user data
+## Classes — structured data models
 
-## What learners should be able to do after this lesson
+```dart
+class Product {
+  final String id;
+  final String name;
+  final double price;
+  final bool available;
 
-- choose the right collection for a task
-- understand why classes improve app readability
-- create small model objects with clearer structure
+  const Product({
+    required this.id,
+    required this.name,
+    required this.price,
+    this.available = true,
+  });
 
-## Teaching outcome
+  String get displayPrice => '\$${price.toStringAsFixed(2)}';
 
-- learners begin thinking in terms of app models, not just disconnected values
+  @override
+  String toString() => '$name ($displayPrice)';
+}
+```
+
+```dart
+// Usage
+final laptop = Product(id: '1', name: 'Laptop', price: 999.99);
+print(laptop.displayPrice); // $999.99
+
+final products = [
+  Product(id: '1', name: 'Laptop', price: 999.99),
+  Product(id: '2', name: 'Phone', price: 699.99, available: false),
+];
+
+final available = products.where((p) => p.available).toList();
+```
+
+## JSON to model conversion
+
+```dart
+class User {
+  final String name;
+  final String email;
+  final DateTime joinedAt;
+
+  const User({required this.name, required this.email, required this.joinedAt});
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      name: json['name'] as String,
+      email: json['email'] as String,
+      joinedAt: DateTime.parse(json['joined_at'] as String),
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    'name': name,
+    'email': email,
+    'joined_at': joinedAt.toIso8601String(),
+  };
+}
+```
+
+## Dart 3: Records and sealed classes
+
+```dart
+// Records — lightweight tuples
+(String, int) parseNameAge(Map<String, dynamic> json) {
+  return (json['name'] as String, json['age'] as int);
+}
+
+final (name, age) = parseNameAge({'name': 'Alex', 'age': 25});
+
+// Sealed classes — exhaustive state modeling
+sealed class Result<T> {}
+class Success<T> extends Result<T> { final T data; Success(this.data); }
+class Failure<T> extends Result<T> { final String error; Failure(this.error); }
+
+String describe(Result<String> result) => switch (result) {
+  Success(:final data) => 'Got: $data',
+  Failure(:final error) => 'Error: $error',
+};
+```
+
+## Practice exercises
+
+1. Create a `Student` class with name, email, and grade — display a list of students
+2. Build a `Product` class with `fromJson` and create a list from JSON data
+3. Use `.where()`, `.map()`, and `.fold()` to filter, transform, and aggregate a list
+4. Model a network response using a sealed `Result` class

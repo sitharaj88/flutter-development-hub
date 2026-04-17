@@ -108,4 +108,3 @@ Some engagements end after the immediate objective. Others naturally continue:
 - [**Engagement Models**](/docs/flutter-development/engagement-models) — Choose the right collaboration format
 - [**Services Overview**](/docs/flutter-development/services) — Full service capabilities
 - [**Contact**](/docs/contact/enquiry) — Start a conversation
-- it ensures that knowledge transfer and delivery quality are not treated separately

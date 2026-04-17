@@ -1,69 +1,83 @@
 ---
 title: Site Phases
-description: The phased roadmap for building the full Flutter portal.
+description: The phased roadmap for building the Flutter portal — with current completion status.
+keywords: [Flutter portal roadmap, site development phases, documentation roadmap]
 ---
 
 # Site Phases
 
-This page translates the vision into a practical build sequence.
+This page tracks the phased development of the portal from initial concept to mature platform.
 
-## Phase 1: Brand foundation
+## Phase 1: Brand foundation ✅
 
-- define positioning for Flutter training, development, and mentoring
-- lock the tone, offer structure, and core calls to action
-- decide what should feel premium, educational, and conversion-oriented
+- [x] Define positioning for Flutter training, development, and consulting
+- [x] Establish tone, offer structure, and core calls to action
+- [x] Professional visual identity with responsive design
 
-## Phase 2: Information architecture
+## Phase 2: Information architecture ✅
 
-- map the portal into homepage, training, services, audiences, proof, resources, apps, and contact
-- decide which content belongs on the homepage and which belongs in docs
-- create a structure that works for GitHub Pages and future repo growth
+- [x] Map the portal: homepage, training, services, audiences, proof, resources, apps, contact
+- [x] Docusaurus-based site with structured sidebar navigation
+- [x] GitHub Pages deployment with custom domain support
 
-## Phase 3: Training experience
+## Phase 3: Training experience ✅
 
-- publish training overview, programs, curriculum, formats, FAQs, and brochure flow
-- create clear paths for students, institutions, and corporate groups
-- show outcomes and delivery style instead of only listing topics
+- [x] Complete training overview, programs, curriculum, formats, and FAQs
+- [x] 8-module structured curriculum from foundations to capstone
+- [x] 45+ tutorial and lesson pages with code examples
+- [x] Dart 3, Material 3, and modern Flutter ecosystem coverage
+- [x] Clear paths for students, institutions, and corporate groups
 
-## Phase 4: Flutter development services
+## Phase 4: Flutter development services ✅
 
-- explain service areas, engagement models, and engineering expectations
-- position the site for consulting, product development, and team enablement
-- make it easier for startups and businesses to understand how to work with you
+- [x] Service areas, engagement models, and delivery process documented
+- [x] Engineering roadmap with phase-based growth plan
+- [x] Professional SVG diagrams for all key processes
 
-## Phase 5: Audience-specific journeys
+## Phase 5: Audience-specific journeys ✅
 
-- create dedicated pages for students, teams, and colleges
-- tailor each page to their goals, questions, and decision-making process
-- reduce friction by speaking directly to the right visitor
+- [x] Dedicated pages for students, teams, and colleges
+- [x] Tailored messaging for each audience's goals and decision-making
 
-## Phase 6: Proof and trust
+## Phase 6: Proof and trust 🔄 In progress
 
-- add trainer profile, outcomes, social proof, testimonials, and success stories
-- bring in screenshots, projects, workshops, and measurable wins
-- support both training credibility and service credibility
+- [x] Practitioner profile published
+- [x] Outcome categories and measurement framework
+- [x] Case study format template
+- [ ] Published case studies with measurable outcomes
+- [ ] Testimonials and endorsements
 
-## Phase 7: Resources and docs
+## Phase 7: Resources and documentation ✅
 
-- publish Flutter learning paths, architecture notes, onboarding guides, and standards
-- make the site useful even before a visitor becomes a lead
-- build long-term organic visibility through practical documentation
+- [x] Flutter learning path with 7-stage progression
+- [x] Engineering standards (Dart 3, linting, code-gen, testing)
+- [x] Knowledge system architecture
+- [x] Complete tools and stack reference
 
-## Phase 8: Apps and demos
+## Phase 8: Apps and demos 📋 Planned
 
-- add demo apps, student labs, starter kits, and showcase projects
-- keep reusable code and docs in the same repository
-- turn the portal into both a marketing and capability asset
+- [ ] Demo apps in `apps/` directory
+- [ ] Student lab starter projects
+- [ ] Showcase applications with architecture documentation
+- [ ] Reusable template repositories
 
-## Phase 9: Lead generation and operations
+## Phase 9: Lead generation and operations 📋 Planned
 
-- connect brochure downloads, enquiry forms, booking links, and analytics
-- define the content update workflow for the repo
-- keep deployment and maintenance simple for GitHub Pages
+- [ ] Contact form or booking integration
+- [ ] Brochure download capability
+- [ ] Analytics and conversion tracking
+- [ ] Automated content update workflow
 
-## What success looks like
+## Current status
 
-- the homepage clearly explains the training and tutorial value
-- the docs feel deep enough to teach from
-- service and proof pages feel credible to companies and institutions
-- resources and apps make the portal more useful over time
+| Phase | Status | Completion |
+|-------|--------|------------|
+| 1. Brand foundation | ✅ Complete | 100% |
+| 2. Information architecture | ✅ Complete | 100% |
+| 3. Training experience | ✅ Complete | 100% |
+| 4. Development services | ✅ Complete | 100% |
+| 5. Audience journeys | ✅ Complete | 100% |
+| 6. Proof and trust | 🔄 In progress | 60% |
+| 7. Resources and docs | ✅ Complete | 100% |
+| 8. Apps and demos | 📋 Planned | 0% |
+| 9. Lead generation | 📋 Planned | 0% |

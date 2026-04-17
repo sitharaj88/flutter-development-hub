@@ -16,9 +16,11 @@ Testing is a risk-reduction tool, not extra work. Every test you write is a bug 
 
 - Write **unit tests** for business logic
 - Write **widget tests** for UI behavior
-- Debug issues **systematically**, not randomly
-- Identify common **performance problems**
-- Prepare apps for **release and deployment**
+- Write **integration tests** for complete user flows
+- Use **golden tests** for visual regression checking
+- Debug issues **systematically** with DevTools
+- Set up **CI/CD pipelines** for automated quality
+- Prepare apps for **multi-platform release and deployment**
 
 ## Unit testing
 
@@ -101,6 +103,74 @@ void main() {
 }
 ```
 
+## Integration testing
+
+Test complete user flows across multiple screens:
+
+```dart
+import 'package:flutter_test/flutter_test.dart';
+import 'package:integration_test/integration_test.dart';
+import 'package:my_app/main.dart' as app;
+
+void main() {
+  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+
+  testWidgets('Complete login and dashboard flow', (tester) async {
+    app.main();
+    await tester.pumpAndSettle();
+
+    // Enter credentials
+    await tester.enterText(find.byKey(const Key('email_field')), 'test@example.com');
+    await tester.enterText(find.byKey(const Key('password_field')), 'password123');
+    await tester.tap(find.text('Sign In'));
+    await tester.pumpAndSettle();
+
+    // Verify navigation to dashboard
+    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.byType(DashboardScreen), findsOneWidget);
+  });
+}
+```
+
+Run integration tests: `flutter test integration_test/`
+
+## Golden tests (visual regression)
+
+Golden tests capture screenshots and compare against baselines to detect unintended visual changes:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:my_app/features/products/presentation/product_card.dart';
+
+void main() {
+  testWidgets('ProductCard matches golden file', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: ThemeData(useMaterial3: true),
+        home: Scaffold(
+          body: ProductCard(
+            product: Product(
+              id: '1',
+              name: 'Flutter Course',
+              price: 49.99,
+              imageUrl: null,
+            ),
+          ),
+        ),
+      ),
+    );
+
+    await expectLater(
+      find.byType(ProductCard),
+      matchesGoldenFile('goldens/product_card.png'),
+    );
+  });
+}
+```
+
+Update golden files: `flutter test --update-goldens`
+
 ## Debugging approach
 
 Debugging is **calm investigation**, not random clicking:
@@ -131,6 +201,72 @@ Use Flutter DevTools for:
 | Large images | Slow load, high memory | Resize, cache, use `Image.network` with `cacheHeight` |
 | Missing `const` | More rebuilds than needed | Add `const` to all static widget trees |
 | Unbounded lists | Memory grows indefinitely | Use `ListView.builder` instead of `ListView` |
+
+## CI/CD pipeline
+
+Automate testing and builds with every commit:
+
+```yaml
+# .github/workflows/flutter-ci.yml
+name: Flutter CI
+on: [push, pull_request]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+          channel: stable
+      - run: flutter pub get
+      - run: dart run build_runner build --delete-conflicting-outputs
+      - run: flutter analyze --fatal-infos
+      - run: flutter test --coverage
+      - run: flutter build apk --release
+```
+
+### CI/CD tools for Flutter
+
+| Tool | Best for |
+|------|---------|
+| **GitHub Actions** | Free for open-source, integrates with GitHub |
+| **Codemagic** | Flutter-specialized CI/CD with Apple code signing |
+| **Fastlane** | Automated App Store / Play Store deployment |
+| **Shorebird** | Over-the-air code push updates (patch without re-submitting) |
+
+### Environment configuration
+
+Use flavors and environment files to separate dev/staging/production:
+
+```dart
+// lib/app/env.dart
+enum Environment { dev, staging, production }
+
+class AppConfig {
+  final Environment environment;
+  final String apiBaseUrl;
+  final bool enableLogging;
+
+  const AppConfig({
+    required this.environment,
+    required this.apiBaseUrl,
+    this.enableLogging = false,
+  });
+
+  static const dev = AppConfig(
+    environment: Environment.dev,
+    apiBaseUrl: 'https://dev-api.example.com',
+    enableLogging: true,
+  );
+
+  static const production = AppConfig(
+    environment: Environment.production,
+    apiBaseUrl: 'https://api.example.com',
+  );
+}
+```
 
 ## Release checklist
 

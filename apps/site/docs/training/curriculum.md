@@ -64,28 +64,21 @@ bool isPrime(int n) {
 - Types, null safety, functions, collections, and classes
 - Async programming with `Future`, `async`, and `await`
 - JSON modeling and clean code organization
+- **Dart 3:** Records, patterns, sealed classes, switch expressions, and class modifiers
 
-**Expected outcome:** Learners can model app data, write reusable logic, and read Flutter-oriented Dart confidently.
+**Expected outcome:** Learners can model app data, write reusable logic using modern Dart 3 features, and read Flutter-oriented Dart confidently.
 
 **Sample exercise:**
 ```dart
-class User {
-  final String name;
-  final String email;
-  final DateTime joinedAt;
+// Dart 3: Using records and pattern matching
+sealed class Result<T> {}
+class Success<T> extends Result<T> { final T data; Success(this.data); }
+class Failure<T> extends Result<T> { final String error; Failure(this.error); }
 
-  const User({required this.name, required this.email, required this.joinedAt});
-
-  factory User.fromJson(Map<String, dynamic> json) {
-    return User(
-      name: json['name'] as String,
-      email: json['email'] as String,
-      joinedAt: DateTime.parse(json['joined_at'] as String),
-    );
-  }
-
-  String get displayName => name.isNotEmpty ? name : email.split('@').first;
-}
+String describe(Result<String> result) => switch (result) {
+  Success(:final data) => 'Got: $data',
+  Failure(:final error) => 'Error: $error',
+};
 ```
 
 ---
@@ -97,10 +90,11 @@ class User {
 **Key topics:**
 - Widget tree and composition patterns
 - Layouts with `Row`, `Column`, `Stack`, `Expanded`, and constraints
-- Forms, navigation, and local interactions
+- Forms, navigation (GoRouter), and local interactions
+- Material 3 theming and component APIs
 - Reusable UI patterns and widget extraction
 
-**Expected outcome:** Learners can build structured screens, complete app flows, and reusable components.
+**Expected outcome:** Learners can build structured screens using Material 3, implement declarative navigation with GoRouter, and create reusable components.
 
 ---
 
@@ -125,11 +119,13 @@ class User {
 
 **Key topics:**
 - Local versus shared state decisions
-- Provider, Riverpod, or Bloc patterns
+- **Riverpod** (recommended), Bloc, or Provider patterns
+- Riverpod code generation (`@riverpod` annotation)
+- Dart 3 sealed classes for state representation
 - Feature-based project organization
 - Separation of UI, logic, and data responsibilities
 
-**Expected outcome:** Learners begin structuring medium-sized apps with clear architecture boundaries.
+**Expected outcome:** Learners begin structuring medium-sized apps with clear architecture boundaries using modern state management.
 
 ---
 
@@ -138,13 +134,15 @@ class User {
 **Purpose:** Connect Flutter apps to real-world data and persistence.
 
 **Key topics:**
-- REST API integration with `http` or `dio`
-- JSON serialization and model mapping
-- Authentication flows and token management
-- Local persistence with `shared_preferences` and SQLite
+- REST API integration with `dio`
+- JSON serialization with `freezed` and `json_serializable`
+- Code generation with `build_runner`
+- Authentication flows and secure token management
+- Local persistence (`shared_preferences`, `drift`, `flutter_secure_storage`)
 - Repository pattern and clean data flow
+- Backend-as-a-Service: Firebase, Supabase
 
-**Expected outcome:** Learners can connect apps to data sources with confidence and proper architecture.
+**Expected outcome:** Learners can connect apps to data sources with production-quality architecture and proper code generation.
 
 ---
 
@@ -153,13 +151,16 @@ class User {
 **Purpose:** Improve reliability, debugging quality, and release discipline.
 
 **Key topics:**
-- Unit testing with `test` package
+- Unit testing with `test` and `mocktail`
 - Widget testing fundamentals
-- Debugging workflow and DevTools
-- Performance awareness and common pitfalls
-- Release builds, signing, and deployment basics
+- Integration testing and golden tests
+- Debugging workflow with Flutter DevTools
+- CI/CD setup (GitHub Actions, Codemagic)
+- Performance awareness and Impeller renderer
+- Release builds, signing, environment configuration, and deployment
+- OTA updates with Shorebird
 
-**Expected outcome:** Learners develop professional quality habits and deployment confidence.
+**Expected outcome:** Learners develop professional quality habits, automated testing pipelines, and multi-platform deployment confidence.
 
 **Sample test:**
 ```dart

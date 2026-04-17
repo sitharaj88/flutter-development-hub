@@ -195,6 +195,132 @@ This pattern works because beginners don't need more syntax. They need more **cl
 | 6 | Async, Future, await | Handling network and delayed data |
 | 7 | Exceptions and error handling | Robust code habits |
 | 8 | JSON and serialization | API data modeling |
+| 9 | Records, patterns, and sealed classes | Modern Dart 3 features |
+
+## Dart 3 — Modern language features
+
+Dart 3 introduced powerful language features that are now standard in professional Flutter codebases.
+
+### Records — lightweight data tuples
+
+Records let you return multiple values without creating a class:
+
+```dart
+// Return multiple values from a function
+(String, int) parseUserInput(String input) {
+  final parts = input.split(':');
+  return (parts.first.trim(), int.parse(parts.last.trim()));
+}
+
+void main() {
+  final (name, age) = parseUserInput('Alice : 28');
+  print('$name is $age years old'); // Alice is 28 years old
+}
+
+// Named fields in records
+({String city, double lat, double lng}) getLocation() {
+  return (city: 'Bangalore', lat: 12.97, lng: 77.59);
+}
+```
+
+### Patterns and pattern matching
+
+Patterns make data decomposition and control flow expressive and safe:
+
+```dart
+// Switch expressions (replace verbose switch statements)
+String describeScore(int score) => switch (score) {
+  >= 90 => 'Excellent',
+  >= 75 => 'Good',
+  >= 60 => 'Average',
+  _ => 'Needs improvement',
+};
+
+// Destructuring in conditions
+void processResponse(Map<String, dynamic> json) {
+  // Guard clause with pattern matching
+  if (json case {'status': 'ok', 'data': List items}) {
+    print('Received ${items.length} items');
+  } else {
+    print('Invalid response');
+  }
+}
+
+// List pattern matching
+void handleCommand(List<String> args) {
+  switch (args) {
+    case ['help']:
+      print('Showing help...');
+    case ['add', var item]:
+      print('Adding $item');
+    case ['remove', var item, '--force']:
+      print('Force removing $item');
+    default:
+      print('Unknown command');
+  }
+}
+```
+
+### Sealed classes — exhaustive type hierarchies
+
+Sealed classes replace stringly-typed state with compiler-checked alternatives:
+
+```dart
+// Define all possible states
+sealed class AuthState {}
+class Authenticated extends AuthState {
+  final String userId;
+  final String displayName;
+  Authenticated({required this.userId, required this.displayName});
+}
+class Unauthenticated extends AuthState {}
+class AuthLoading extends AuthState {}
+class AuthError extends AuthState {
+  final String message;
+  AuthError(this.message);
+}
+
+// The compiler ensures ALL cases are handled
+Widget buildAuthUI(AuthState state) => switch (state) {
+  Authenticated(:final displayName) => Text('Welcome, $displayName'),
+  Unauthenticated()                 => const LoginScreen(),
+  AuthLoading()                     => const CircularProgressIndicator(),
+  AuthError(:final message)         => ErrorWidget(message),
+};
+```
+
+### Class modifiers
+
+Dart 3 gives you precise control over class inheritance:
+
+```dart
+// final — cannot be extended or implemented outside the library
+final class DatabaseConnection {
+  void query(String sql) { /* ... */ }
+}
+
+// interface — can only be implemented, not extended
+interface class Validator {
+  bool validate(String input);
+}
+
+// base — can be extended but not implemented outside the library
+base class Repository {
+  Future<void> save(Map<String, dynamic> data) async { /* ... */ }
+}
+
+// sealed — abstract + exhaustive (used for state, as shown above)
+sealed class Result<T> {}
+class Success<T> extends Result<T> { final T data; Success(this.data); }
+class Failure<T> extends Result<T> { final String error; Failure(this.error); }
+```
+
+:::tip When to use Dart 3 features
+- **Records** — returning multiple values, lightweight data without classes
+- **Patterns** — `switch` expressions, JSON parsing, list destructuring
+- **Sealed classes** — app state, API results, any exhaustive type set
+- **Class modifiers** — library design and controlling inheritance
+:::
 
 ## Common learner pain points
 

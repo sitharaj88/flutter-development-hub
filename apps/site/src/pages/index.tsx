@@ -8,9 +8,9 @@ import styles from './index.module.css';
 
 const stats = [
   { number: '8', label: 'Training Modules', icon: '📚' },
-  { number: '30+', label: 'Tutorial Pages', icon: '📖' },
+  { number: '45+', label: 'Tutorial & Lesson Pages', icon: '📖' },
   { number: '7', label: 'Learning Tracks', icon: '🗺️' },
-  { number: '6', label: 'Capstone Stages', icon: '🎯' }
+  { number: '6', label: 'Target Platforms', icon: '📱' }
 ];
 
 const highlights = [
@@ -24,13 +24,13 @@ const highlights = [
     icon: '🎓',
     iconBg: 'rgba(12, 196, 226, 0.1)',
     title: 'Deep tutorial system',
-    body: 'Every concept gets a dedicated tutorial page with plain-language explanation, runnable Dart/Flutter examples, common mistakes, and guided exercises.'
+    body: 'Every concept gets a dedicated tutorial page with plain-language explanation, runnable Dart 3 and Flutter examples, common mistakes, and guided exercises.'
   },
   {
     icon: '🔬',
     iconBg: 'rgba(100, 120, 200, 0.1)',
-    title: 'Engineering-first approach',
-    body: 'Architecture, code organization, and quality thinking are introduced early — not saved for an "advanced" section most learners never reach.'
+    title: 'Multi-platform & modern',
+    body: 'Covers iOS, Android, web, and desktop from a single codebase — with Material 3, Impeller renderer, and the latest Dart 3 language features built in.'
   }
 ];
 
@@ -192,7 +192,7 @@ export default function Home(): JSX.Element {
                 <span className={styles.heroStatLabel}>Modules</span>
               </div>
               <div className={styles.heroStat}>
-                <span className={styles.heroStatNumber}>30+</span>
+                <span className={styles.heroStatNumber}>45+</span>
                 <span className={styles.heroStatLabel}>Tutorials</span>
               </div>
               <div className={styles.heroStat}>
@@ -229,6 +229,7 @@ export default function Home(): JSX.Element {
                 {'  '}<span className={styles.type}>Widget</span> <span className={styles.function}>build</span>(<span className={styles.type}>BuildContext</span> ctx) {'{\n'}
                 {'    '}<span className={styles.keyword}>return</span> <span className={styles.type}>MaterialApp</span>({'\n'}
                 {'      '}title: <span className={styles.string}>'Flutter Training'</span>,{'\n'}
+                {'      '}theme: <span className={styles.type}>ThemeData</span>(useMaterial3: <span className={styles.keyword}>true</span>),{'\n'}
                 {'      '}home: <span className={styles.keyword}>const</span> <span className={styles.type}>HomeScreen</span>(),{'\n'}
                 {'    '});{'\n'}
                 {'  }'}{'\n'}

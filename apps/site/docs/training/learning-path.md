@@ -1,13 +1,18 @@
 ---
 title: Full Learning Path
-description: The end-to-end path from programming basics to complete Flutter app design, development, and delivery.
+description: The end-to-end path from programming basics to complete Flutter app delivery.
+keywords: [Flutter learning path, Flutter training progression, learning stages]
 ---
 
 # Full Learning Path
 
-This training is designed as a real learning journey, not a loose collection of topics. A learner should be able to begin with basic programming ideas and move step by step toward designing, building, testing, and presenting a complete Flutter application with confidence.
+This training is designed as a **real learning journey** — each stage builds on the previous one, in the order learners actually need it.
 
-## Why this path matters
+:::tip Detailed stage breakdown
+For the complete stage-by-stage guide with topic tables and module links, see the [Flutter Learning Path](/docs/resources/flutter-learning-path).
+:::
+
+## Why order matters
 
 Many learners struggle because they jump directly into Flutter widgets before they understand:
 
@@ -16,129 +21,44 @@ Many learners struggle because they jump directly into Flutter widgets before th
 - how user flows become app structure
 - how state, APIs, and testing fit into the full picture
 
-This path solves that by introducing each layer in the order learners actually need it.
+This path solves that by introducing each layer **in sequence**.
 
-## Stage 1: Programming mindset
+## The seven stages
 
-The first stage builds the thinking foundation.
+| Stage | Focus | Key skills |
+|-------|-------|-----------|
+| **1. Programming foundations** | Logic, control flow, functions | Read and explain simple code |
+| **2. Dart in depth** | Types, null safety, async, Dart 3 patterns | Write clean Dart for Flutter |
+| **3. Flutter UI** | Widgets, layouts, Material 3, GoRouter | Turn designs into widget trees |
+| **4. Design & UX** | Visual hierarchy, responsive design, interaction | Build usable, not just functional, UI |
+| **5. State & architecture** | Riverpod, project structure, clean architecture | Structure scalable apps |
+| **6. Backend & data** | dio, freezed, repositories, persistence | Connect apps to real data |
+| **7. Testing & release** | Unit/widget/integration tests, CI/CD | Ship with confidence |
+| **Capstone** | Guided project, code review, presentation | Prove skills with a real project |
 
-Focus:
+## Recommended sequence
 
-- input, output, conditions, loops, and functions
-- breaking problems into smaller steps
-- writing and explaining simple logic-based solutions
-- building code-reading confidence instead of only code-copying habits
+```
+Foundations → Dart → Flutter UI → Design → Architecture → Data → Testing → Capstone
+```
 
-What learners should be able to do after this stage:
+Each stage has:
+- **Overview page** — structure and goals
+- **Tutorials** — detailed concept explanations with code
+- **Lessons** — teachable topic blocks
+- **Exercises** — reinforcement through practice
 
-- understand simple control flow
-- explain what a short piece of code is doing
-- solve small beginner problems without panic
+## How different audiences use this path
 
-## Stage 2: Dart language fundamentals
+| Audience | Approach |
+|----------|---------|
+| **Students** | Follow all 7 stages sequentially |
+| **Teams with Flutter experience** | Start at Stage 5 (architecture) or later |
+| **Workshop attendees** | Focus on Stages 2–4 in a compressed format |
+| **Institutions** | Map stages to semester weeks or bootcamp days |
 
-The second stage introduces Dart as the language behind Flutter.
+## Next steps
 
-Focus:
-
-- variables, types, operators, and functions
-- collections, classes, constructors, and null safety
-- async basics, exceptions, JSON, and clean structure
-
-What learners should be able to do after this stage:
-
-- model basic app data
-- write helper functions and reusable logic
-- understand why Flutter code depends on clean Dart thinking
-
-## Stage 3: Flutter foundations
-
-This is where learning becomes visible.
-
-Focus:
-
-- widget tree and composition
-- layouts, constraints, and screen building
-- navigation, forms, and reusable UI patterns
-- local state and interaction basics
-
-What learners should be able to do after this stage:
-
-- turn a screen idea into a widget tree
-- build complete app flows instead of isolated UI fragments
-- understand why composition and layout structure matter
-
-## Stage 4: App design and user experience
-
-This stage helps learners move from working UI to usable UI.
-
-Focus:
-
-- flow planning and user journeys
-- visual hierarchy, spacing, and readability
-- responsive thinking
-- loading, empty, error, and success states
-- reusable components and basic design systems
-
-What learners should be able to do after this stage:
-
-- design cleaner screens before and during coding
-- make interfaces easier to scan and use
-- avoid messy layouts that technically work but feel weak
-
-## Stage 5: Architecture, data, and delivery
-
-This stage introduces professional app structure.
-
-Focus:
-
-- local versus shared state
-- feature-based project organization
-- APIs, repositories, persistence, and app data flow
-- testing, debugging, performance, and release thinking
-
-What learners should be able to do after this stage:
-
-- organize medium-sized projects more responsibly
-- connect UI to backend data more cleanly
-- debug and evaluate app quality with better discipline
-
-## Stage 6: Capstone and presentation
-
-This is where learning becomes proof.
-
-Focus:
-
-- planning and building a complete mini app
-- making design and technical decisions intentionally
-- explaining tradeoffs clearly
-- presenting the result as a learning, portfolio, or internal delivery artifact
-
-What learners should be able to do after this stage:
-
-- build a more complete application
-- justify decisions instead of only showing screens
-- use the capstone as visible evidence of capability
-
-## Recommended learner sequence
-
-1. Programming fundamentals
-2. Dart deep dive
-3. Flutter UI foundations
-4. App design and UX
-5. State, backend, testing, and delivery quality
-6. Capstone planning and presentation
-
-## How to use this path inside the portal
-
-- use the overview pages for structure
-- use the tutorial library for detailed concept explanations
-- use the lessons pages for teachable topic blocks
-- use assignments, exercises, and capstone work to reinforce each stage
-
-## Best-fit use cases
-
-- students needing an end-to-end path
-- corporate teams needing a staged internal enablement structure
-- institutions wanting a clean workshop-to-bootcamp progression
-- founders or product teams learning while building
+- [**Flutter Learning Path (detailed)**](/docs/resources/flutter-learning-path) — Stage-by-stage breakdown with topic tables
+- [**Curriculum**](/docs/training/curriculum) — 8-module structured syllabus
+- [**Tutorial Library**](/docs/training/tutorial-library) — Hands-on tutorials for each stage
