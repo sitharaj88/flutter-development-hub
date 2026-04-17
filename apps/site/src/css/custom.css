@@ -49,7 +49,9 @@
 html[data-theme='dark'] {
   --ifm-background-color: #0a1221;
   --ifm-background-surface-color: rgba(18, 30, 50, 0.72);
-  --ifm-navbar-background-color: rgba(10, 18, 33, 0.88);
+  --ifm-navbar-background-color: rgba(10, 18, 33, 0.92);
+  --ifm-navbar-link-color: #c8d5e2;
+  --ifm-color-emphasis-700: #c8d5e2;
   --color-surface-elevated: rgba(20, 35, 60, 0.7);
   --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-text-muted: #8899aa;
@@ -64,9 +66,169 @@ html[data-theme='dark'] h4 {
   color: #e8edf3;
 }
 
+html[data-theme='dark'] body {
+  color: #b8c8d8;
+}
+
 html[data-theme='dark'] .theme-doc-markdown p,
 html[data-theme='dark'] .theme-doc-markdown li {
   color: #a8b8cc;
+}
+
+html[data-theme='dark'] .navbar__title {
+  color: #e0e8f0;
+}
+
+html[data-theme='dark'] .navbar__item.navbar__link,
+html[data-theme='dark'] .navbar__link {
+  color: #c0d0e0;
+}
+
+html[data-theme='dark'] .navbar__item.navbar__link:hover,
+html[data-theme='dark'] .navbar__link:hover {
+  background: rgba(255, 106, 61, 0.12);
+  color: #ff8d4a;
+}
+
+html[data-theme='dark'] .dropdown__menu {
+  background: #0e1929;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme='dark'] .dropdown__link {
+  color: #b0c0d0;
+}
+
+html[data-theme='dark'] .dropdown__link:hover {
+  background: rgba(255, 106, 61, 0.1);
+  color: #ff8d4a;
+}
+
+/* ─── Mobile sidebar ─── */
+.navbar-sidebar {
+  background: var(--ifm-background-color) !important;
+  /* backdrop-filter on .navbar creates a containing block for position:fixed,
+     constraining sidebar height to navbar height. Override with explicit vh. */
+  height: 100vh !important;
+  height: 100dvh !important;
+}
+
+.navbar-sidebar__brand {
+  background: var(--ifm-background-color) !important;
+}
+
+.navbar-sidebar__items {
+  background: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] .navbar-sidebar {
+  background: #0e1929 !important;
+}
+
+html[data-theme='dark'] .navbar-sidebar__brand {
+  background: #0e1929 !important;
+}
+
+html[data-theme='dark'] .navbar-sidebar__items {
+  background: #0e1929;
+}
+
+html[data-theme='dark'] .navbar-sidebar .menu__link {
+  color: #c0d0e0;
+}
+
+html[data-theme='dark'] .navbar-sidebar .menu__link:hover {
+  color: #ff8d4a;
+  background: rgba(255, 106, 61, 0.1);
+}
+
+/* ─── Dark mode sidebar / menu ─── */
+html[data-theme='dark'] .menu__link {
+  color: #b0c0d0;
+}
+
+html[data-theme='dark'] .menu__link:hover:not(.menu__link--active) {
+  background: rgba(255, 106, 61, 0.1);
+  color: #e0e8f0;
+}
+
+html[data-theme='dark'] .menu__link--active {
+  color: #ff8d4a;
+  background: rgba(255, 106, 61, 0.12);
+}
+
+html[data-theme='dark'] .menu__list-item-collapsible .menu__link {
+  color: #7a8a9a;
+}
+
+/* ─── Dark mode breadcrumbs ─── */
+html[data-theme='dark'] .breadcrumbs__link {
+  color: #b0c0d0;
+}
+
+html[data-theme='dark'] .breadcrumbs__link:hover {
+  background: rgba(255, 106, 61, 0.08);
+}
+
+/* ─── Dark mode pagination ─── */
+html[data-theme='dark'] .pagination-nav__sublabel {
+  color: #7a8a9a;
+}
+
+html[data-theme='dark'] .pagination-nav__label {
+  color: #e0e8f0;
+}
+
+html[data-theme='dark'] .pagination-nav__link {
+  background: rgba(20, 35, 60, 0.5);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Dark mode TOC ─── */
+html[data-theme='dark'] .table-of-contents__link {
+  color: #7a8a9a;
+}
+
+html[data-theme='dark'] .table-of-contents__link--active {
+  color: #ff8d4a;
+}
+
+/* ─── Dark mode tables ─── */
+html[data-theme='dark'] table {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme='dark'] table thead th {
+  color: #8899aa;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme='dark'] table tbody td {
+  color: #b0c0d0;
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme='dark'] table tbody tr:hover {
+  background: rgba(255, 106, 61, 0.04);
+}
+
+/* ─── Dark mode inline code ─── */
+html[data-theme='dark'] code {
+  background: rgba(255, 106, 61, 0.1);
+  color: #ff9d6a;
+  border-color: rgba(255, 106, 61, 0.18);
+}
+
+/* ─── Dark mode SVG diagrams ─── */
+html[data-theme='dark'] .theme-doc-markdown img[src$=".svg"],
+html[data-theme='dark'] .theme-doc-markdown img[src^="data:image/svg"] {
+  filter: invert(0.88) hue-rotate(180deg);
+  border-radius: 12px;
+}
+
+/* ─── Dark mode alerts/admonitions ─── */
+html[data-theme='dark'] .alert {
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 /* ─── Global ─── */
