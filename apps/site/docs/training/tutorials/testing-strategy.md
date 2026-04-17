@@ -39,6 +39,29 @@ A useful teaching rule is:
 - loading and success states as widget tests
 - button enable/disable behavior as a widget test
 
+## Plain-language explanation
+
+Testing is one of the clearest ways to teach learners that software quality is something we verify, not only assume.
+
+Good testing lessons should help learners understand:
+
+- what is worth testing
+- why it is worth testing
+- how testing helps during future changes
+
+## Simple teaching structure
+
+1. start with a pure function that is easy to test
+2. show how a small change can break behavior
+3. use the test to catch that break
+4. connect the idea to UI behavior and app reliability
+
+## What learners should be able to do after this lesson
+
+- explain the difference between unit and widget testing at a basic level
+- identify a few good candidates for testing
+- see testing as a practical tool instead of extra ceremony
+
 ## Teaching outcome
 
 - learners understand testing as risk reduction and clarity, not just extra work

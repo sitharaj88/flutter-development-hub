@@ -1,39 +1,66 @@
 ---
 title: Resources Overview
-description: The knowledge layer of the portal for learning, engineering, and delivery support.
+description: The knowledge layer of the portal for learning, engineering, delivery support, and long-term reuse.
 ---
 
 # Resources Overview
 
-The resources section is where the portal becomes more than a brochure. It gives visitors, learners, and teams something genuinely useful before they ever contact you.
+The resources section is where the portal becomes more than a public-facing training site. It gives learners, teams, and partners something genuinely useful before, during, and after an engagement.
 
 ## What this section should do
 
-- help students navigate the training journey more clearly
-- help teams see engineering depth and practical standards
-- support delivery work with reusable references and guidance
-- make the site more credible, searchable, and worth returning to
+- help learners navigate the training journey more clearly
+- help teams see engineering depth and delivery discipline
+- support programs with reusable references, standards, and notes
+- make the portal more valuable over time instead of only more descriptive
 
 ## Core resource categories
 
-- learning paths and structured study sequences
-- engineering standards and delivery conventions
-- onboarding notes and reusable knowledge references
-- checklists, process notes, and practical technical guidance
+### Learning paths
+
+These help learners understand:
+
+- where to start
+- what comes next
+- how the full training journey fits together
+
+### Engineering standards
+
+These help teams and advanced learners understand:
+
+- how Flutter work should be structured
+- what quality expectations matter
+- how implementation becomes easier to review and scale
+
+### Knowledge references
+
+These support:
+
+- training batches
+- onboarding
+- consulting conversations
+- future delivery reuse
 
 ## Why resources matter commercially
 
-- they show depth before a sales conversation
-- they reduce friction in training and consulting discussions
-- they help people understand how you think, not only what you offer
-- they create a long-term content foundation that compounds over time
+- they show depth before a sales or enquiry conversation
+- they reduce friction in consulting and training discussions
+- they help people understand how the practice thinks, not just what it sells
+- they create a long-term content foundation that compounds
 
-## What a strong resource section should feel like
+## Why resources matter educationally
+
+- learners can revise after sessions
+- trainers can reuse structured material across batches
+- institutions can use the portal as a continuity layer
+- teams can use the material as reference after workshops or enablement programs
+
+## What a strong resources section should feel like
 
 - practical, not academic
-- clear enough for learners
-- credible enough for technical teams
-- structured enough to support future workshops, proposals, and delivery work
+- detailed enough to be useful
+- credible enough for technical audiences
+- structured enough to support future scaling of the portal
 
 ## Best next pages
 

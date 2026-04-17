@@ -5,7 +5,7 @@ description: The result categories and proof signals that make the portal persua
 
 # Outcomes
 
-This page is where the trust layer becomes concrete. Even before every testimonial and case study is published, the portal should make clear what kinds of outcomes the work is designed to create.
+This page is where the trust layer becomes concrete. Even before every testimonial and case study is published, the portal should clearly explain what kinds of outcomes the work is designed to create.
 
 ## Outcome categories
 
@@ -43,3 +43,9 @@ This page is where the trust layer becomes concrete. Even before every testimoni
 - testimonials from learners, leads, or decision-makers
 - before-and-after engineering process improvements
 - code artifacts, screenshots, and architecture snapshots
+
+## Why these outcomes matter
+
+- they make the portal feel grounded in results instead of only explanation
+- they help different audiences recognize the value in their own terms
+- they create a stronger bridge between training, implementation, and trust

@@ -38,6 +38,44 @@
   color: #43536a;
 }
 
+.inlineContactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.35rem;
+}
+
+.inlineContactItem,
+.contactCard {
+  border: 1px solid rgba(16, 27, 46, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: #132235;
+  text-decoration: none;
+}
+
+.inlineContactItem {
+  min-width: 10rem;
+  padding: 0.8rem 0.95rem;
+}
+
+.inlineContactItem span,
+.contactCard span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #6b7b8d;
+}
+
+.inlineContactItem strong,
+.contactCard strong {
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .kicker,
 .bandLabel,
 .sectionHeader span,
@@ -260,6 +298,17 @@
   letter-spacing: -0.04em;
 }
 
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.contactCard {
+  padding: 1rem 1.05rem;
+}
+
 @media (max-width: 996px) {
   .hero,
   .band,
@@ -268,7 +317,8 @@
   .processGrid,
   .offerGrid,
   .trackList,
-  .executiveStrip {
+  .executiveStrip,
+  .contactGrid {
     grid-template-columns: 1fr;
   }
 

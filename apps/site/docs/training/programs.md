@@ -1,11 +1,11 @@
 ---
 title: Training Programs
-description: Program types for individuals, companies, and institutions.
+description: Program types for students, teams, institutions, and product-driven engagements.
 ---
 
 # Training Programs
 
-The training offer should feel modular and intentional, not like one generic course for everyone.
+The training offer should feel intentionally structured, not like one generic course for every audience. Different learners and organizations need different program shapes, pacing, and outcomes.
 
 ## Program family structure
 
@@ -14,63 +14,107 @@ The training offer should feel modular and intentional, not like one generic cou
 - institutional programs for academic or community delivery
 - mentoring-led programs for product teams building while learning
 
-## Student track
+## 1. Student track
 
-- beginner-friendly progression from Dart basics to Flutter app delivery
-- assignments, mini projects, and portfolio direction
-- interview-oriented reinforcement for learners aiming at jobs or internships
+This track is meant for serious learners who want to move from basics to real application building.
 
-### Best when
+Focus areas:
 
-- learners need structure, accountability, and visible milestones
-- the goal is employability, project confidence, and hands-on momentum
-- the training should culminate in a presentable capstone or portfolio outcome
+- programming and Dart foundations
+- Flutter UI, navigation, and form handling
+- project structure, APIs, state, and app design
+- portfolio and capstone readiness
 
-## Corporate enablement
+Best when:
 
-- upskilling for engineering teams moving into Flutter
-- customized depth based on the current team maturity
-- live architecture and implementation support alongside training
+- learners need structure and accountability
+- the goal is employability or stronger project confidence
+- the training should end with presentable output rather than vague exposure
 
-### Best when
+Typical outcomes:
 
-- a company needs internal capability, not just awareness
-- engineering leaders want faster onboarding into Flutter delivery
-- the training must align with product goals, coding standards, and team workflows
+- stronger implementation confidence
+- less tutorial dependency
+- clearer technical explanation ability during interviews or reviews
 
-## College and bootcamp mode
+## 2. Corporate enablement track
 
-- workshops for awareness and fast onboarding
-- multi-session bootcamps with hands-on labs
-- faculty-friendly structure for extended programs and department events
+This track is built for engineering teams that need capability building tied to actual delivery quality.
 
-### Best when
+Focus areas:
 
-- institutions want practical mobile development exposure
-- departments need a structured program with reusable lab exercises
-- the goal is student engagement plus stronger applied outcomes
+- Flutter foundations for teams new to the stack
+- architecture and state choices for maintainable projects
+- API integration, testing, and release discipline
+- standards, review quality, and shared delivery practices
 
-## Founder and startup mentoring
+Best when:
 
-- combine learning with product implementation
-- help teams avoid architecture mistakes early
-- shorten the time from prototype thinking to production-ready planning
+- a company is adopting Flutter more seriously
+- engineering leaders want internal capability, not only awareness
+- the training must align with live team workflows and business goals
 
-### Best when
+Typical outcomes:
 
-- a startup wants to learn while building
-- the team needs direct support with architecture and delivery choices
-- timelines are tight and rework would be expensive
+- stronger onboarding
+- clearer standards
+- more consistent engineering decisions
+
+## 3. Institutional track
+
+This track is built for colleges, departments, academies, and communities.
+
+Focus areas:
+
+- practical mobile development exposure
+- structured workshops or bootcamps
+- labs, mini projects, and guided capstones
+- outcome-oriented training that still fits academic constraints
+
+Best when:
+
+- institutions want current, practical content
+- batches need repeatable structure
+- the goal is both engagement and applied learning
+
+Typical outcomes:
+
+- stronger student participation
+- visible project work
+- a clearer technical story for academic stakeholders
+
+## 4. Founder and startup mentoring track
+
+This is the best fit when the learner is also trying to move a product forward.
+
+Focus areas:
+
+- learning while building
+- technical planning and architecture choices
+- direct product-oriented implementation guidance
+- reducing avoidable mistakes early
+
+Best when:
+
+- a startup is moving quickly
+- the team needs both learning and engineering direction
+- product execution matters as much as curriculum coverage
+
+Typical outcomes:
+
+- faster product progress
+- cleaner early technical decisions
+- better understanding in the context of live implementation
 
 ## How to choose the right program
 
-- choose the student track for skill-building and portfolio growth
-- choose corporate enablement for engineering teams and internal capability development
-- choose bootcamp mode for institutions and community-focused learning environments
-- choose mentoring-led delivery when a live product matters as much as the training itself
+- choose the student track for structured learning and portfolio growth
+- choose the corporate track for internal engineering capability
+- choose the institutional track for workshops and repeatable academic delivery
+- choose the mentoring track when product execution and learning must happen together
 
-## How these programs scale
+## How these programs can scale
 
-- start with a workshop for awareness
-- move into a structured package for capability building
-- extend into capstone, review, and delivery support when deeper outcomes are needed
+- begin with a workshop or short orientation
+- move into a structured multi-session program
+- extend into capstone, review, standards, or implementation support where deeper outcomes are needed

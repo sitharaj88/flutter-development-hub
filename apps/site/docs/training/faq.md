@@ -1,62 +1,123 @@
 ---
 title: FAQs
-description: Answers to common questions about Flutter training and engagement formats.
+description: Answers to common questions about Flutter training, corporate programs, workshops, and engagement formats.
 ---
 
 # FAQs
 
 ## Who is this training for?
 
-The program works for beginners, developers transitioning into Flutter, startup teams, and institutions that want a structured mobile development track.
+The training is designed for multiple audience types:
+
+- beginners who need a strong structured path
+- developers transitioning into Flutter from other stacks
+- startup or internal product teams
+- colleges and institutions that want practical mobile development programs
 
 ## Can the curriculum be customized?
 
-Yes. The modules can be combined into short workshops, multi-week cohorts, corporate enablement programs, or project-based mentoring.
+Yes. The modules can be shaped into:
+
+- short workshops
+- multi-week cohorts
+- corporate enablement tracks
+- institutional bootcamps
+- project-based mentoring or blended delivery support
 
 ## Are there named training packages?
 
-Yes. The training section includes package-style offerings such as foundation, corporate enablement, advanced delivery, institutional bootcamp, and mentored build formats. These can be customized to the audience and timeline.
+Yes. The training section includes package-style offerings such as:
+
+- Flutter Foundation Intensive
+- Corporate Enablement Sprint
+- Advanced Delivery Program
+- Institutional Bootcamp
+- Mentored Build Lab
+
+These are starting structures and can be customized to the audience and timeline.
 
 ## Is this only for mobile apps?
 
-No. Flutter training can include responsive thinking for desktop and larger-screen workflows as part of the broader product engineering conversation.
+No. The training can include responsive thinking for larger-screen experiences and broader product engineering conversations where Flutter is being used beyond basic mobile app delivery.
 
-## Can you support a real client or internal project?
+## Can you support a real product or internal project?
 
-Yes. A strong format is to combine training with guided implementation so teams learn while building something useful.
+Yes. One of the strongest formats is to combine learning with guided implementation so teams improve capability while building something useful.
 
 ## Is the training only for beginners?
 
-No. The structure can support beginner, intermediate, and team-enablement use cases. The depth depends on the audience maturity and the engagement goal.
+No. The structure supports beginner, intermediate, and advanced team-enablement use cases. The depth depends on:
+
+- audience maturity
+- business need
+- timeline
+- whether the engagement is learning-only or blended with implementation
 
 ## Do teams need prior Flutter experience?
 
-Not necessarily. Teams can start from fundamentals or join at a more advanced level if they already have some Flutter exposure and need stronger standards or architecture guidance.
+Not necessarily. Teams can start from foundations or join at a more advanced level if they already have some Flutter exposure and need stronger standards or architecture guidance.
 
 ## What is included besides live sessions?
 
-Programs can include assignments, review checkpoints, learning materials, starter repositories, architecture notes, and capstone guidance depending on the engagement format.
+Depending on the format, programs can include:
+
+- assignments
+- review checkpoints
+- learning materials
+- starter repositories
+- architecture notes
+- capstone guidance
+- standards and reference material
 
 ## Is there a weekly syllabus available?
 
-Yes. The program can be presented as a weekly syllabus for cohorts, academic environments, or corporate learning tracks that want a more formal structure.
+Yes. The program can be presented as a weekly syllabus for:
+
+- learner cohorts
+- academic environments
+- corporate learning tracks
 
 ## Is this suitable for corporate teams?
 
-Yes. Corporate programs are designed around capability-building, engineering maturity, and delivery improvement rather than generic classroom pacing.
+Yes. Corporate programs are designed around:
+
+- capability building
+- engineering maturity
+- delivery improvement
+- reusable internal standards
+
+They are not positioned as generic classroom training.
 
 ## Can the training be delivered onsite or online?
 
-Yes. The content is designed for live online delivery, onsite sessions, hybrid models, and blended mentoring plus implementation support.
+Yes. The content can be delivered as:
+
+- live online sessions
+- onsite classroom or company sessions
+- hybrid formats
+- blended mentoring plus implementation support
 
 ## Are assessments and capstones included?
 
-They can be. Assessments, assignments, review checkpoints, and capstone projects are available as part of fuller programs and can be adjusted to the audience maturity.
+They can be. Assessments, assignments, review checkpoints, and capstone projects are available as part of fuller programs and can be adjusted to the audience maturity and time available.
 
 ## Can workshops and long-form training both be offered?
 
-Yes. The same knowledge base can support short workshops, multi-week programs, corporate enablement tracks, and blended learning plus implementation engagements.
+Yes. The same knowledge base can support:
 
-## Can the brochure be downloaded from this site?
+- short workshops
+- bootcamps
+- multi-week structured programs
+- blended learning plus implementation engagements
 
-Yes. Once the brochure PDF is placed in the static files folder, it can be linked directly from the homepage and training pages.
+## How do enquiries work?
+
+Enquiries can be started through:
+
+- `sitharaj.info@gmail.com`
+
+You can also review the Contact section for:
+
+- engagement process
+- enquiry guidance
+- public GitHub and LinkedIn links

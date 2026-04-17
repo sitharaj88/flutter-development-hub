@@ -5,14 +5,14 @@ description: How the repository can grow beyond docs into demos, labs, showcase 
 
 # Apps Overview
 
-The apps section is where the portal proves that the work is not only instructional. It is also executable.
+The apps section is where the portal proves that the work is not only instructional. It is also executable. Over time, this area should connect the training material to visible artifacts in code.
 
 ## What can live in `apps/`
 
 - polished showcase apps that demonstrate Flutter quality
 - student lab projects and guided assignments
 - starter kits for training batches or internal teams
-- internal tools for enrolment, review, or content operations
+- internal tools for enquiry, review, or content operations
 
 ## Why this section matters
 
@@ -23,13 +23,47 @@ The apps section is where the portal proves that the work is not only instructio
 
 ## High-value app categories
 
-- UI showcase apps with strong layout and interaction quality
-- architecture-focused sample apps
-- training lab apps with guided milestones
-- business-support tools for the training and consulting workflow
+### Showcase apps
+
+Used to demonstrate:
+
+- UI quality
+- Flutter architecture decisions
+- responsive behavior
+- overall delivery maturity
+
+### Lab apps
+
+Used to support:
+
+- training cohorts
+- bootcamp milestones
+- guided assignments
+- practice with real codebases
+
+### Starter kits
+
+Used to support:
+
+- repeatable cohort setup
+- better engineering defaults
+- faster onboarding for teams or learners
+
+### Internal tools
+
+Used to support:
+
+- enquiry management
+- evaluation workflows
+- training operations
+- internal business processes
 
 ## Good first milestones
 
 1. one polished showcase app
 2. one cohort starter project
 3. one internal workflow tool that supports the business
+
+## Long-term value
+
+As the apps area grows, it can become one of the strongest parts of the portal because it links teaching, proof, and engineering practice together.

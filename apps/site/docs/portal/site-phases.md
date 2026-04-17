@@ -61,3 +61,9 @@ This page translates the vision into a practical build sequence.
 - define the content update workflow for the repo
 - keep deployment and maintenance simple for GitHub Pages
 
+## What success looks like
+
+- the homepage clearly explains the training and tutorial value
+- the docs feel deep enough to teach from
+- service and proof pages feel credible to companies and institutions
+- resources and apps make the portal more useful over time

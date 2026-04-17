@@ -5,7 +5,7 @@ description: The main contact paths for training, consulting, and Flutter develo
 
 # Enquiry
 
-The contact experience should be simple, direct, and professional.
+The contact experience should be simple, direct, and professional. This page explains the best ways to start a conversation and what information helps shape the right response quickly.
 
 ## Main contact
 
@@ -30,6 +30,7 @@ The contact experience should be simple, direct, and professional.
 - expected audience type such as students, teams, or institutions
 - preferred timeline
 - preferred format such as online, onsite, or hybrid
+- whether the current need is planning, implementation, or both
 
 ## Good subject lines
 
@@ -37,3 +38,11 @@ The contact experience should be simple, direct, and professional.
 - Flutter Development Discussion
 - College Workshop Request
 - Mentoring and Capability Building Enquiry
+
+## What happens next
+
+After the first contact:
+
+- the requirement can be clarified
+- the right program or engagement path can be identified
+- the next step can be a proposal, discussion, workshop, or scoped conversation

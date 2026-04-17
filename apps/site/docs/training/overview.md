@@ -5,12 +5,13 @@ description: Corporate-grade Flutter training for teams, institutions, and serio
 
 # Training Overview
 
-This training offer should read like a premium capability-building program, not a generic course page. The goal is to show that the learning is structured, practical, and strong enough for corporate teams, institutions, and ambitious learners.
+This training offer should read like a professional training and tutorial system, not a generic course page. The goal is to show that the learning is structured, practical, detailed enough to teach from, and strong enough for corporate teams, institutions, and ambitious learners.
 
 ## What this training is built to do
 
 - turn Flutter from an abstract skill into a repeatable engineering capability
 - help learners move beyond tutorial-style coding into real implementation thinking
+- provide detailed tutorial material that can support teaching, revision, and self-study
 - support organizations that want stronger internal delivery without wasting time on shallow onboarding
 - create visible outcomes through assignments, reviews, architecture thinking, and working project artifacts
 
@@ -18,6 +19,7 @@ This training offer should read like a premium capability-building program, not 
 
 - teach Flutter as a professional delivery stack, not only a UI toolkit
 - combine practical implementation with engineering judgment
+- support lesson-by-lesson teaching through tutorials, exercises, and structured explanation
 - create reusable understanding around structure, quality, and release readiness
 - make the learning useful for real teams, real learners, and real products
 
@@ -43,6 +45,13 @@ This training offer should read like a premium capability-building program, not 
 - how to build, validate, and connect real UI flows with API-backed data
 - how to make sound decisions around state, storage, testing, and deployment
 - how to work with stronger engineering standards instead of one-off fixes
+
+## What makes this a stronger tutorial system
+
+- topic pages are being expanded into detailed teaching material
+- lesson pages break concepts into smaller, teachable units
+- tutorial tracks connect theory, examples, and practical exercises
+- the portal supports both trainer-led teaching and self-paced revision
 
 ## Deliverables participants can expect
 
@@ -73,6 +82,7 @@ This training offer should read like a premium capability-building program, not 
 - assignments are meant to reinforce engineering decisions, not only syntax recall
 - architecture, quality, and release thinking appear early instead of being saved for the end
 - the content can support companies, colleges, and serious individual learners without becoming vague
+- the tutorial material is meant to be detailed enough that it can actually be taught from
 
 ## Recommended next pages
 

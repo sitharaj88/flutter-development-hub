@@ -5,7 +5,7 @@ description: Recommended durations, pacing models, and session structures for Fl
 
 # Schedule and Duration
 
-The same content can be delivered in different rhythms depending on the audience and business need.
+The same training content can be delivered in different rhythms depending on the audience, goals, and business context. This page explains the main pacing models that work well for Flutter programs.
 
 ## Recommended pacing models
 
@@ -16,6 +16,32 @@ The same content can be delivered in different rhythms depending on the audience
 | Corporate sprint | teams adopting Flutter | 3 to 6 weeks |
 | Institutional bootcamp | colleges and training centers | 30 to 40 hours |
 | Mentored build | startups and live product teams | 6 to 8 weeks |
+
+## How to choose the right pacing
+
+### Intensive format
+
+Best when:
+
+- the goal is concentrated momentum
+- a workshop or bootcamp needs quick impact
+- team time is limited but focused
+
+### Cohort format
+
+Best when:
+
+- learners need practice time between sessions
+- assignments and reinforcement matter
+- the goal is steady capability building
+
+### Corporate sprint format
+
+Best when:
+
+- a team is adopting Flutter while continuing normal product work
+- sessions need to fit around delivery pressure
+- reinforcement and review matter as much as lectures
 
 ## Sample weekly rhythm
 
@@ -44,3 +70,8 @@ The same content can be delivered in different rhythms depending on the audience
 - module-based progression works better than isolated talks
 - capstone milestones improve retention and accountability
 
+## What strong pacing should feel like
+
+- fast enough to keep momentum
+- slow enough to allow real understanding
+- practical enough that each session leaves visible progress

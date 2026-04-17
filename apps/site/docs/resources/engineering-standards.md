@@ -23,6 +23,14 @@ Engineering standards are what separate a one-off code exercise from a repeatabl
 - testing expectations for logic and UI
 - release preparation and environment handling
 
+## What this can include in practice
+
+- feature folder conventions
+- naming rules for screens, widgets, and models
+- guidelines for state and repository organization
+- expectations for error handling and loading states
+- testing and review expectations for important flows
+
 ## Why this matters
 
 - training feels stronger when it connects to real delivery discipline
@@ -36,3 +44,12 @@ Engineering standards are what separate a one-off code exercise from a repeatabl
 - flexible enough for real project context
 - easy to explain to new developers
 - practical enough to use during code review and onboarding
+
+## Why this section should keep growing
+
+As the portal matures, this page can become a practical operating handbook for:
+
+- training cohorts
+- internal engineering teams
+- consulting engagements
+- future starter kits and sample apps

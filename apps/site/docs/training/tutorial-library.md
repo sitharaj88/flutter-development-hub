@@ -5,28 +5,89 @@ description: A larger library of detailed tutorial material across programming, 
 
 # Tutorial Library
 
-This section is where the training grows from a curriculum outline into a true handbook. The goal is to build a large body of material that can support live teaching, guided self-study, revision, and corporate enablement.
+The tutorial library is where the training system becomes a real handbook. The curriculum explains the path, but the tutorial library provides the deeper concept-by-concept material that supports teaching, revision, self-study, and long-term reuse.
 
 ## What this library is for
 
 - lesson preparation before live sessions
-- detailed walkthroughs after live sessions
-- revision material for learners who need to revisit difficult topics
-- reusable content for future batches, teams, and institutions
+- deeper walkthroughs after live sessions
+- revision material for learners revisiting difficult topics
+- reusable content for future batches, teams, institutions, and mentoring engagements
+
+## How this differs from the curriculum
+
+The curriculum answers:
+
+- what should be taught
+- in what order
+- to what depth
+
+The tutorial library answers:
+
+- how a concept should be explained
+- what examples should be used
+- what common mistakes learners make
+- what exercises help the concept stick
 
 ## Main tutorial tracks
 
-- programming foundations
-- Dart deep dive
-- Flutter UI and interaction
-- app design and UX
-- architecture and data flow
-- testing, debugging, performance, and release
-- capstone planning and execution
+### Programming Foundations
 
-## How to use it
+This track builds the base for learners who need comfort with logic before Flutter and Dart complexity appear.
+
+### Dart Deep Dive
+
+This track covers Dart in detail so learners can handle data, logic, classes, async flows, and modeling properly before or during Flutter work.
+
+### Flutter UI
+
+This track focuses on widget trees, layout reasoning, forms, navigation, and user interaction.
+
+### Design and UX
+
+This track covers user flow, hierarchy, spacing, responsive thinking, and reusable component decisions.
+
+### Architecture and Data
+
+This track explains state, structure, repositories, APIs, persistence, and maintainable project organization.
+
+### Quality and Delivery
+
+This track focuses on testing, debugging, performance, and release thinking.
+
+### Capstone Execution
+
+This track helps learners turn all the previous sections into a complete project they can explain and refine.
+
+## How to use the tutorial library well
+
+### For learners
 
 - start with the learning path if you are new
-- follow the curriculum if you want a structured program
-- use the tutorial library when you want concept-by-concept depth
-- combine the lesson pages with assignments, examples, and project work
+- use tutorials when you want more depth than the overview pages provide
+- revisit difficult topics after assignments or guided builds
+
+### For trainers
+
+- use the tutorials as teaching support material
+- adapt examples and exercises to the audience
+- combine tutorial pages with live coding, review, and capstone work
+
+### For teams and institutions
+
+- use selected tracks to support focused workshops
+- use tutorials as references after enablement sessions
+- reuse them as internal knowledge or revision material
+
+## What a strong tutorial page should include
+
+- plain-language explanation
+- one or more runnable examples
+- expected output or expected behavior
+- common beginner mistakes
+- guided exercises or practice prompts
+- connection to real Flutter implementation
+
+## Why this section matters
+
+Without a strong tutorial library, a training portal can feel like a syllabus. With a strong tutorial library, it becomes a real learning system.

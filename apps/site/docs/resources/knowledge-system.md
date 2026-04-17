@@ -29,6 +29,15 @@ The most valuable version of this portal is not just a set of pages. It is a reu
 - college and bootcamp program delivery
 - demo apps, showcase work, and reusable templates
 
+## Why this is more valuable than isolated pages
+
+When the portal is treated as a knowledge system:
+
+- the same material can support marketing and delivery
+- training content becomes easier to reuse
+- future apps and examples strengthen the docs
+- the repository becomes more useful over time instead of only bigger
+
 ## High-value additions over time
 
 - workshop playbooks

@@ -36,7 +36,20 @@ Programming Foundations is the first serious layer of the training. It is where 
 - keep practice small and frequent instead of using one big exercise too early
 - encourage learners to explain their reasoning aloud, not just type code
 
+## Why this stage matters so much
+
+When this stage is weak:
+
+- Dart feels harder than it should
+- Flutter code feels intimidating
+- learners depend too much on copying
+
+When this stage is strong:
+
+- later topics become easier
+- learners make better sense of syntax
+- confidence builds earlier
+
 ## Bridge to the next stage
 
 Once learners are comfortable here, Dart becomes easier to learn because the mental model for programming is already in place.
-

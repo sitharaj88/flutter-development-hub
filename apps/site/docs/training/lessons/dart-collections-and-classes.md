@@ -21,6 +21,19 @@ This lesson connects programming basics to app development by showing how real a
 - constructors and object creation
 - simple methods inside classes
 
+## Plain-language explanation
+
+Collections help store groups of values.
+
+Classes help represent meaningful things such as:
+
+- users
+- products
+- orders
+- courses
+
+That is the shift from generic coding to app-oriented thinking.
+
 ## Real app examples
 
 - list of products
@@ -34,7 +47,12 @@ This lesson connects programming basics to app development by showing how real a
 - build a list of products and display useful information
 - compare a map-based and class-based approach to storing user data
 
+## What learners should be able to do after this lesson
+
+- choose the right collection for a task
+- understand why classes improve app readability
+- create small model objects with clearer structure
+
 ## Teaching outcome
 
 - learners begin thinking in terms of app models, not just disconnected values
-

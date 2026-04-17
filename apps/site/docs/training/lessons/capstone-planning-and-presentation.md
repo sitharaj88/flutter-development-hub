@@ -28,7 +28,19 @@ The final lesson should help learners turn their skill into visible proof.
 - form interaction and validation
 - clean structure and reusable UI
 
+## Good teaching prompts
+
+- is the scope realistic for the time available?
+- what is the main user journey?
+- which decisions matter most to explain?
+- what would be improved with more time?
+
+## What learners should be able to do after this lesson
+
+- choose a more realistic project scope
+- explain their app with more confidence
+- treat the project as evidence of learning rather than only a task to finish
+
 ## Teaching outcome
 
 - learners finish the training with something they can explain, improve, and showcase
-

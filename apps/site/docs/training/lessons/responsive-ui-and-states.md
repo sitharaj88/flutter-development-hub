@@ -20,6 +20,17 @@ Strong apps feel clear in different situations, not only in ideal screenshots.
 - loading states, empty states, success states, and failure states
 - planning for real user conditions rather than ideal demos
 
+## Plain-language explanation
+
+An app should not feel complete only when:
+
+- the network is fast
+- there is lots of data
+- the user makes no mistakes
+- the screen size matches the designer mockup
+
+Teaching states and responsiveness helps learners build more realistic apps.
+
 ## Practical exercises
 
 - adapt a simple list layout for tablet width
@@ -27,7 +38,12 @@ Strong apps feel clear in different situations, not only in ideal screenshots.
 - create a friendly error state for network failure
 - compare a poor loading experience to a well-designed one
 
+## What learners should be able to do after this lesson
+
+- think about edge cases earlier
+- adapt layouts more intentionally
+- make apps feel more complete and professional
+
 ## Teaching outcome
 
 - learners build apps that feel more complete and professional
-

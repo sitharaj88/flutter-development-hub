@@ -20,6 +20,15 @@ Good app design should be taught as a practical skill, not only as decoration.
 - readability through typography and contrast
 - simple component consistency across the app
 
+## Plain-language explanation
+
+Design principles are useful because they help answer practical questions:
+
+- what should the user notice first?
+- what is the main action here?
+- which elements belong together?
+- why does one screen feel calm while another feels cluttered?
+
 ## Real design comparisons
 
 - cluttered screen versus clean screen
@@ -33,7 +42,12 @@ Good app design should be taught as a practical skill, not only as decoration.
 - redesign a basic dashboard using better hierarchy
 - compare strong and weak button placement and feedback
 
+## What learners should be able to do after this lesson
+
+- notice weak layout patterns more quickly
+- improve simple screens before over-designing them
+- connect design decisions to usability instead of visual taste alone
+
 ## Teaching outcome
 
 - learners develop design awareness that improves both app quality and confidence
-

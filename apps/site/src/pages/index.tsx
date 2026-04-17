@@ -6,57 +6,93 @@ import styles from './index.module.css';
 
 const highlights = [
   {
-    title: 'Executive-grade training programs',
-    body: 'Designed for companies that want stronger mobile capability, sharper engineering habits, and teams that can ship with more confidence.'
+    title: 'Professional training programs',
+    body: 'Structured for companies, institutions, and serious learners who want practical Flutter training with stronger engineering depth and clearer outcomes.'
   },
   {
-    title: 'Corporate Flutter delivery support',
-    body: 'From architecture and implementation to rescue engagements and team acceleration, the offer goes far beyond classroom-style training.'
+    title: 'Detailed tutorial system',
+    body: 'The portal combines guided learning paths, in-depth topic pages, lesson blocks, examples, exercises, and capstone-oriented teaching material.'
   },
   {
-    title: 'A more interesting portal experience',
-    body: 'Less static brochure, more credible digital headquarters for training, consulting, engineering standards, demos, and future products.'
+    title: 'Training with real implementation value',
+    body: 'The content is designed to move beyond surface explanation into app design, engineering practice, architecture, backend integration, testing, and delivery readiness.'
   }
 ];
 
 const capabilityPillars = [
   {
     title: 'Training',
-    eyebrow: 'Capability Building',
-    body: 'Corporate batches, leadership-friendly learning paths, team onboarding, and practical labs with clear progression.',
+    eyebrow: 'Professional Learning',
+    body: 'Structured training programs, learning paths, practical labs, and guided progression for serious Flutter skill development.',
     href: '/docs/training/overview'
   },
   {
-    title: 'Development',
-    eyebrow: 'Product Delivery',
-    body: 'Architecture, engineering implementation, release hardening, and delivery support for product teams building with Flutter.',
-    href: '/docs/flutter-development/services'
+    title: 'Tutorial Library',
+    eyebrow: 'In-Depth Content',
+    body: 'Detailed tutorials, lesson-level explanations, examples, exercises, and concept pages that support real teaching and self-study.',
+    href: '/docs/training/tutorial-library'
   },
   {
     title: 'Resources',
     eyebrow: 'Knowledge Layer',
-    body: 'Learning paths, engineering standards, onboarding notes, and reusable documentation that compounds over time.',
+    body: 'Learning paths, engineering standards, onboarding notes, and reusable references that support both training and implementation.',
     href: '/docs/resources/overview'
   },
   {
-    title: 'Apps',
-    eyebrow: 'Proof In Code',
-    body: 'Demo apps, internal tools, cohort labs, starter kits, and future showcase projects living in the same repository.',
-    href: '/docs/apps/overview'
+    title: 'Development',
+    eyebrow: 'Implementation Support',
+    body: 'Architecture guidance, delivery support, code quality improvement, and product-oriented Flutter implementation help.',
+    href: '/docs/flutter-development/services'
   }
 ];
 
 const engagementTracks = [
-  'Corporate team upskilling and engineering enablement',
-  'Product consulting, architecture, and delivery acceleration',
-  'Institutional bootcamps, workshops, and applied training labs',
-  'Knowledge systems with docs, standards, demos, and implementation assets'
+  'Programming foundations, Dart, Flutter UI, design, backend, testing, and capstones',
+  'Professional tutorial pages with examples, exercises, and structured progression',
+  'Corporate programs, workshops, and institutional bootcamps',
+  'Implementation support, engineering standards, proof, and future showcase apps'
 ];
 
 const proofSignals = [
-  'Programs shaped for companies, institutions, and product teams',
-  'Training connected to engineering practice, not theory alone',
-  'A docs-first structure that scales into a serious capability hub'
+  'Detailed training content across the full Flutter journey',
+  'Tutorial material connected to engineering practice, not theory alone',
+  'A docs-first structure that scales into a serious learning and implementation hub'
+];
+
+const audienceCards = [
+  {
+    title: 'Students',
+    body: 'A structured path from programming and Dart foundations to Flutter app building, capstones, and stronger portfolio confidence.',
+    href: '/docs/audiences/students'
+  },
+  {
+    title: 'Teams',
+    body: 'Capability-building programs for engineering teams that need stronger architecture, implementation standards, and onboarding clarity.',
+    href: '/docs/audiences/teams'
+  },
+  {
+    title: 'Colleges',
+    body: 'Workshop and bootcamp formats for departments and institutions that want practical, current Flutter programs with visible outcomes.',
+    href: '/docs/audiences/colleges'
+  }
+];
+
+const learningFlow = [
+  {
+    title: 'Foundations',
+    body: 'Programming logic, problem solving, and Dart fundamentals that remove confusion before Flutter UI work begins.',
+    href: '/docs/training/learning-path'
+  },
+  {
+    title: 'Implementation',
+    body: 'Flutter UI, design, navigation, state, backend integration, testing, and release thinking in a structured progression.',
+    href: '/docs/training/curriculum'
+  },
+  {
+    title: 'Evaluation',
+    body: 'Assignments, code review, capstones, and measurable progress signals that make training outcomes credible.',
+    href: '/docs/training/assessment'
+  }
 ];
 
 const processSteps = [
@@ -76,59 +112,86 @@ const processSteps = [
 
 const offerCards = [
   {
-    title: 'Corporate capability programs',
-    body: 'Training programs for engineering teams that need stronger Flutter delivery, better architecture decisions, and faster team onboarding.',
-    href: '/docs/training/corporate-programs'
+    title: 'Full learning path',
+    body: 'A complete progression from programming basics to Flutter app delivery, designed to support serious learners and structured training cohorts.',
+    href: '/docs/training/learning-path'
   },
   {
-    title: 'Consulting and product delivery',
-    body: 'Advisory, implementation, rescue engagements, and engineering acceleration for organizations building serious products.',
-    href: '/docs/flutter-development/delivery-process'
+    title: 'Detailed curriculum',
+    body: 'A staged curriculum covering Dart, Flutter UI, app design, state, backend integration, testing, and capstone execution.',
+    href: '/docs/training/curriculum'
   },
   {
-    title: 'Institutional bootcamps and workshops',
-    body: 'Applied workshops and bootcamp formats for colleges, academies, and high-signal communities.',
-    href: '/docs/training/workshops'
+    title: 'Assessment and evaluation',
+    body: 'Assignments, review checkpoints, and capstone-based evaluation that make the training more credible and measurable.',
+    href: '/docs/training/assessment'
+  }
+];
+
+const contactLinks = [
+  {
+    label: 'Email',
+    value: 'sitharaj.info@gmail.com',
+    href: 'mailto:sitharaj.info@gmail.com'
+  },
+  {
+    label: 'GitHub',
+    value: 'sitharaj88',
+    href: 'https://github.com/sitharaj88'
+  },
+  {
+    label: 'LinkedIn',
+    value: 'sitharaj08',
+    href: 'https://www.linkedin.com/in/sitharaj08'
   }
 ];
 
 export default function Home(): JSX.Element {
   return (
     <Layout
-      title="Corporate Flutter Training and Development"
-      description="Corporate-grade Flutter training, engineering delivery, and a modern portal for teams, institutions, and product companies."
+      title="Professional Flutter Training and Tutorials"
+      description="Professional Flutter training, detailed tutorials, structured learning paths, and implementation-focused guidance."
     >
       <main className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <span className={styles.kicker}>Corporate Flutter Training. Product Engineering. Capability Building.</span>
-            <h1>Build a Flutter presence that feels enterprise-ready and impossible to ignore.</h1>
+            <span className={styles.kicker}>Professional Flutter Training. Detailed Tutorials. Practical Learning.</span>
+            <h1>A professional Flutter training and tutorial portal with real depth.</h1>
             <p>
-              This portal is being shaped as a premium front door for corporate training, serious Flutter
-              development, institutional programs, engineering resources, and future apps that prove the work.
+              This portal is built for structured Flutter learning: professional training programs, detailed
+              tutorials, lesson-level teaching material, practical labs, and implementation-focused guidance from
+              programming foundations to app delivery.
             </p>
             <div className={styles.actions}>
               <Link className={clsx('button button--primary button--lg', styles.primaryAction)} to="/docs/training/overview">
-                Explore corporate training
+                Explore training
               </Link>
-              <Link className={clsx('button button--secondary button--lg', styles.secondaryAction)} to="/docs/flutter-development/services">
-                View development services
+              <Link className={clsx('button button--secondary button--lg', styles.secondaryAction)} to="/docs/training/tutorial-library">
+                Open tutorials
               </Link>
+            </div>
+            <div className={styles.inlineContactRow}>
+              {contactLinks.map((item) => (
+                <a key={item.label} className={styles.inlineContactItem} href={item.href}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </a>
+              ))}
             </div>
           </div>
 
           <div className={styles.heroPanel}>
             <div className={styles.metricCard}>
-              <span>Positioning</span>
-              <strong>Premium training and development, not generic tutorials</strong>
+              <span>Training focus</span>
+              <strong>Professional Flutter learning with structured progression and practical outcomes</strong>
             </div>
             <div className={styles.metricCard}>
               <span>Audience</span>
-              <strong>Companies, institutions, founders, and ambitious delivery teams</strong>
+              <strong>Students, teams, institutions, and serious learners who want deeper understanding</strong>
             </div>
             <div className={styles.metricCard}>
-              <span>Operating model</span>
-              <strong>Docs, curriculum, services, proof, and apps under one system</strong>
+              <span>Learning system</span>
+              <strong>Docs, tutorials, curriculum, assessment, proof, and future apps under one system</strong>
             </div>
           </div>
         </section>
@@ -143,8 +206,8 @@ export default function Home(): JSX.Element {
 
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span>Why this can stand out</span>
-            <h2>Corporate-level structure with a more interesting story.</h2>
+            <span>Why this matters</span>
+            <h2>More than course marketing, this is a real training and tutorial system.</h2>
           </div>
           <div className={styles.cardGrid}>
             {highlights.map((item) => (
@@ -158,8 +221,8 @@ export default function Home(): JSX.Element {
 
         <section className={styles.band}>
           <div>
-            <span className={styles.bandLabel}>Engagement tracks</span>
-            <h2>Designed for training impact, delivery credibility, and long-term growth.</h2>
+            <span className={styles.bandLabel}>Coverage</span>
+            <h2>Designed to teach the full Flutter journey with enough depth to be useful.</h2>
           </div>
           <div className={styles.trackList}>
             {engagementTracks.map((track) => (
@@ -172,8 +235,8 @@ export default function Home(): JSX.Element {
 
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span>Core pillars</span>
-            <h2>Everything important has a clear place in the portal.</h2>
+            <span>Core sections</span>
+            <h2>Everything important for learning and implementation has a clear place.</h2>
           </div>
           <div className={styles.pillarGrid}>
             {capabilityPillars.map((item) => (
@@ -191,8 +254,45 @@ export default function Home(): JSX.Element {
 
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span>How engagement works</span>
-            <h2>Structured enough for corporate buyers, flexible enough for real delivery.</h2>
+            <span>Who it serves</span>
+            <h2>Different audiences can move through the same system in different ways.</h2>
+          </div>
+          <div className={styles.offerGrid}>
+            {audienceCards.map((item) => (
+              <article key={item.title} className={styles.offerCard}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <Link className={styles.textLink} to={item.href}>
+                  View path
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span>Training journey</span>
+            <h2>The learning system now has a clear start, structured middle, and measurable end.</h2>
+          </div>
+          <div className={styles.processGrid}>
+            {learningFlow.map((item, index) => (
+              <article key={item.title} className={styles.processCard}>
+                <div className={styles.processIndex}>0{index + 1}</div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <Link className={styles.textLink} to={item.href}>
+                  Open page
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span>How it works</span>
+            <h2>Structured enough for professional training, flexible enough for real implementation needs.</h2>
           </div>
           <div className={styles.processGrid}>
             {processSteps.map((item, index) => (
@@ -207,8 +307,8 @@ export default function Home(): JSX.Element {
 
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <span>Commissionable offers</span>
-            <h2>The site now speaks to actual engagements, not just page categories.</h2>
+            <span>High-value pages</span>
+            <h2>The most important training pages are now easier to discover directly from the homepage.</h2>
           </div>
           <div className={styles.offerGrid}>
             {offerCards.map((item) => (
@@ -225,19 +325,26 @@ export default function Home(): JSX.Element {
 
         <section className={styles.ctaSection}>
           <div className={styles.ctaCard}>
-            <span className={styles.bandLabel}>Ready to move</span>
-            <h2>Use this portal as the public face of a more serious Flutter practice.</h2>
+            <span className={styles.bandLabel}>Direct contact</span>
+            <h2>Start with the right learning, training, or implementation path.</h2>
             <p>
-              The current version is now structured for corporate training, product engineering conversations,
-              institutional programs, proof building, and future showcase apps. The next refinement is to add your
-              real brochure copy, testimonials, and engagement details.
+              Use the portal to explore training, tutorials, curriculum, assessment, resources, and implementation
+              support, then reach out directly for corporate programs, workshop discussions, mentoring, or blended engagements.
             </p>
+            <div className={styles.contactGrid}>
+              {contactLinks.map((item) => (
+                <a key={item.label} className={styles.contactCard} href={item.href}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </a>
+              ))}
+            </div>
             <div className={styles.actions}>
               <Link className={clsx('button button--primary button--lg', styles.primaryAction)} to="/docs/contact/enquiry">
                 Open enquiry paths
               </Link>
-              <Link className={clsx('button button--secondary button--lg', styles.secondaryAction)} to="/docs/proof/outcomes">
-                Build trust layer
+              <Link className={clsx('button button--secondary button--lg', styles.secondaryAction)} to="/docs/training/learning-path">
+                Review learning path
               </Link>
             </div>
           </div>
