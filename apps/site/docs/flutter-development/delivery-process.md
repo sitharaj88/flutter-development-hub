@@ -1,101 +1,115 @@
 ---
 title: Delivery Process
-description: A clear process for Flutter consulting, implementation, stabilization, and team support.
+description: A clear, structured process for Flutter consulting — from discovery through execution to knowledge transfer.
+keywords: [Flutter consulting process, delivery framework, engineering engagement, Flutter architecture review]
 ---
 
 # Delivery Process
 
-Serious clients usually want to understand how the engagement will work, not only what the service list says. This page explains the working rhythm behind consulting, delivery support, and capability-building engagements.
+Clients want to understand **how the engagement works**, not just what the services are. This page explains the working rhythm behind consulting, delivery support, and capability-building engagements.
 
-## Step 1: Discovery
+:::info Five stages, always adapted
+Every engagement follows this framework, but the emphasis changes based on whether the work is consulting, implementation, rescue, or training.
+:::
 
-The first step is understanding the real situation clearly.
+## The five stages
 
-Typical discovery questions:
+```
+  ┌─────────────┐    ┌──────────────┐    ┌────────────┐    ┌───────────────┐    ┌────────────┐
+  │  Discovery   │───▶│ Scope Framing │───▶│ Execution  │───▶│ Stabilization │───▶│ Continuity │
+  └─────────────┘    └──────────────┘    └────────────┘    └───────────────┘    └────────────┘
+```
 
-- what product or platform is being built?
-- what stage is the team currently in?
-- is the main problem architecture, speed, code quality, onboarding, or delivery confidence?
-- is the need training, implementation, rescue work, or a blend?
+---
 
-Discovery usually focuses on:
+### Step 1: Discovery
 
-- product context
-- current codebase condition
-- team maturity
-- delivery risk
-- expected outcomes and timeline
+Understanding the **real situation** before proposing any solution.
 
-## Step 2: Scope framing
+| Area | Key questions |
+|------|---------------|
+| Product | What is being built? What stage is it in? |
+| Team | Who is building it? What's their Flutter experience? |
+| Problem | Is the bottleneck architecture, speed, quality, or confidence? |
+| Need | Training, implementation, rescue, or a blend? |
+| Timeline | What outcomes are expected and by when? |
 
-Once the problem is clearer, the engagement needs to be shaped properly.
+---
 
-This includes:
+### Step 2: Scope framing
 
-- defining the desired outcome
-- choosing the right engagement model
-- deciding how much work is direct implementation versus guidance
-- identifying the most useful artifacts to leave behind
+Once the problem is clear, the engagement is shaped to match:
 
-Examples of artifacts:
+- **Define** the desired outcome and success criteria
+- **Choose** the right engagement model (advisory, sprint, enablement, rescue)
+- **Decide** the balance between direct implementation and guidance
+- **Identify** artifacts to leave behind
 
-- recommended structure
-- review checklist
-- architecture notes
-- standards documentation
-- starter reference implementation
+:::tip Typical deliverable artifacts
+- Architecture recommendation document
+- Code review checklist tailored to the codebase
+- Standards and conventions guide
+- Starter reference implementation
+- Onboarding guide for new team members
+:::
 
-## Step 3: Execution
+---
 
-This is where the main technical work happens.
+### Step 3: Execution
 
-Depending on the engagement, execution may include:
+The main technical work. What this includes depends on the engagement:
 
-- architecture sessions
-- implementation work
-- reviews and walkthroughs
-- training and enablement sessions
-- debugging and technical decision support
+| Engagement type | Execution focus |
+|----------------|----------------|
+| Consulting | Architecture sessions, technical planning, decision documentation |
+| Implementation | Feature development, API integration, code reviews |
+| Enablement | Training sessions, paired programming, standards adoption |
+| Rescue | Diagnosis, refactoring, pattern fixes, release hardening |
 
-Execution should create momentum in two ways:
+Execution creates momentum in two ways:
+1. **Immediate progress** — product moves forward visibly
+2. **Stronger habits** — team engineering quality improves
 
-- immediate product or technical progress
-- stronger long-term engineering habits
+---
 
-## Step 4: Stabilization
+### Step 4: Stabilization
 
-After the main work, the next priority is to strengthen what was delivered.
+Strengthening what was delivered:
 
-This may include:
+- Fix weak patterns discovered during execution
+- Improve release readiness and CI/CD quality
+- Document final architectural decisions
+- Translate lessons into reusable team conventions
 
-- fixing weak patterns that were discovered during delivery
-- improving release readiness
-- documenting final decisions
-- translating lessons into reusable team conventions
+:::caution Don't skip this
+Rescue and scale-up engagements especially need this stage. Without stabilization, the same problems tend to return within weeks.
+:::
 
-This stage is especially important in rescue or scale-up scenarios.
+---
 
-## Step 5: Continuity
+### Step 5: Continuity
 
-Some engagements end after the immediate objective. Others naturally continue into:
+Some engagements end after the immediate objective. Others naturally continue:
 
-- periodic advisory
-- deeper engineering enablement
-- further delivery support
-- training for new engineers
-- ongoing architecture review
+- Periodic advisory and architecture review
+- Deeper engineering enablement for the team
+- Training for new engineers joining the project
+- Ongoing delivery support for product milestones
 
-The goal is to leave the team stronger than before, with the option to continue where it adds value.
+**The goal is always to leave the team stronger than before**, with the option to continue where it adds value.
 
-## What good delivery process feels like
+## What good delivery feels like
 
-- clear without becoming rigid
-- collaborative without becoming chaotic
-- technical without losing business relevance
-- practical enough that progress is visible at each stage
+| Quality | Meaning |
+|---------|--------|
+| Clear | Everyone knows what's happening and why |
+| Collaborative | Team input shapes the work, not just the consultant |
+| Technical | Decisions are grounded in engineering reality |
+| Visible | Progress is evident at every stage |
 
-## Why this process matters
+## Next steps
 
-- it reduces uncertainty for clients and teams
-- it makes the engagement easier to explain internally
+- [**Engagement Models**](/docs/flutter-development/engagement-models) — Choose the right collaboration format
+- [**Services Overview**](/docs/flutter-development/services) — Full service capabilities
+- [**Contact**](/docs/contact/enquiry) — Start a conversation
 - it ensures that knowledge transfer and delivery quality are not treated separately

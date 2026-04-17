@@ -2,121 +2,110 @@
 id: intro
 slug: /
 title: Flutter Portal Overview
-description: The main public structure for training, Flutter development services, proof, resources, apps, and contact.
+description: The central hub for professional Flutter training, tutorials, development services, and engineering resources.
+keywords: [Flutter, training, tutorials, Dart, mobile development, cross-platform]
 ---
 
 # Flutter Portal Overview
 
-This site is designed as the main public hub for the Flutter practice of Sitharaj Seenivasan. At its core, it should feel like a professional training and tutorial portal with enough structure and depth to support real learning and real implementation.
+Welcome to the **Flutter Development Hub** — a professional training and tutorial portal built by [Sitharaj Seenivasan](https://www.linkedin.com/in/sitharaj08). This is more than a course website. It's a complete learning system designed to take you from programming fundamentals to production-quality Flutter delivery.
 
-It is intended to become a complete portal for:
+:::tip Quick Navigation
+- **New to Flutter?** Start with the [Learning Path](/docs/training/learning-path)
+- **Looking for tutorials?** Browse the [Tutorial Library](/docs/training/tutorial-library)
+- **Need corporate training?** See [Corporate Programs](/docs/training/corporate-programs)
+- **Want development services?** Check [Flutter Services](/docs/flutter-development/services)
+:::
 
-- training and capability building
-- Flutter product development and consulting
-- engineering resources and standards
-- proof, profile, and trust-building material
-- apps, showcases, starter kits, and future tools
+## What makes this portal different
 
-## What this portal is meant to do
+| Feature | Generic Courses | This Portal |
+|---------|----------------|-------------|
+| **Depth** | Syntax demos and widget examples | Architecture, testing, and delivery thinking |
+| **Structure** | Random topic playlists | Staged progression with prerequisites |
+| **Practice** | Follow-along only | Labs, assignments, and capstone projects |
+| **Content** | Video-dependent | Detailed written tutorials with code examples |
+| **Audience** | Individual hobbyists | Students, teams, and institutions |
 
-The portal should help different visitors find different kinds of value:
+## Portal sections
 
-- students should see a clear learning journey
-- teams should see structured capability-building and engineering depth
-- institutions should see workshop and bootcamp readiness
-- companies should see delivery credibility and real implementation thinking
-- future partners should see that the portal is backed by reusable knowledge and code assets
+### 📋 Training
 
-## Main sections in the site
+The training section covers the **complete learning journey** from programming foundations through Dart, Flutter UI, design, architecture, backend integration, testing, and capstone delivery. It includes:
 
-### Training
+- **8 structured modules** with clear learning outcomes
+- **Multi-week program formats** for cohorts and teams
+- **Assessment system** with assignments and capstone evaluation
 
-The training section covers the full learning journey from programming foundations to Dart, Flutter UI, design, architecture, backend integration, testing, and capstone delivery.
+### 📖 Tutorial Library
 
-### Tutorial Library
+The tutorial library provides **concept-by-concept teaching depth** — not just overviews, but detailed explanations with:
 
-The tutorial library gives the portal its real teaching depth through concept pages, guided topic breakdowns, examples, and lesson-oriented explanations.
+- Plain-language concept breakdowns
+- Runnable Dart and Flutter code examples
+- Common beginner mistakes and how to avoid them
+- Guided exercises after every concept
 
-### Flutter Development
+### 🚀 Flutter Development Services
 
-The Flutter development section explains consulting, architecture support, engineering acceleration, delivery support, and product-oriented collaboration models.
+For companies and teams that need more than training:
 
-### Audience Paths
+- Architecture consulting and code review
+- Delivery acceleration and implementation support
+- Technical rescue for struggling Flutter codebases
+- Engineering enablement and standards adoption
 
-These pages help different audiences quickly understand which parts of the portal are most relevant to them:
+### 🎯 Audience Paths
 
-- students
-- teams
-- colleges and institutions
+Different visitors need different entry points:
 
-### Resources
+- **Students** → Structured learning from zero to portfolio-ready
+- **Teams** → Capability-building with engineering depth
+- **Institutions** → Workshop and bootcamp formats with clear outcomes
 
-The resources area is the knowledge layer of the portal. It is meant to grow into a reusable system for learning paths, engineering standards, onboarding notes, and delivery references.
+### ⚙️ Resources
 
-### Proof
+The knowledge layer that supports everything:
 
-The proof area gives the site a trust layer through profile, outcomes, and case-study structure.
+- [Flutter Learning Path](/docs/resources/flutter-learning-path) — staged progression guide
+- [Engineering Standards](/docs/resources/engineering-standards) — quality and consistency references
+- [Knowledge System](/docs/resources/knowledge-system) — how the portal fits together
 
-### Apps
+### 📊 Proof
 
-The apps area explains how this repository can grow beyond docs into showcases, lab apps, starter kits, and internal tools.
+Trust-building material including profile, outcomes, and case study structure.
 
-### Contact
+### 📱 Apps
 
-The contact area creates a clearer path for enquiries, engagement shaping, and follow-through.
+Future expansion into showcase apps, starter kits, and reference implementations.
 
-## How this portal should be used
+## How to use this portal
 
-### As a public website
+### As a learner
 
-It should work as the front door for:
+1. Start with [Programming Fundamentals](/docs/training/programming-fundamentals) if you're new
+2. Follow the [Learning Path](/docs/training/learning-path) stage by stage
+3. Use the [Tutorial Library](/docs/training/tutorial-library) for deeper concept understanding
+4. Build your [Capstone](/docs/training/capstone) to prove your skills
 
-- training enquiries
-- consulting discussions
-- product development conversations
-- institutional workshop opportunities
+### As a team lead or manager
 
-### As a knowledge system
+1. Review the [Training Overview](/docs/training/overview) for program structure
+2. Compare [Packages](/docs/training/packages) for your team size
+3. Explore [Corporate Programs](/docs/training/corporate-programs) for enterprise formats
+4. [Contact](/docs/contact/enquiry) for a custom engagement discussion
 
-It should also become a reusable internal asset for:
+### As an institution
 
-- training delivery
-- curriculum reuse
-- code review and engineering standards
-- onboarding and implementation guidance
+1. Check [Workshops](/docs/training/workshops) for session formats
+2. Review the [Curriculum](/docs/training/curriculum) for academic alignment
+3. See [Outcomes](/docs/training/outcomes) for what participants achieve
 
-### As a future code hub
+## What this portal is becoming
 
-Because the repository is structured for both docs and apps, it can support:
+This system is designed to grow beyond documentation into:
 
-- live demo apps
-- training starter kits
-- reference implementations
-- business-support tools
-
-## Why this structure matters
-
-This structure is useful because it avoids a common problem: many training sites explain what is offered, but they do not prove depth, delivery thinking, or long-term capability.
-
-This portal aims to do more than describe services. It should:
-
-- explain the training clearly
-- function as a serious tutorial destination
-- show engineering maturity
-- make the work reusable
-- create trust before a conversation even starts
-
-## What a strong final version should feel like
-
-- credible for corporate and institutional visitors
-- helpful for learners
-- technically interesting for engineers
-- structured enough to grow over time without becoming messy
-
-## Recommended next navigation paths
-
-- go to Training if the goal is structured learning
-- go to Flutter Development if the goal is consulting or product delivery
-- go to Resources if the goal is knowledge depth and standards
-- go to Proof if the goal is evaluating credibility
-- go to Contact if the goal is starting a discussion
+- **Live demo apps** that showcase training concepts
+- **Starter kits** for common Flutter patterns
+- **Reference implementations** of architecture and state management
+- **Engineering tools** that support the training and development practice

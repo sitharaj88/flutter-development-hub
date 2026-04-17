@@ -1,101 +1,107 @@
 ---
 title: Flutter Development Services
-description: Corporate Flutter product engineering, consulting, architecture guidance, and delivery support.
+description: Professional Flutter consulting, architecture guidance, delivery acceleration, and technical rescue for teams and companies.
+keywords: [Flutter consulting, Flutter development, app architecture, mobile development services, code rescue]
 ---
 
 # Flutter Development Services
 
-This section is meant to position Flutter expertise as a serious engineering and delivery capability, not only a training skill set. The focus here is on helping companies, founders, teams, and institutions that need real product progress, stronger engineering structure, or both.
+Beyond training, this practice offers **professional Flutter engineering services** — helping companies, founders, and teams that need real product progress, stronger engineering structure, or technical rescue.
 
-## What this practice can support
+:::info Not just another agency
+Every engagement prioritizes **knowledge transfer** alongside delivery. The goal is to leave your team stronger, not dependent.
+:::
 
-### Product development
+## Service areas
 
-- building new Flutter applications
-- supporting internal platforms and operational tools
-- creating mobile-first or cross-platform product experiences
-- shaping early product implementation for startups and growing teams
+### 🚀 Product development
 
-### Architecture and technical planning
+| What | Details |
+|------|---------|
+| New Flutter applications | iOS, Android, web, and desktop from a single codebase |
+| Internal platforms | Operations tools, dashboards, and team utilities |
+| Mobile-first products | Consumer and B2B cross-platform experiences |
+| MVP and early-stage | Getting startups from idea to working prototype quickly |
 
-- application structure and module planning
-- state and data flow decisions
-- API, authentication, and persistence strategy
-- maintainability, release, and scaling considerations
+### 🏗️ Architecture & technical planning
 
-### Delivery acceleration
+```
+Typical decisions this service helps with:
 
-- feature implementation support
-- engineering mentoring alongside active delivery
-- performance and release hardening
-- code review and technical quality improvement
+├── Application structure
+│   ├── Feature-based module organization
+│   ├── Shared vs. feature-specific code
+│   └── Navigation architecture
+├── State management
+│   ├── Provider / Riverpod / Bloc selection
+│   ├── Local vs. global state boundaries
+│   └── Reactive data flow patterns
+├── Data layer
+│   ├── API integration strategy
+│   ├── Repository pattern implementation
+│   └── Offline-first vs. online-first
+└── Quality
+    ├── Testing strategy and coverage goals
+    ├── CI/CD pipeline design
+    └── Performance budgets
+```
 
-### Rescue and stabilization
+### ⚡ Delivery acceleration
 
-- recovering messy or inconsistent Flutter codebases
-- improving weak structure and unclear architecture
-- resolving delivery blockers and technical quality issues
-- helping teams regain execution confidence
+For teams that are building but need to **move faster** or **build better**:
 
-## Core service areas
+- Direct feature implementation on high-priority work
+- Engineering mentoring during active sprints
+- Performance optimization and release hardening
+- Code review practices and quality improvement
 
-### Flutter consulting
+### 🔧 Technical rescue
 
-This is useful when a team needs:
+For codebases that exist but are **struggling**:
 
-- architecture decisions
-- delivery direction
-- implementation planning
-- technical clarity before larger commitments
+- Untangling unclear architecture and circular dependencies
+- Fixing fragile state management that causes UI bugs
+- Resolving build, performance, and release issues
+- Establishing patterns that prevent the same problems recurring
 
-### Implementation support
+:::caution Signs you need rescue
+- "It works, but nobody wants to touch it"
+- Bugs keep appearing in areas you didn't change
+- Adding a new feature takes 5x longer than it should
+- New team members can't understand the codebase
+:::
 
-This is useful when a team wants:
+## Engagement models
 
-- direct feature development help
-- structured technical guidance during active delivery
-- faster progress on high-priority product work
+| Model | Duration | Best for |
+|-------|----------|----------|
+| **Consulting sprint** | 1–2 weeks | Architecture decisions and technical direction |
+| **Implementation support** | 1–3 months | Active feature delivery with mentoring |
+| **Engineering enablement** | 2–6 weeks | Team capability building + standards |
+| **Technical rescue** | 2–4 weeks | Codebase recovery and stabilization |
+| **Advisory retainer** | Ongoing | Periodic architecture review and guidance |
 
-### Engineering enablement
+## What good delivery looks like
 
-This is useful when the goal is:
+- **Clear feature boundaries** and maintainable project structure
+- **Clean data modeling** with proper async flow and state management
+- **Thoughtful testing** — unit, widget, and integration where it matters
+- **Documentation and standards** that remain valuable after the engagement
+- **Knowledge transfer** so your team can continue independently
 
-- stronger internal capability
-- better engineering standards
-- improved onboarding and delivery consistency
+## Typical scenarios
 
-### Technical rescue
+> **Startup**: "We need help shaping our Flutter product properly from the beginning."
+>
+> **Growth team**: "We've started building but need more consistent architecture and patterns."
+>
+> **Enterprise**: "We inherited an unstable codebase and need technical recovery."
+>
+> **Product team**: "We want to learn Flutter while building our actual product."
 
-This is useful when the codebase already exists but the team is struggling with:
+## Next steps
 
-- unclear structure
-- fragile state management
-- release issues
-- growing complexity without clear patterns
-
-## What strong delivery should look like
-
-- clear feature boundaries and maintainable project structure
-- clean modeling of data, async flow, and state
-- thoughtful handling of testing, debugging, and release readiness
-- documentation and standards that remain valuable after the engagement
-
-## Typical use cases
-
-- a startup needs help shaping a Flutter product properly from the beginning
-- an internal product team wants stronger engineering structure before scaling
-- a company has started with Flutter but needs more consistent implementation patterns
-- a team inherited an unstable codebase and needs technical recovery plus confidence
-
-## What makes this different from generic development support
-
-- the work is tied to knowledge transfer, not only code output
-- architecture and delivery discipline are treated as part of the engagement
-- the portal itself supports the work through docs, standards, and reusable references
-- training and implementation can be blended when the situation needs both
-
-## Best next pages
-
-- read Engagement Models to understand collaboration options
-- use Delivery Process to understand how the work is structured
-- review Engineering Roadmap to see how this practice can scale further
+- [**Engagement Models**](/docs/flutter-development/engagement-models) — Detailed collaboration options
+- [**Delivery Process**](/docs/flutter-development/delivery-process) — How engagements are structured
+- [**Engineering Roadmap**](/docs/flutter-development/engineering-roadmap) — Practice growth direction
+- [**Contact**](/docs/contact/enquiry) — Start a conversation

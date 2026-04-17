@@ -1,55 +1,115 @@
 ---
 title: Engineering Standards
-description: The standards layer that supports maintainable Flutter training and delivery.
+description: Flutter engineering standards for project structure, naming, state management, testing, and code quality.
+keywords: [Flutter standards, code quality, project structure, naming conventions, Flutter best practices]
 ---
 
 # Engineering Standards
 
-Engineering standards are what separate a one-off code exercise from a repeatable delivery practice.
+Engineering standards separate a one-off code exercise from a **repeatable, scalable delivery practice**. These standards apply to training projects, consulting engagements, and production codebases.
 
-## What this section is for
+:::info Living standards
+These standards evolve as the practice grows. They are specific enough to guide implementation but flexible enough for real project context.
+:::
 
-- documenting how Flutter work should be structured
-- making expectations clear for learners and teams
-- improving review quality, onboarding speed, and consistency
-- turning training into more than topic coverage
+## Project structure
 
-## Standards worth documenting over time
+Use **feature-based folder organization**:
 
-- feature-based folder structure
-- naming conventions for screens, widgets, and models
-- state management expectations
-- API, repository, and persistence patterns
-- testing expectations for logic and UI
-- release preparation and environment handling
+```
+lib/
+├── app/
+│   ├── app.dart              # MaterialApp root
+│   ├── router.dart           # Route definitions
+│   └── theme.dart            # App-wide theme data
+├── features/
+│   ├── auth/
+│   │   ├── data/             # Repository, API client
+│   │   ├── domain/           # Models, entities
+│   │   └── presentation/     # Screens, widgets
+│   ├── home/
+│   │   ├── data/
+│   │   ├── domain/
+│   │   └── presentation/
+│   └── settings/
+├── shared/
+│   ├── widgets/              # Reusable UI components
+│   ├── utils/                # Helpers, formatters
+│   └── constants/            # App-wide constants
+└── main.dart
+```
 
-## What this can include in practice
+## Naming conventions
 
-- feature folder conventions
-- naming rules for screens, widgets, and models
-- guidelines for state and repository organization
-- expectations for error handling and loading states
-- testing and review expectations for important flows
+| Element | Convention | Example |
+|---------|-----------|--------|
+| Files | `snake_case` | `user_profile_screen.dart` |
+| Classes | `PascalCase` | `UserProfileScreen` |
+| Variables | `camelCase` | `userName`, `isLoading` |
+| Constants | `camelCase` or `SCREAMING_SNAKE` | `maxRetryCount`, `API_BASE_URL` |
+| Screens | Suffix with `Screen` | `LoginScreen`, `HomeScreen` |
+| Widgets | Descriptive, noun-based | `UserCard`, `PriceTag` |
+| Models | Domain noun | `User`, `Product`, `Order` |
+| Repositories | Suffix with `Repository` | `UserRepository` |
+| Providers/Notifiers | Suffix with role | `AuthProvider`, `CartNotifier` |
 
-## Why this matters
+## State management
 
-- training feels stronger when it connects to real delivery discipline
-- consulting becomes easier to trust when the operating model is clear
-- teams move faster when common decisions are written down
-- the portal becomes a reusable technical asset instead of static content
+| Principle | Guideline |
+|-----------|----------|
+| Scope | Keep state as local as possible |
+| Immutability | Use immutable models with `copyWith` |
+| Separation | Business logic out of `build()` methods |
+| Pattern | Choose one pattern per project (Riverpod, Bloc, Provider) |
+| Testing | State logic must be testable without widgets |
 
-## What good standards should feel like
+## Code quality expectations
 
-- specific enough to guide implementation
-- flexible enough for real project context
-- easy to explain to new developers
-- practical enough to use during code review and onboarding
+```dart
+// ✅ Good: Clear, testable, single responsibility
+class PriceCalculator {
+  double calculateTotal(List<CartItem> items, {double taxRate = 0.1}) {
+    final subtotal = items.fold(0.0, (sum, item) => sum + item.price * item.quantity);
+    return subtotal * (1 + taxRate);
+  }
+}
 
-## Why this section should keep growing
+// ❌ Bad: Mixed concerns, untestable, magic numbers
+class CartScreen extends StatefulWidget {
+  // Business logic mixed into widget...
+  double getTotal() {
+    var t = 0.0;
+    for (var i in items) t += i.price * i.qty * 1.1; // What is 1.1?
+    return t;
+  }
+}
+```
 
-As the portal matures, this page can become a practical operating handbook for:
+## Testing expectations
 
-- training cohorts
-- internal engineering teams
-- consulting engagements
-- future starter kits and sample apps
+| Layer | What to test | Minimum coverage |
+|-------|-------------|------------------|
+| Models | Serialization, equality, edge cases | All models |
+| Business logic | Calculations, validation, state transitions | All logic classes |
+| Repositories | API integration, error handling | Critical paths |
+| Widgets | Key interactions, state changes | Main screens |
+
+## API and data patterns
+
+- Use the **repository pattern** to abstract data sources
+- Handle loading, success, and error states explicitly
+- Never call APIs directly from widgets
+- Use `try/catch` at the repository level, not in UI code
+
+:::caution Anti-patterns to avoid
+- Calling `setState` from API callbacks in large screens
+- Storing API responses as raw `Map<String, dynamic>`
+- Mixing navigation logic with business logic
+- Using `late` without null safety justification
+:::
+
+## Next steps
+
+- [**Flutter Learning Path**](/docs/resources/flutter-learning-path) — The staged learning journey
+- [**Knowledge System**](/docs/resources/knowledge-system) — How the portal is organized
+- [**State & Architecture**](/docs/training/state-and-architecture) — Architecture training module

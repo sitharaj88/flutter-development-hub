@@ -1,79 +1,93 @@
 ---
 title: Capstone Project
-description: The applied project layer that turns training into visible, meaningful output.
+description: The applied project that turns training into visible, reviewable proof of Flutter engineering capability.
+keywords: [Flutter capstone, portfolio project, Flutter project, code review, engineering proof]
 ---
 
 # Capstone Project
 
-The capstone is where the training stops being theoretical and starts becoming evidence. It is the point where learners, teams, or institutions can see whether the full learning journey has turned into real implementation capability.
+The capstone is where training becomes **evidence**. It's the point where learners demonstrate they can move from guided learning to purposeful, independent implementation.
 
-## Capstone purpose
+:::info What makes a capstone different from exercises
+Exercises practice individual concepts. The capstone brings **everything together** — UI, state, data, structure, and delivery thinking — into a single, coherent project.
+:::
 
-- bring together UI, state, data, structure, and delivery thinking
-- test whether participants can move from guided learning to purposeful implementation
-- create an artifact that can support portfolios, internal references, or capability review
+## Capstone requirements
 
-## What the capstone should include
+### What every capstone must include
 
-### Real user flow
+| Requirement | What it proves |
+|-------------|---------------|
+| Real user flow | Can design meaningful journeys, not just disconnected screens |
+| Structured code | Can organize a project others can understand |
+| App states handled | Can handle loading, success, empty, and error states |
+| Clean architecture | Can separate UI, logic, and data properly |
+| Explanation quality | Can articulate *why*, not just *what* |
 
-The project should not be only disconnected screens. It should include:
+### Typical capstone features
 
-- a meaningful user journey
-- transitions between screens or states
-- complete interactions such as login, list-detail, forms, or dashboards
+- Authentication or onboarding flow
+- Data-backed dashboard or list-detail pattern
+- Form handling with validation
+- API integration or local persistence
+- At least 3–4 connected screens
 
-### Structured code
+## Example capstone ideas
 
-The capstone should show:
+| Project | Key concepts exercised |
+|---------|----------------------|
+| 📝 Task Manager | CRUD, state management, local persistence |
+| 🛒 Shopping App | Product list, cart, checkout flow, API integration |
+| 💰 Expense Tracker | Forms, charts, data modeling, filtering |
+| 📚 Learning Journal | Rich text, categories, search, export |
 
-- readable widget composition
-- sensible project organization
-- cleaner separation between UI, state, and data handling
+## Recommended process
 
-### Visible app states
+```
+1. Scope    →  Choose a project that can be completed well
+2. Plan     →  Map the user flow before writing code
+3. Design   →  Define screens, states, and data needs
+4. Build    →  Implement with regular checkpoints
+5. Review   →  Code review for quality and clarity
+6. Refine   →  Polish based on feedback
+7. Present  →  Explain decisions and trade-offs
+```
 
-The project should handle:
-
-- loading
-- success
-- empty state
-- failure or validation issues
-
-### Explanation quality
-
-Participants should be able to explain:
-
-- what the app solves
-- why the structure was chosen
-- where they would improve it next
-
-## Typical capstone elements
-
-- authentication or onboarding flow
-- data-backed dashboard or list-detail flow
-- form handling, validation, and submission behavior
-- state organization and project structure that can be explained clearly
-
-## What a strong capstone demonstrates
-
-- the ability to translate requirements into screens and logic
-- sensible code organization and reusable patterns
-- practical handling of app states
-- stronger engineering confidence than a basic tutorial clone
+:::tip Build in checkpoints
+Don't wait until the end to review. Schedule checkpoints after:
+- User flow mapping (before any code)
+- Core screens working (before polish)
+- State management connected (before edge cases)
+- Final polish (before presentation)
+:::
 
 ## Review criteria
 
-- code clarity
-- architectural judgment
-- user-flow completeness
-- UI consistency
-- readiness for future extension
+| Area | What reviewers look for |
+|------|------------------------|
+| **Code clarity** | Readable names, consistent style, no dead code |
+| **Architecture** | Sensible structure, separation of concerns |
+| **User flow** | Complete journeys, not just isolated screens |
+| **State handling** | Loading, error, empty, success all covered |
+| **UI quality** | Consistent spacing, clean layout, good hierarchy |
+| **Extensibility** | Could a new developer add features without confusion? |
 
-## Recommended capstone process
+## What a strong capstone demonstrates
 
-1. choose a scope that can be completed well
-2. map the user flow before writing code
-3. define the screens, states, and data needs
-4. build in checkpoints instead of waiting until the end
-5. review both design and engineering quality
+- Ability to translate requirements into screens and logic
+- Sensible code organization and reusable patterns
+- Practical handling of real-world app states
+- Engineering confidence **beyond** tutorial cloning
+
+:::caution What a weak capstone looks like
+- Copied code that the learner can't explain
+- Only happy-path implementation (no error or empty states)
+- All logic inside widget `build()` methods
+- No clear project structure or naming conventions
+:::
+
+## Next steps
+
+- [**Testing & Release**](/docs/training/testing-and-release) — Verify your capstone works
+- [**Engineering Standards**](/docs/resources/engineering-standards) — Quality benchmarks to aim for
+- [**Outcomes**](/docs/training/outcomes) — What successful training produces

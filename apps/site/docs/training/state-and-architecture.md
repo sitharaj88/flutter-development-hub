@@ -1,79 +1,185 @@
 ---
 title: State and Architecture
-description: The transition from small Flutter demos to maintainable application structure.
+description: Master app state management and scalable architecture patterns in Flutter — from local state to feature-based structure.
+keywords: [Flutter state management, Flutter architecture, Riverpod, Bloc, Provider, feature structure]
 ---
 
 # State and Architecture
 
-This is the stage where training moves from "can build screens" to "can build apps responsibly."
+This is where training moves from **"can build screens"** to **"can build apps responsibly."** Poor state choices create poor architecture, and weak architecture makes state harder to manage. That's why they're taught together.
 
-At this point, the learner already knows how to create UI. Now the real questions become:
+:::info Prerequisites
+Learners should already be comfortable with StatefulWidget, basic navigation, and forms before starting this module.
+:::
 
-- where should data live?
-- what should rebuild and when?
-- where should business logic go?
-- how do we stop screens from becoming messy?
-- how do we organize code so the app can grow safely?
+## What is "state"?
 
-That is why state and architecture should be taught together. Poor state choices often create poor architecture, and weak architecture makes state harder to manage.
+Before discussing libraries or patterns, understand what state actually is:
 
-## Key topics
+| Example | Type | Where it lives |
+|---------|------|----------------|
+| Current text in a form field | Local UI state | Inside the widget |
+| Selected tab index | Local UI state | Inside the widget |
+| Logged-in user | App-wide state | Shared across screens |
+| Shopping cart contents | Feature state | Shared within a feature |
+| API loading status | Async state | Repository/provider layer |
 
-- local state versus shared app state
-- choosing a state management strategy
-- feature-based project structure
-- separating UI, domain logic, and data access
-- repositories, services, and reusable patterns
+## Teaching progression
 
-## What learners should understand first
+### 1. Local widget state
 
-Before talking about any library or pattern, learners should understand what state actually is:
+```dart
+class CounterScreen extends StatefulWidget {
+  const CounterScreen({super.key});
 
-- the current form field value
-- the selected tab
-- the logged-in user
-- the shopping cart contents
-- the loading status of an API request
+  @override
+  State<CounterScreen> createState() => _CounterScreenState();
+}
 
-Once learners see state as changing app information, the rest of the discussion becomes easier.
+class _CounterScreenState extends State<CounterScreen> {
+  int _count = 0;
 
-## What learners should understand
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('Count: $_count', style: Theme.of(context).textTheme.headlineMedium),
+        ElevatedButton(
+          onPressed: () => setState(() => _count++),
+          child: const Text('Increment'),
+        ),
+      ],
+    );
+  }
+}
+```
 
-- where business logic should live
-- how to keep UI components from becoming messy
-- how to organize apps so new features do not break the whole structure
-- how architecture affects team speed and maintainability
+### 2. Lifted / shared state
 
-## A simple teaching progression
+When multiple widgets need the same data, **lift state up** to a common ancestor:
 
-1. start with local widget state
-2. move to lifted/shared state
-3. introduce simple separation of UI and logic
-4. show feature-based structure
-5. explain repositories and services when data flow becomes more complex
+```dart
+// Parent owns the state
+class ShoppingPage extends StatefulWidget {
+  @override
+  State<ShoppingPage> createState() => _ShoppingPageState();
+}
 
-This progression works better than introducing a large state library too early.
+class _ShoppingPageState extends State<ShoppingPage> {
+  final List<Product> _cart = [];
 
-## Common beginner problems
+  void _addToCart(Product product) {
+    setState(() => _cart.add(product));
+  }
 
-- putting all logic inside one screen widget
-- mixing API calls directly inside UI code
-- duplicating state across multiple widgets
-- choosing a complex pattern before understanding the problem
-- creating folder structures that look advanced but are hard to explain
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        ProductList(onAdd: _addToCart),    // Child can add
+        CartSummary(items: _cart),          // Child can read
+      ],
+    );
+  }
+}
+```
 
-## Teaching outcome
+### 3. Separation of UI and logic
 
-When this section is strong, learners start to build apps that are easier to:
+```dart
+// ✅ Business logic in a separate class
+class TodoController {
+  final List<Todo> _todos = [];
+  List<Todo> get todos => List.unmodifiable(_todos);
 
-- debug
-- test
-- extend
-- review
-- maintain as a team
+  void add(String title) {
+    _todos.add(Todo(id: DateTime.now().toString(), title: title));
+  }
 
-## Training goals
+  void toggleComplete(String id) {
+    final index = _todos.indexWhere((t) => t.id == id);
+    if (index != -1) {
+      _todos[index] = _todos[index].copyWith(
+        isCompleted: !_todos[index].isCompleted,
+      );
+    }
+  }
 
-- reduce copy-paste growth patterns
-- improve clarity in larger apps
-- help teams and advanced learners make stronger engineering choices
+  int get completedCount => _todos.where((t) => t.isCompleted).length;
+}
+```
+
+### 4. Feature-based structure
+
+```
+lib/features/
+├── auth/
+│   ├── data/           # AuthRepository, AuthApi
+│   ├── domain/         # User model, AuthState
+│   └── presentation/   # LoginScreen, SignUpScreen
+├── products/
+│   ├── data/           # ProductRepository
+│   ├── domain/         # Product model
+│   └── presentation/   # ProductListScreen, ProductDetail
+└── cart/
+    ├── data/           # CartRepository
+    ├── domain/         # CartItem, CartState
+    └── presentation/   # CartScreen, CheckoutScreen
+```
+
+### 5. Repository pattern
+
+```dart
+abstract class ProductRepository {
+  Future<List<Product>> getAll();
+  Future<Product> getById(String id);
+}
+
+class ApiProductRepository implements ProductRepository {
+  final http.Client _client;
+
+  ApiProductRepository(this._client);
+
+  @override
+  Future<List<Product>> getAll() async {
+    final response = await _client.get(Uri.parse('$baseUrl/products'));
+    final list = jsonDecode(response.body) as List;
+    return list.map((json) => Product.fromJson(json)).toList();
+  }
+
+  @override
+  Future<Product> getById(String id) async {
+    final response = await _client.get(Uri.parse('$baseUrl/products/$id'));
+    return Product.fromJson(jsonDecode(response.body));
+  }
+}
+```
+
+## State management options
+
+| Solution | Complexity | Best for |
+|----------|-----------|----------|
+| `setState` | Low | Simple local UI state |
+| `InheritedWidget` | Medium | Understanding how Flutter state works |
+| **Provider** | Medium | Small–medium apps, good for learning |
+| **Riverpod** | Medium–High | Medium–large apps, strong typing |
+| **Bloc/Cubit** | High | Enterprise apps, strict patterns |
+
+:::tip Start simple
+Don't introduce Riverpod or Bloc on day one. Start with `setState`, understand why it becomes painful, then introduce solutions that fix the actual problem.
+:::
+
+## Common mistakes
+
+:::caution Beginner traps
+- **All logic in one widget** — Screen becomes unmaintainable at 200+ lines
+- **API calls in build methods** — Causes infinite rebuild loops
+- **Complex patterns too early** — Bloc for a counter app is over-engineering
+- **Fancy folder structure, no separation** — Structure without actual logic separation is theater
+:::
+
+## Next steps
+
+- [**Backend & Data**](/docs/training/backend-and-data) — APIs, persistence, and data flow
+- [**Testing & Release**](/docs/training/testing-and-release) — Verify your architecture works
+- [**Engineering Standards**](/docs/resources/engineering-standards) — Project structure conventions

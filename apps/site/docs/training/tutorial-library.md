@@ -1,93 +1,139 @@
 ---
 title: Tutorial Library
-description: A larger library of detailed tutorial material across programming, Dart, Flutter, design, architecture, and delivery.
+description: Deep-dive tutorials across Dart, Flutter UI, architecture, design, testing, and delivery — the hands-on companion to the curriculum.
+keywords: [Flutter tutorials, Dart tutorials, Flutter learning, hands-on tutorials, code walkthroughs]
 ---
 
 # Tutorial Library
 
-The tutorial library is where the training system becomes a real handbook. The curriculum explains the path, but the tutorial library provides the deeper concept-by-concept material that supports teaching, revision, self-study, and long-term reuse.
+The tutorial library is where the training system becomes a **real handbook**. The curriculum explains the path; the tutorial library provides the **deeper, concept-by-concept material** that supports teaching, revision, self-study, and long-term reuse.
 
-## What this library is for
+:::info How this differs from the curriculum
+- **Curriculum** answers: *What* should be taught, *in what order*, to *what depth*
+- **Tutorial Library** answers: *How* a concept should be explained, *what examples* work best, *what mistakes* learners make
+:::
 
-- lesson preparation before live sessions
-- deeper walkthroughs after live sessions
-- revision material for learners revisiting difficult topics
-- reusable content for future batches, teams, institutions, and mentoring engagements
+## Tutorial tracks
 
-## How this differs from the curriculum
+| Track | Topics | Difficulty |
+|-------|--------|------------|
+| 🧩 **Programming Foundations** | Logic, control flow, functions, decomposition | Beginner |
+| 🎯 **Dart Deep Dive** | Types, null safety, classes, async, JSON | Beginner–Intermediate |
+| 📱 **Flutter UI** | Widget tree, layouts, forms, navigation | Intermediate |
+| 🎨 **Design & UX** | Hierarchy, spacing, responsive, components | Intermediate |
+| 🏠 **Architecture & Data** | State, structure, repositories, APIs | Intermediate–Advanced |
+| ✅ **Quality & Delivery** | Testing, debugging, performance, release | Intermediate–Advanced |
+| 🏆 **Capstone Execution** | End-to-end project, review, portfolio | Advanced |
 
-The curriculum answers:
+---
 
-- what should be taught
-- in what order
-- to what depth
+### 🧩 Programming Foundations
 
-The tutorial library answers:
+Builds comfort with logic before Flutter and Dart complexity appear.
 
-- how a concept should be explained
-- what examples should be used
-- what common mistakes learners make
-- what exercises help the concept stick
+- Variables, types, and operators
+- Conditions and decision logic
+- Loops and iteration patterns
+- Functions and code reuse
+- Problem decomposition
 
-## Main tutorial tracks
+---
 
-### Programming Foundations
+### 🎯 Dart Deep Dive
 
-This track builds the base for learners who need comfort with logic before Flutter and Dart complexity appear.
+Covers Dart thoroughly so learners enter Flutter focused on UI, not language confusion.
 
-### Dart Deep Dive
+- Variables, final, const, and type inference
+- Null safety and defensive coding
+- Collections: List, Map, Set operations
+- Classes, constructors, and immutable models
+- Async programming: Future, async/await
+- JSON serialization and API data modeling
+- Error handling and exceptions
 
-This track covers Dart in detail so learners can handle data, logic, classes, async flows, and modeling properly before or during Flutter work.
+---
 
-### Flutter UI
+### 📱 Flutter UI
 
-This track focuses on widget trees, layout reasoning, forms, navigation, and user interaction.
+Focuses on building real screens with clean, composable widget code.
 
-### Design and UX
+- Widget tree and composition patterns
+- Layout reasoning: Row, Column, Stack, constraints
+- Forms, input handling, and validation
+- Navigation: push, pop, named routes
+- Reusable widgets and theming
+- Responsive layouts for different screen sizes
 
-This track covers user flow, hierarchy, spacing, responsive thinking, and reusable component decisions.
+---
 
-### Architecture and Data
+### 🎨 Design & UX
 
-This track explains state, structure, repositories, APIs, persistence, and maintainable project organization.
+Makes apps usable, not just functional.
 
-### Quality and Delivery
+- Visual hierarchy and spacing systems
+- Typography and color selection
+- User flow and interaction design
+- Responsive and adaptive thinking
+- Reusable design systems and component libraries
 
-This track focuses on testing, debugging, performance, and release thinking.
+---
 
-### Capstone Execution
+### 🏠 Architecture & Data
 
-This track helps learners turn all the previous sections into a complete project they can explain and refine.
+Scales from demo to production-quality structure.
 
-## How to use the tutorial library well
+- Local vs. shared state management
+- Feature-based project organization
+- Repository pattern and data layer
+- API integration and persistence
+- Dependency injection patterns
 
-### For learners
+---
 
-- start with the learning path if you are new
-- use tutorials when you want more depth than the overview pages provide
-- revisit difficult topics after assignments or guided builds
+### ✅ Quality & Delivery
 
-### For trainers
+Ships with confidence, not crossed fingers.
 
-- use the tutorials as teaching support material
-- adapt examples and exercises to the audience
-- combine tutorial pages with live coding, review, and capstone work
+- Unit testing for business logic
+- Widget testing for UI behavior
+- Systematic debugging workflow
+- Performance profiling and optimization
+- Release preparation and deployment
 
-### For teams and institutions
+---
 
-- use selected tracks to support focused workshops
-- use tutorials as references after enablement sessions
-- reuse them as internal knowledge or revision material
+### 🏆 Capstone Execution
 
-## What a strong tutorial page should include
+Turns all previous learning into a complete, reviewable project.
 
-- plain-language explanation
-- one or more runnable examples
-- expected output or expected behavior
-- common beginner mistakes
-- guided exercises or practice prompts
-- connection to real Flutter implementation
+- Project scoping and planning
+- End-to-end implementation
+- Code review and refinement
+- Documentation and presentation
+- Portfolio and case study preparation
 
-## Why this section matters
+## What a strong tutorial includes
 
-Without a strong tutorial library, a training portal can feel like a syllabus. With a strong tutorial library, it becomes a real learning system.
+| Element | Purpose |
+|---------|--------|
+| Plain-language explanation | Concept clarity before code |
+| Runnable code examples | Hands-on understanding |
+| Expected output | Verify understanding |
+| Common mistakes | Learn what to avoid |
+| Practice exercises | Reinforce through doing |
+| Real-app connection | Show why it matters |
+
+## How to use this library
+
+:::tip For different audiences
+- **Learners** — Follow your track sequentially, revisit when stuck
+- **Trainers** — Use as teaching support, adapt examples to your audience
+- **Teams** — Select specific tracks for focused workshops
+- **Institutions** — Use as continuity material between cohorts
+:::
+
+## Next steps
+
+- [**Learning Path**](/docs/resources/flutter-learning-path) — See the full staged journey
+- [**Curriculum**](/docs/training/curriculum) — What's taught and in what order
+- [**Programming Fundamentals**](/docs/training/programming-fundamentals) — Start from the beginning

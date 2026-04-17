@@ -1,47 +1,70 @@
 ---
 title: Knowledge System
-description: How the portal becomes a reusable operating system for training, consulting, and growth.
+description: How the portal is organized as a reusable knowledge system for training, consulting, and engineering growth.
+keywords: [knowledge management, Flutter portal, training platform, engineering knowledge base]
 ---
 
 # Knowledge System
 
-The most valuable version of this portal is not just a set of pages. It is a reusable knowledge system for training, consulting, engineering delivery, and future products.
+The most valuable version of this portal is not just a set of pages — it's a **reusable knowledge system** for training, consulting, engineering delivery, and future products.
 
-## What the system should contain
+:::info System thinking
+Every page, tutorial, and reference is designed to serve multiple audiences. Training content doubles as consulting reference. Engineering standards serve both learners and delivery teams.
+:::
 
-- public-facing positioning and trust pages
-- structured training material and teaching references
-- engineering standards and reusable delivery notes
-- proof pages, case studies, and code-based artifacts
-- apps, starter kits, and internal tools that support the business
+## System architecture
 
-## Why this matters
+```
+┌──────────────────────────────────────────────────────┐
+│                  Public Portal                        │
+│  ┌───────────┐  ┌────────────┐  ┌─────────────┐  │
+│  │  Training  │  │  Tutorials  │  │  Services    │  │
+│  └─────┬─────┘  └─────┬──────┘  └──────┬──────┘  │
+│        │              │               │            │
+│  ┌─────┴────────────┴──────────────┴──────┐  │
+│  │         Knowledge Layer                     │  │
+│  │  Standards · Patterns · References · Examples │  │
+│  └──────────────────────────────────────────┘  │
+│                                                      │
+│  ┌───────────┐  ┌────────────┐  ┌─────────────┐  │
+│  │ Proof &   │  │ Showcase   │  │ Contact &   │  │
+│  │ Case Study│  │ Apps       │  │ Enquiry     │  │
+│  └───────────┘  └────────────┘  └─────────────┘  │
+└──────────────────────────────────────────────────────┘
+```
 
-- every engagement becomes easier to explain
-- training material becomes easier to reuse across multiple batches
-- engineering knowledge compounds instead of being recreated each time
-- the repository becomes a long-term strategic asset
+## What the system contains
 
-## What this system supports
+| Layer | Content | Serves |
+|-------|---------|--------|
+| **Training** | Curriculum, modules, exercises | Learners, institutions |
+| **Tutorials** | Deep-dive, hands-on code walkthroughs | Learners, self-study |
+| **Services** | Consulting, delivery, engagement models | Clients, partners |
+| **Standards** | Engineering conventions, patterns | Teams, consultants |
+| **Proof** | Case studies, outcomes, profile | Decision-makers |
+| **Apps** | Showcase applications, starter kits | Everyone |
 
-- corporate training and capability building
-- consulting and architecture discussions
-- college and bootcamp program delivery
-- demo apps, showcase work, and reusable templates
+## Why a system, not just pages
 
-## Why this is more valuable than isolated pages
-
-When the portal is treated as a knowledge system:
-
-- the same material can support marketing and delivery
-- training content becomes easier to reuse
-- future apps and examples strengthen the docs
-- the repository becomes more useful over time instead of only bigger
+| Isolated pages | Knowledge system |
+|---------------|------------------|
+| Content gets outdated silently | Content is cross-referenced and maintained |
+| Same material recreated per engagement | Material reused across training batches |
+| Repository grows bigger but not better | Repository grows more valuable over time |
+| Marketing and delivery are separate | Same content serves both |
 
 ## High-value additions over time
 
-- workshop playbooks
-- onboarding checklists
-- proposal-ready case studies
-- architecture starter references
-- evaluation rubrics and capstone review templates
+| Asset | Purpose |
+|-------|--------|
+| Workshop playbooks | Structured delivery guides for trainers |
+| Onboarding checklists | New engineer ramp-up for consulting clients |
+| Architecture starter references | Reusable project templates |
+| Evaluation rubrics | Capstone review and assessment criteria |
+| Proposal-ready case studies | Business development support |
+
+## Next steps
+
+- [**Resources Overview**](/docs/resources/overview) — Full resource categories
+- [**Engineering Standards**](/docs/resources/engineering-standards) — Quality expectations
+- [**Engineering Roadmap**](/docs/flutter-development/engineering-roadmap) — Future growth direction

@@ -1,164 +1,206 @@
 ---
 title: Curriculum
-description: A staged Flutter curriculum that moves from programming fundamentals to app delivery quality.
+description: A complete 8-module Flutter curriculum from programming fundamentals to capstone delivery.
+keywords: [Flutter curriculum, Dart syllabus, Flutter modules, training structure]
 ---
 
 # Curriculum
 
-The curriculum is designed as a complete ladder from programming foundations to app design, Flutter implementation, architecture, testing, and delivery readiness.
+The curriculum is a **complete learning ladder** from programming foundations to professional app delivery. Each module builds on the previous one, with clear entry requirements, learning outcomes, and practical deliverables.
 
-## Curriculum design principles
+:::info Design principles
+- Foundations come before framework complexity
+- Syntax is always tied to real implementation meaning
+- Design is taught alongside development, not after it
+- Architecture and quality appear early enough to change habits
+- Capstone work proves learning, not just attendance
+:::
 
-The program is built around a few clear principles:
+## Module overview
 
-- foundations should come before framework complexity
-- syntax should always be tied to real implementation meaning
-- design should be taught alongside development, not after it
-- architecture and quality should appear early enough to change habits
-- capstone work should prove learning, not only attendance
+| Module | Title | Duration | Key outcome |
+|--------|-------|----------|-------------|
+| 1 | Programming Fundamentals | ~1 week | Logic confidence and code-reading ability |
+| 2 | Dart for App Development | ~1.5 weeks | Language mastery for Flutter work |
+| 3 | Flutter Core | ~1.5 weeks | Widget composition and screen building |
+| 4 | App Design & UX | ~1 week | Usable, scannable, responsive interfaces |
+| 5 | State & Architecture | ~1 week | Maintainable app structure |
+| 6 | Backend & Data | ~1 week | API integration and data persistence |
+| 7 | Testing & Release | ~1 week | Quality habits and deployment readiness |
+| 8 | Capstone | ~1–2 weeks | Complete app with justified decisions |
+
+---
 
 ## Module 1: Programming Fundamentals
 
-Purpose:
+**Purpose:** Build logic confidence before Flutter complexity appears.
 
-- build logic confidence before Flutter complexity appears
+**Key topics:**
+- Variables, conditions, loops, and functions
+- Step-by-step problem solving and computational thinking
+- Debugging mindset and code reading
 
-Key topics:
+**Expected outcome:** Learners can reason through small programming problems and explain simple logic clearly.
 
-- variables, conditions, loops, and functions
-- step-by-step problem solving
-- debugging mindset and code reading
+**Sample exercise:**
+```dart
+// Write a function that checks if a number is prime
+bool isPrime(int n) {
+  if (n < 2) return false;
+  for (int i = 2; i * i <= n; i++) {
+    if (n % i == 0) return false;
+  }
+  return true;
+}
+```
 
-Expected outcome:
-
-- learners gain the ability to reason through small programming problems and explain simple logic clearly
+---
 
 ## Module 2: Dart for App Development
 
-Purpose:
+**Purpose:** Build the language foundation behind Flutter.
 
-- build the language foundation behind Flutter
+**Key topics:**
+- Types, null safety, functions, collections, and classes
+- Async programming with `Future`, `async`, and `await`
+- JSON modeling and clean code organization
 
-Key topics:
+**Expected outcome:** Learners can model app data, write reusable logic, and read Flutter-oriented Dart confidently.
 
-- types, null safety, functions, collections, and classes
-- async thinking and exceptions
-- JSON modeling and basic code organization
+**Sample exercise:**
+```dart
+class User {
+  final String name;
+  final String email;
+  final DateTime joinedAt;
 
-Expected outcome:
+  const User({required this.name, required this.email, required this.joinedAt});
 
-- learners can model app data, write reusable logic, and read Flutter-oriented Dart code more confidently
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      name: json['name'] as String,
+      email: json['email'] as String,
+      joinedAt: DateTime.parse(json['joined_at'] as String),
+    );
+  }
+
+  String get displayName => name.isNotEmpty ? name : email.split('@').first;
+}
+```
+
+---
 
 ## Module 3: Flutter Core
 
-Purpose:
+**Purpose:** Teach the visual and structural foundations of Flutter apps.
 
-- teach the visual and structural foundations of Flutter apps
+**Key topics:**
+- Widget tree and composition patterns
+- Layouts with `Row`, `Column`, `Stack`, `Expanded`, and constraints
+- Forms, navigation, and local interactions
+- Reusable UI patterns and widget extraction
 
-Key topics:
+**Expected outcome:** Learners can build structured screens, complete app flows, and reusable components.
 
-- widget tree and composition
-- layouts and constraints
-- forms, navigation, and local interactions
-- reusable UI patterns
+---
 
-Expected outcome:
+## Module 4: App Design & UX
 
-- learners can build structured screens, simple flows, and reusable components
+**Purpose:** Move learners from working UI to usable UI.
 
-## Module 4: App Design and UX
+**Key topics:**
+- User flow planning and wireframing
+- Visual hierarchy, spacing, and readability
+- Responsive layouts for different screen sizes
+- Loading, empty, error, and success states
+- Design systems and component consistency
 
-Purpose:
+**Expected outcome:** Learners create interfaces that are easier to use, scan, and maintain.
 
-- teach learners to create cleaner, more usable app experiences
+---
 
-Key topics:
+## Module 5: State & Architecture
 
-- user flow planning
-- spacing and hierarchy
-- responsive thinking
-- state presentation and interface clarity
+**Purpose:** Move from demo apps toward maintainable app structure.
 
-Expected outcome:
+**Key topics:**
+- Local versus shared state decisions
+- Provider, Riverpod, or Bloc patterns
+- Feature-based project organization
+- Separation of UI, logic, and data responsibilities
 
-- learners create interfaces that are easier to use, scan, and maintain
+**Expected outcome:** Learners begin structuring medium-sized apps with clear architecture boundaries.
 
-## Module 5: State and Architecture
+---
 
-Purpose:
+## Module 6: Backend & Data
 
-- move learners from demo apps toward maintainable app structure
+**Purpose:** Connect Flutter apps to real-world data and persistence.
 
-Key topics:
+**Key topics:**
+- REST API integration with `http` or `dio`
+- JSON serialization and model mapping
+- Authentication flows and token management
+- Local persistence with `shared_preferences` and SQLite
+- Repository pattern and clean data flow
 
-- local versus shared state
-- project structure and feature modules
-- separation of UI, logic, and data responsibilities
+**Expected outcome:** Learners can connect apps to data sources with confidence and proper architecture.
 
-Expected outcome:
+---
 
-- learners begin structuring medium-sized apps more responsibly
+## Module 7: Testing & Release
 
-## Module 6: Backend and Data
+**Purpose:** Improve reliability, debugging quality, and release discipline.
 
-Purpose:
+**Key topics:**
+- Unit testing with `test` package
+- Widget testing fundamentals
+- Debugging workflow and DevTools
+- Performance awareness and common pitfalls
+- Release builds, signing, and deployment basics
 
-- connect Flutter apps to real-world data and persistence
+**Expected outcome:** Learners develop professional quality habits and deployment confidence.
 
-Key topics:
+**Sample test:**
+```dart
+import 'package:test/test.dart';
 
-- APIs, JSON, authentication, persistence, and repository patterns
-- loading, empty, and error states
-- cleaner data flow and model handling
+void main() {
+  group('User model', () {
+    test('displayName falls back to email prefix', () {
+      final user = User(name: '', email: 'dev@example.com', joinedAt: DateTime.now());
+      expect(user.displayName, equals('dev'));
+    });
+  });
+}
+```
 
-Expected outcome:
-
-- learners can connect apps to data sources with more confidence and less architectural confusion
-
-## Module 7: Testing and Release
-
-Purpose:
-
-- improve reliability, debugging quality, and release discipline
-
-Key topics:
-
-- unit and widget testing basics
-- debugging workflow
-- performance awareness
-- release-readiness thinking
-
-Expected outcome:
-
-- learners develop stronger quality habits and more professional delivery thinking
+---
 
 ## Module 8: Capstone
 
-Purpose:
+**Purpose:** Turn the entire curriculum into visible proof of understanding.
 
-- turn the curriculum into visible proof of understanding
+**Key topics:**
+- Project scoping and feature planning
+- End-to-end app execution with all learned patterns
+- Design and architecture decision documentation
+- Presentation, review, and refinement
 
-Key topics:
+**Expected outcome:** Learners produce a meaningful project artifact that demonstrates their full capability growth.
 
-- project planning
-- end-to-end app execution
-- presentation of design and technical decisions
-- review and refinement
+:::tip Capstone examples
+- Task management app with categories, priorities, and local persistence
+- Weather dashboard with API integration and location-based data
+- Expense tracker with charts, filtering, and data export
+- Mini e-commerce flow with product listing, cart, and checkout
+:::
 
-Expected outcome:
+## Delivery formats
 
-- learners produce a meaningful project artifact that demonstrates progress and capability
+The curriculum adapts to different contexts:
 
-## Optional advanced extensions
-
-- advanced state patterns
-- modular architecture for larger teams
-- analytics, notifications, and deeper integrations
-- team review standards and engineering conventions
-
-## How the curriculum can be delivered
-
-- as a student cohort program
-- as a corporate enablement structure
-- as an institutional bootcamp
-- as a blended learning-plus-implementation program
+- **Student cohort** — Full 8 modules over 8–12 weeks
+- **Corporate enablement** — Modules 3–7 focused on team needs
+- **Institutional bootcamp** — Intensive 2–3 week compressed format
+- **Blended learning + implementation** — Curriculum alongside real project delivery

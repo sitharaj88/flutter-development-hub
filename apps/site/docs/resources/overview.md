@@ -1,69 +1,53 @@
 ---
 title: Resources Overview
-description: The knowledge layer of the portal for learning, engineering, delivery support, and long-term reuse.
+description: Engineering references, learning paths, and standards that support training, consulting, and delivery.
+keywords: [Flutter resources, engineering standards, learning path, Flutter references]
 ---
 
 # Resources Overview
 
-The resources section is where the portal becomes more than a public-facing training site. It gives learners, teams, and partners something genuinely useful before, during, and after an engagement.
+The resources section is where the portal becomes more than a training site. It provides **practical references** that learners, teams, and partners can use before, during, and after an engagement.
 
-## What this section should do
+:::info Who this is for
+Learners revising after sessions · Teams adopting Flutter standards · Institutions using the portal as continuity material · Anyone wanting structured Flutter engineering references.
+:::
 
-- help learners navigate the training journey more clearly
-- help teams see engineering depth and delivery discipline
-- support programs with reusable references, standards, and notes
-- make the portal more valuable over time instead of only more descriptive
+## Resource categories
 
-## Core resource categories
+| Category | Purpose | Audience |
+|----------|---------|----------|
+| 📍 [Learning Path](/docs/resources/flutter-learning-path) | Staged journey from foundations to production | Learners, institutions |
+| 🛠️ [Engineering Standards](/docs/resources/engineering-standards) | Code structure, naming, and quality expectations | Teams, advanced learners |
+| 🧠 [Knowledge System](/docs/resources/knowledge-system) | How the whole portal fits together as a system | Partners, contributors |
 
-### Learning paths
+## Why resources matter
 
-These help learners understand:
+**For learners:**
+- Revise concepts after training sessions
+- Understand the full learning journey
+- Reference standards during project work
 
-- where to start
-- what comes next
-- how the full training journey fits together
+**For teams:**
+- See engineering depth before committing to an engagement
+- Use standards as onboarding material for new developers
+- Reference patterns during code review
 
-### Engineering standards
+**For institutions:**
+- Shape workshop depth using the learning path
+- Use the portal as a continuity layer between cohorts
+- Reuse structured material across multiple batches
 
-These help teams and advanced learners understand:
+## Design principles
 
-- how Flutter work should be structured
-- what quality expectations matter
-- how implementation becomes easier to review and scale
+| Principle | Meaning |
+|-----------|--------|
+| Practical | Useful during real work, not just reading |
+| Detailed | Enough depth for technical audiences |
+| Structured | Easy to navigate and reference |
+| Growing | Becomes more valuable over time |
 
-### Knowledge references
+## Start here
 
-These support:
-
-- training batches
-- onboarding
-- consulting conversations
-- future delivery reuse
-
-## Why resources matter commercially
-
-- they show depth before a sales or enquiry conversation
-- they reduce friction in consulting and training discussions
-- they help people understand how the practice thinks, not just what it sells
-- they create a long-term content foundation that compounds
-
-## Why resources matter educationally
-
-- learners can revise after sessions
-- trainers can reuse structured material across batches
-- institutions can use the portal as a continuity layer
-- teams can use the material as reference after workshops or enablement programs
-
-## What a strong resources section should feel like
-
-- practical, not academic
-- detailed enough to be useful
-- credible enough for technical audiences
-- structured enough to support future scaling of the portal
-
-## Best next pages
-
-- review the Flutter learning path
-- read the engineering standards direction
-- use the knowledge system page to understand how the whole portal fits together
+- [**Flutter Learning Path**](/docs/resources/flutter-learning-path) — See the full training journey
+- [**Engineering Standards**](/docs/resources/engineering-standards) — How Flutter work should be structured
+- [**Knowledge System**](/docs/resources/knowledge-system) — How the portal itself is organized

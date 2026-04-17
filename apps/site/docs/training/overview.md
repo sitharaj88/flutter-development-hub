@@ -1,99 +1,103 @@
 ---
 title: Training Overview
-description: Corporate-grade Flutter training for teams, institutions, and serious learners.
+description: Professional Flutter training programs for teams, institutions, and serious learners — from programming foundations to production delivery.
+keywords: [Flutter training, Dart course, mobile development training, corporate Flutter, bootcamp]
 ---
 
 # Training Overview
 
-This training offer should read like a professional training and tutorial system, not a generic course page. The goal is to show that the learning is structured, practical, detailed enough to teach from, and strong enough for corporate teams, institutions, and ambitious learners.
+This is a **professional Flutter training system** — not a generic course page. The program is structured to build real engineering capability through detailed tutorials, hands-on labs, and progressive skill-building from programming fundamentals to production-quality app delivery.
 
-## What this training is built to do
+:::info Who is this for?
+**Students** building portfolio-ready skills · **Teams** adopting Flutter for production · **Institutions** running workshops or bootcamps · **Serious learners** who want depth, not demos.
+:::
 
-- turn Flutter from an abstract skill into a repeatable engineering capability
-- help learners move beyond tutorial-style coding into real implementation thinking
-- provide detailed tutorial material that can support teaching, revision, and self-study
-- support organizations that want stronger internal delivery without wasting time on shallow onboarding
-- create visible outcomes through assignments, reviews, architecture thinking, and working project artifacts
+## What this training delivers
+
+| Outcome | How it's achieved |
+|---------|------------------|
+| **Flutter proficiency** | 8 structured modules from basics to delivery |
+| **Engineering judgment** | Architecture, testing, and quality thinking from the start |
+| **Real project skills** | Capstone-based evaluation with working app artifacts |
+| **Team readiness** | Standards, review practices, and shared conventions |
+| **Teaching depth** | 30+ tutorial pages with examples, exercises, and explanations |
 
 ## Training promise
 
-- teach Flutter as a professional delivery stack, not only a UI toolkit
-- combine practical implementation with engineering judgment
-- support lesson-by-lesson teaching through tutorials, exercises, and structured explanation
-- create reusable understanding around structure, quality, and release readiness
-- make the learning useful for real teams, real learners, and real products
+This program teaches Flutter as a **professional delivery stack**, not just a UI toolkit:
+
+- **Foundations first** — Programming logic and Dart before Flutter complexity
+- **Engineering depth** — Architecture, state management, and testing appear early
+- **Practical exercises** — Every concept includes hands-on practice
+- **Real outcomes** — Capstones produce portfolio-worthy, demonstrable projects
+- **Reusable skills** — Design thinking, code organization, and quality habits that transfer
+
+## The 8-module journey
+
+```
+Module 1  ─→  Programming Fundamentals (logic, problem-solving, code confidence)
+Module 2  ─→  Dart for App Development (types, null safety, async, classes)
+Module 3  ─→  Flutter Core (widgets, layouts, navigation, forms)
+Module 4  ─→  App Design & UX (flows, hierarchy, responsive, polish)
+Module 5  ─→  State & Architecture (management, modules, structure)
+Module 6  ─→  Backend & Data (APIs, persistence, repositories)
+Module 7  ─→  Testing & Release (unit tests, debugging, performance)
+Module 8  ─→  Capstone (plan, build, present, refine)
+```
+
+:::tip Start where you are
+Experienced developers can skip to Module 3 (Flutter Core). The entry point adapts to your current level.
+:::
 
 ## Ideal for
 
-- corporate teams building internal capability in Flutter
-- engineering groups moving from web or native stacks into a shared Flutter strategy
-- colleges and institutions planning stronger applied bootcamps or workshop series
-- serious learners who want production-grade habits, not tutorial dependency
+### Corporate teams
+Engineering groups building internal Flutter capability. The program includes architecture standards, code review practices, and team conventions that improve delivery immediately.
 
-## Core outcomes
+### Colleges and institutions
+Departments wanting practical, current Flutter programs. Workshop and bootcamp formats with structured assessments and visible student outcomes.
 
-- understand Flutter deeply enough to build with confidence instead of copy-paste habits
-- build responsive product-quality UI flows for mobile and larger screens
-- work with scalable state management, API integration, authentication, and persistence
-- structure applications for maintainability, testing, release readiness, and team collaboration
-- improve engineering judgment around architecture, performance, and delivery discipline
+### Serious individual learners
+Developers who want production-grade habits instead of tutorial dependency. Every module builds toward independent engineering judgment.
 
-## What participants actually learn
+## Program formats
 
-- how Flutter renders UI and why widget composition matters
-- how to plan application structure before feature growth becomes messy
-- how to build, validate, and connect real UI flows with API-backed data
-- how to make sound decisions around state, storage, testing, and deployment
-- how to work with stronger engineering standards instead of one-off fixes
+| Format | Duration | Best for |
+|--------|----------|----------|
+| **Foundational** | 6–8 weeks | Developers new to Flutter or mobile |
+| **Delivery-focused** | 4–6 weeks | Teams already building, needing consistency |
+| **Applied bootcamp** | 2–3 weeks intensive | Institutions and internal academies |
+| **Blended** | Flexible | Teams learning while building real products |
+| **Workshop series** | 1–5 days per topic | Awareness, onboarding, or specific skills |
 
-## What makes this a stronger tutorial system
+## What participants actually build
 
-- topic pages are being expanded into detailed teaching material
-- lesson pages break concepts into smaller, teachable units
-- tutorial tracks connect theory, examples, and practical exercises
-- the portal supports both trainer-led teaching and self-paced revision
+By the end of the full program, learners will have:
 
-## Deliverables participants can expect
+- **Completed exercises** for every module — not just watched demonstrations
+- **Built UI flows** with proper navigation, forms, and responsive layouts
+- **Connected to APIs** with clean data modeling and error handling
+- **Implemented state management** with scalable, maintainable patterns
+- **Written tests** for critical business logic and UI components
+- **Delivered a capstone** — a complete mini-application with justified design decisions
 
-- structured learning sessions
-- guided implementation exercises
-- assignments or labs
-- capstone project direction
-- review feedback and engineering guidance
-- optional starter repositories or sample reference apps
+## What makes this different
 
-## Engagement styles
+:::caution Not another widget tutorial
+Most Flutter courses teach you to place widgets on screen. This training teaches you to **think in Flutter** — how to structure applications, make architecture decisions, handle real-world complexity, and deliver with confidence.
+:::
 
-- executive-friendly workshops for awareness and strategic onboarding
-- multi-week team programs with assignments, review, and measurable progression
-- corporate learning tracks mapped to business goals and engineering maturity
-- mentoring-led implementation for teams building real products while they learn
+- Architecture and quality appear in **Module 3**, not a separate "advanced" section
+- Assignments reinforce **engineering decisions**, not just syntax recall
+- Tutorial pages explain **why**, not just **how**
+- Content supports **companies, colleges, and individuals** without becoming vague
+- The material is detailed enough to **actually teach from**, not just market with
 
-## Common training formats
+## Next steps
 
-- foundational track for developers entering Flutter from other stacks
-- delivery-focused track for teams already building but lacking consistency
-- applied bootcamp for institutions, internal academies, or engineering communities
-- blended learning plus implementation format for high-priority product teams
-
-## What makes this different from generic training
-
-- the program is structured around delivery quality, not only feature demos
-- assignments are meant to reinforce engineering decisions, not only syntax recall
-- architecture, quality, and release thinking appear early instead of being saved for the end
-- the content can support companies, colleges, and serious individual learners without becoming vague
-- the tutorial material is meant to be detailed enough that it can actually be taught from
-
-## Recommended next pages
-
-- review the named packages
-- explore the curriculum and weekly syllabus
-- compare delivery formats and assessment flow
-- use the corporate programs page for enterprise-style training conversations
-
-## Site-ready calls to action
-
-- book a consultation call
-- request a corporate proposal
-- ask for a custom team batch
-- discuss an institutional or workshop engagement
+- [**Learning Path**](/docs/training/learning-path) — See the full stage-by-stage progression
+- [**Curriculum**](/docs/training/curriculum) — Review module details and outcomes
+- [**Tutorial Library**](/docs/training/tutorial-library) — Browse the in-depth teaching content
+- [**Packages**](/docs/training/packages) — Compare program options
+- [**Corporate Programs**](/docs/training/corporate-programs) — Enterprise training details
+- [**Contact**](/docs/contact/enquiry) — Start a conversation about your needs

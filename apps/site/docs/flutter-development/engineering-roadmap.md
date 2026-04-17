@@ -1,60 +1,79 @@
 ---
 title: Engineering Roadmap
-description: The broader roadmap for growing the portal into a stronger Flutter engineering and knowledge hub.
+description: The evolution plan for growing the portal into a comprehensive Flutter engineering knowledge hub and delivery platform.
+keywords: [Flutter roadmap, engineering platform, knowledge hub, Flutter training platform]
 ---
 
 # Engineering Roadmap
 
-Because this repository is meant to hold both the docs portal and future apps, it helps to think of the work as an evolving engineering system rather than a fixed marketing site.
+This repository holds both the docs portal and future apps. It's an **evolving engineering system**, not a static marketing site.
 
-## Short-term roadmap
+:::info Living document
+This roadmap reflects the current direction. It evolves as the practice grows, new content is published, and community feedback shapes priorities.
+:::
 
-In the short term, the portal should establish strong public clarity.
+## Roadmap phases
 
-Priorities:
+### Phase 1: Public clarity (current)
 
-- complete the training and service sections with strong, detailed content
-- refine contact, proof, and enquiry paths
-- publish consistent positioning across training, development, and resources
-- add brochure support and stronger homepage proof cues
+Establish strong, detailed public-facing content that demonstrates real depth.
 
-## Medium-term roadmap
+| Priority | Status |
+|----------|--------|
+| Complete training section with structured curriculum | ✅ Done |
+| Deep-dive tutorial library with code examples | 🔄 In progress |
+| Service and engagement positioning | ✅ Done |
+| Contact and enquiry paths | ✅ Done |
+| Responsive, mobile-friendly design | ✅ Done |
+| SEO and discoverability | 🔄 In progress |
 
-Once the public-facing layer is strong, the next step is to increase technical proof.
+### Phase 2: Technical proof
 
-Priorities:
+Increase visible engineering credibility through working examples and case studies.
 
-- publish showcase apps in `apps/`
-- add training lab starter projects
-- add case studies and visible delivery artifacts
-- document architecture patterns and reusable implementation notes
+| Priority | Status |
+|----------|--------|
+| Publish showcase apps in `apps/` | 📋 Planned |
+| Training lab starter projects | 📋 Planned |
+| Case studies with measurable outcomes | 📋 Planned |
+| Architecture pattern documentation | 📋 Planned |
+| Reusable implementation reference code | 📋 Planned |
 
-## Long-term roadmap
+### Phase 3: Platform maturity
 
-Over time, this portal can become a real operating system for the practice.
+Transform the portal into an operating system for the practice.
 
-Possible long-term assets:
+| Asset | Purpose |
+|-------|---------|
+| Onboarding guides | New engineer ramp-up |
+| Engineering handbooks | Architecture and standards reference |
+| Cohort lab systems | Structured training delivery |
+| Evaluation templates | Learner assessment and review |
+| Client reference implementations | Proposal-ready technical demos |
+| Internal workflow tools | Practice operations |
 
-- reusable onboarding guides
-- engineering standards and architecture handbooks
-- cohort lab systems
-- internal workflow tools
-- evaluation and review templates
-- client-ready reference implementations
+## Growth trajectory
 
-## Why this roadmap matters
+```
+Phase 1              Phase 2              Phase 3
+Content Portal  ───▶  Proof Layer    ───▶  Engineering Platform
+                      
+• Training docs       • Showcase apps       • Cohort systems
+• Service pages       • Case studies        • Lab environments  
+• Tutorial library    • Starter projects    • Assessment tools
+• Contact paths       • Pattern docs        • Client demos
+```
 
-Without a roadmap, the site risks staying a static content destination. With a roadmap, it can become:
+## What a mature version includes
 
-- a business-facing portal
-- a training delivery platform
-- a technical proof layer
-- a reusable internal knowledge asset
+- **Full tutorial and handbook material** covering Dart, Flutter, architecture, and deployment
+- **Product-quality showcase apps** demonstrating real engineering patterns
+- **Proposal-ready case studies** with measurable outcomes
+- **Engineering references** used during live consulting and delivery
+- **Reusable assets** for cohorts, clients, and internal operations
 
-## What a mature version could include
+## Next steps
 
-- full tutorial and handbook material
-- product-quality showcase apps
-- proposal-ready trust and case-study pages
-- engineering references used during live delivery
-- reusable assets for cohorts, clients, and internal operations
+- [**Services**](/docs/flutter-development/services) — Current delivery capabilities
+- [**Training Overview**](/docs/training/overview) — Training program structure
+- [**Resources**](/docs/resources/overview) — Engineering standards and references

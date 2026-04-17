@@ -1,133 +1,205 @@
 ---
 title: Flutter Core
-description: The essential Flutter concepts needed to build working applications.
+description: Master Flutter's visual foundations — widget composition, layouts, navigation, forms, and reusable UI patterns.
+keywords: [Flutter widgets, Flutter UI, widget tree, layouts, navigation, Flutter tutorial]
 ---
 
 # Flutter Core
 
-This part of the training introduces the heart of Flutter application development. It should feel like the point where learners stop writing only logic and start creating visible, interactive software.
+This is where learning becomes **visible**. Learners stop writing console logic and start creating interactive, visual applications. Flutter Core is not just "learn some widgets" — it's where you begin to **think in Flutter**.
 
-Flutter Core is not just "learn some widgets." It is where learners begin to understand:
+:::info What you'll learn
+How screens are built from smaller pieces · How layout choices affect usability · How input, state, and navigation create app behavior · How reusable structure keeps projects maintainable.
+:::
 
-- how a screen is built from smaller pieces
-- how layout choices affect clarity and usability
-- how input, state, and navigation create app behavior
-- how reusable UI structure makes a project easier to maintain
+## What learners achieve
 
-## What learners should feel after this track
+After this module, learners can:
 
-By the end of this part of the course, learners should be able to:
-
-- read common Flutter UI code without feeling lost
-- turn a screen idea into a widget tree
-- build simple but clean layouts with predictable spacing
-- capture user input and validate it properly
-- move between screens with clear navigation flow
-- break large screens into smaller reusable widgets
+- Read common Flutter UI code **without feeling lost**
+- Turn a screen design into a **widget tree**
+- Build clean layouts with **predictable spacing**
+- Capture and **validate user input**
+- Implement **multi-screen navigation** flows
+- Extract **reusable widgets** from complex screens
 
 ## Core concepts
 
-- widgets and the widget tree
-- stateless and stateful widgets
-- layout building with rows, columns, stacks, expanded, and containers
-- navigation and moving between screens
-- forms, user input, and validation
-- theming and reusable UI structure
+### The widget tree
 
-## How to teach Flutter Core well
+Everything in Flutter is a widget. Screens are built by **composing** smaller widgets into a tree:
 
-Good Flutter teaching usually works best when each lesson follows this order:
+```dart
+Scaffold(
+  appBar: AppBar(title: const Text('Profile')),
+  body: Column(
+    children: [
+      const CircleAvatar(radius: 48, child: Icon(Icons.person, size: 48)),
+      const SizedBox(height: 16),
+      const Text('Sitharaj Seenivasan', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+      const Text('Flutter Engineer', style: TextStyle(color: Colors.grey)),
+      const SizedBox(height: 24),
+      ElevatedButton(onPressed: () {}, child: const Text('Edit Profile')),
+    ],
+  ),
+)
+```
 
-1. show the screen or UI goal first
-2. break the screen into visible parts
-3. map those parts into widgets
-4. code the smallest version first
-5. refine spacing, interaction, and reuse
+:::tip Mental model
+Don't think "I'm writing code." Think "I'm describing what the screen looks like." Flutter code **is** the UI — once you see it that way, the nesting makes sense.
+:::
 
-This matters because many learners see Flutter as a wall of nested code. Once they learn to read it as visual structure, the framework becomes much easier.
+### Layout building blocks
 
-## A simple progression for classroom delivery
+| Widget | Purpose | When to use |
+|--------|---------|------------|
+| `Column` | Vertical arrangement | Stacking items top to bottom |
+| `Row` | Horizontal arrangement | Items side by side |
+| `Stack` | Layered arrangement | Overlapping elements |
+| `Expanded` | Fill available space | Flexible sizing in Row/Column |
+| `Padding` | Add space around a widget | Consistent spacing |
+| `SizedBox` | Fixed size or gap | Spacing between widgets |
+| `Container` | Combined decoration + sizing | Background, border, padding |
 
-### Stage 1: read the widget tree
+```dart
+Row(
+  children: [
+    const CircleAvatar(child: Text('S')),
+    const SizedBox(width: 12),
+    Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text('Sitharaj', style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('Online', style: TextStyle(color: Colors.green, fontSize: 12)),
+        ],
+      ),
+    ),
+    IconButton(icon: const Icon(Icons.message), onPressed: () {}),
+  ],
+)
+```
 
-Learners should understand that Flutter screens are nested structures:
+### Navigation
 
-- `Scaffold` gives the screen shell
-- layout widgets such as `Column`, `Row`, and `Stack` organize space
-- display widgets such as `Text`, `Icon`, and `Image` render content
-- input widgets such as `TextField` and `ElevatedButton` create interaction
+```dart
+// Push to a new screen
+Navigator.of(context).push(
+  MaterialPageRoute(builder: (context) => const DetailScreen()),
+);
 
-### Stage 2: build reusable pieces
+// Pop back
+Navigator.of(context).pop();
 
-Instead of writing one giant `build()` method, learners should practice extracting:
+// Named routes (for larger apps)
+Navigator.of(context).pushNamed('/details', arguments: item);
+```
 
-- header sections
-- reusable cards
-- list items
-- form blocks
-- action buttons
+### Forms and validation
 
-### Stage 3: connect logic to UI
+```dart
+class LoginForm extends StatefulWidget {
+  const LoginForm({super.key});
 
-Once the layout is visible, the learner should connect:
+  @override
+  State<LoginForm> createState() => _LoginFormState();
+}
 
-- button taps
-- form validation
-- state changes
-- navigation events
+class _LoginFormState extends State<LoginForm> {
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
 
-That is the point where Flutter stops being only layout code and starts feeling like app development.
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
+            controller: _emailController,
+            decoration: const InputDecoration(labelText: 'Email'),
+            validator: (value) {
+              if (value == null || !value.contains('@')) {
+                return 'Please enter a valid email';
+              }
+              return null;
+            },
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                // Process login
+              }
+            },
+            child: const Text('Sign In'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    super.dispose();
+  }
+}
+```
+
+### Stateless vs. Stateful
+
+| Type | Use when | Example |
+|------|----------|---------|
+| `StatelessWidget` | UI doesn't change after build | Profile card, info display |
+| `StatefulWidget` | UI changes based on interaction | Forms, counters, toggles |
+
+```dart
+// Stateless — displays data, never changes internally
+class UserCard extends StatelessWidget {
+  final String name;
+  final String role;
+
+  const UserCard({super.key, required this.name, required this.role});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(title: Text(name), subtitle: Text(role));
+  }
+}
+```
+
+## Teaching approach
+
+The best way to teach Flutter Core:
+
+1. **Show the screen goal** — what it should look like
+2. **Break it into visible parts** — identify the widget structure
+3. **Map parts to widgets** — Column, Row, Text, Button...
+4. **Code the minimal version** — get it on screen first
+5. **Refine** — spacing, interaction, and extraction into reusable widgets
 
 ## Practical builds
 
-- profile page layouts
-- sign-in and sign-up screens
-- dashboard or home screen layouts
-- list-detail style application flows
+| Build | Concepts practiced | Difficulty |
+|-------|-------------------|------------|
+| Profile card screen | Layout, spacing, composition | Beginner |
+| Sign-in / Sign-up flow | Forms, validation, navigation | Beginner |
+| Product list + detail | ListView, navigation, data passing | Intermediate |
+| Settings screen with toggles | StatefulWidget, switches, persistence | Intermediate |
+| Dashboard with tabs | TabBar, multiple screens, bottom nav | Intermediate |
 
-## A strong first Flutter exercise
+## Common mistakes to avoid
 
-One useful beginner build is a profile card screen:
+:::caution Watch out for these
+- **Container overuse** — Don't wrap everything in Container. Use `Padding`, `SizedBox`, or `DecoratedBox` for specific needs.
+- **Giant `build()` methods** — If your build method is 100+ lines, extract widgets.
+- **Magic numbers** — Don't hardcode `16.0` everywhere. Use theme values or constants.
+- **Mixing logic in UI** — Keep business logic out of `build()`. Use separate methods or classes.
+:::
 
-- app bar with title
-- profile image placeholder
-- name and role text
-- short description
-- edit button
+## Next steps
 
-This is a good training exercise because it teaches:
-
-- screen structure
-- spacing and alignment
-- composition into smaller widgets
-- simple interaction handling
-
-## Skills learners should gain
-
-- break a screen into reusable pieces
-- build UI that is clear and organized
-- handle interaction flows such as taps, forms, and validation
-- navigate between pages with sensible structure
-
-## Common beginner pain points
-
-- not understanding why widgets are nested
-- overusing containers without layout intent
-- writing long unreadable `build()` methods
-- guessing about spacing instead of planning it
-- mixing navigation, business logic, and UI rendering in one place
-
-## Teaching outcome
-
-When this stage is taught well, learners do not just memorize widgets. They begin to think in Flutter:
-
-- what is the screen structure?
-- what should be reusable?
-- what changes over time?
-- where should the interaction go?
-
-## Why this stage matters
-
-- it is where Flutter starts feeling real
-- learners begin connecting programming logic with visible user experience
-- later design and architecture topics have something concrete to build on
+- [**App Design & UX**](/docs/training/app-design-and-ux) — Make UI that's usable, not just functional
+- [**Widget Tree Tutorial**](/docs/training/tutorials/widget-tree-and-composition) — Deep dive into composition
+- [**Layouts Tutorial**](/docs/training/tutorials/layouts-and-constraints) — Master Flutter's layout system

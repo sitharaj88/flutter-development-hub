@@ -1,103 +1,117 @@
 ---
 title: Engagement Models
-description: How organizations can work with Sitharaj Seenivasan for Flutter consulting, delivery, and capability building.
+description: Choose the right collaboration model — advisory, sprint delivery, team enablement, rescue, or blended support.
+keywords: [Flutter consulting, engagement models, Flutter team support, architecture advisory, delivery support]
 ---
 
 # Engagement Models
 
-Different organizations need different levels of support. Some need technical direction. Some need hands-on implementation. Some need training plus delivery guidance at the same time. This page explains the main ways the work can be shaped.
+Different organizations need different levels of support. This page helps you identify which model fits your situation.
+
+:::info Quick comparison
+| Model | Duration | Best for | Primary output |
+|-------|----------|----------|----------------|
+| Advisory | 1–2 weeks | Architecture decisions | Technical direction |
+| Sprint delivery | 1–3 months | Active product work | Features + quality |
+| Team enablement | 2–6 weeks | Building capability | Stronger team |
+| Rescue | 2–4 weeks | Codebase recovery | Stability + confidence |
+| Blended | Flexible | Learning while building | Product + knowledge |
+:::
+
+---
 
 ## 1. Advisory and architecture consulting
 
-Best for:
+**Best for:** Teams evaluating Flutter decisions, founders wanting technical clarity, engineering leaders needing architecture direction.
 
-- teams evaluating Flutter decisions
-- organizations needing technical clarity before implementation grows
-- founders or engineering leaders who want a stronger architecture direction
+| Activity | Deliverables |
+|----------|-------------|
+| Architecture review | Decision document with rationale |
+| Technical planning | Module and feature strategy |
+| State & API guidance | Recommended patterns and libraries |
+| Risk identification | Prioritized risk register |
 
-Typical work includes:
+**Expected result:** Clearer technical direction and fewer avoidable mistakes during implementation.
 
-- architecture review
-- technical planning
-- feature and module strategy
-- state, API, and project structure guidance
-- delivery risk identification
-
-Expected result:
-
-- a clearer technical direction and fewer avoidable mistakes during implementation
+---
 
 ## 2. Sprint-based delivery support
 
-Best for:
+**Best for:** Teams with a product roadmap that need implementation momentum and focused technical support.
 
-- teams that already have a product roadmap and need implementation momentum
-- companies that want focused technical support during active delivery
-- product teams tackling important releases or feature sets
+| Activity | Deliverables |
+|----------|-------------|
+| Feature development | Working, tested code |
+| Code review | Feedback and quality improvements |
+| API & integration work | Connected, reliable data layer |
+| Release hardening | Stable, shippable builds |
 
-Typical work includes:
+**Expected result:** Faster progress on product work with stronger engineering discipline.
 
-- feature development support
-- code review and implementation guidance
-- API and integration work
-- debugging and release hardening
-
-Expected result:
-
-- faster progress on product work with stronger engineering discipline
+---
 
 ## 3. Team acceleration and enablement
 
-Best for:
+**Best for:** Organizations building internal Flutter capability, improving consistency, or needing knowledge transfer.
 
-- organizations building internal Flutter capability
-- teams needing better consistency, onboarding, and review quality
-- companies that want knowledge transfer alongside technical work
+| Activity | Deliverables |
+|----------|-------------|
+| Codebase-aligned training | Skills that apply immediately |
+| Coding standards | Living standards document |
+| Paired implementation | Mentored feature delivery |
+| Review culture | Consistent code review practices |
 
-Typical work includes:
+**Expected result:** The internal team becomes stronger and less dependent on external help.
 
-- training aligned to the live codebase or real engineering needs
-- coding standards and reference structure
-- mentoring and paired implementation guidance
-- review culture improvement
+:::tip This model compounds
+Enablement is the highest-ROI engagement because every developer who improves accelerates the entire team permanently.
+:::
 
-Expected result:
-
-- the internal team becomes stronger, faster, and less dependent on ad hoc trial and error
+---
 
 ## 4. Rescue and stabilization
 
-Best for:
+**Best for:** Inconsistent codebases, release blockers, performance issues, or inherited projects that need clarity.
 
-- organizations dealing with inconsistent codebases
-- teams facing release blockers, performance issues, or architecture confusion
-- inherited projects that need clarity before safe growth
+| Activity | Deliverables |
+|----------|-------------|
+| Structural diagnosis | Problem identification report |
+| High-risk pattern cleanup | Refactored critical paths |
+| Release readiness | Deployable, stable builds |
+| Engineering guardrails | Patterns that prevent recurrence |
 
-Typical work includes:
+**Expected result:** Reduced technical risk and restored team confidence.
 
-- diagnosing weak project structure
-- cleaning high-risk implementation patterns
-- improving release readiness
-- introducing stronger engineering guardrails
-
-Expected result:
-
-- reduced technical risk and better team confidence moving forward
+---
 
 ## 5. Blended training and implementation
 
-Best for:
+**Best for:** Startups learning while building, product teams adopting Flutter in live delivery.
 
-- startups learning while building
-- product teams adopting Flutter in live delivery
-- companies wanting both knowledge transfer and implementation guidance
+| Activity | Deliverables |
+|----------|-------------|
+| Targeted training | Skills aligned to current sprint |
+| Architecture review | Validated technical direction |
+| Implementation checkpoints | Code review and quality gates |
+| Documentation | Reusable standards and references |
 
-Typical work includes:
+**Expected result:** Product moves forward while the team builds real Flutter capability.
 
-- selective training based on current product needs
-- architecture review and technical planning
-- implementation checkpoints and code review
-- documentation, references, and reusable standards
+## Choosing your model
+
+```
+ "We need direction"        → Advisory
+ "We need to ship faster"   → Sprint delivery
+ "We need a stronger team"  → Enablement
+ "We need to fix things"    → Rescue
+ "We need all of the above" → Blended
+```
+
+## Next steps
+
+- [**Delivery Process**](/docs/flutter-development/delivery-process) — How engagements are structured
+- [**Services Overview**](/docs/flutter-development/services) — Full capabilities
+- [**Contact**](/docs/contact/enquiry) — Start a conversation
 
 Expected result:
 
