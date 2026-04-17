@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" fill="none">
+  <defs>
+    <linearGradient id="er-grad1" x1="0" y1="0" x2="280" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a3d"/>
+      <stop offset="100%" stop-color="#f28c5e"/>
+    </linearGradient>
+    <linearGradient id="er-grad2" x1="300" y1="0" x2="580" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f28c5e"/>
+      <stop offset="100%" stop-color="#38b2a0"/>
+    </linearGradient>
+    <linearGradient id="er-grad3" x1="600" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38b2a0"/>
+      <stop offset="100%" stop-color="#0cc4e2"/>
+    </linearGradient>
+    <filter id="er-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <!-- Phase 1 -->
+  <rect x="10" y="16" width="260" height="64" rx="14" fill="#fff" stroke="#ff6a3d" stroke-width="2" filter="url(#er-shadow)"/>
+  <text x="28" y="42" font-family="system-ui,sans-serif" font-size="11" fill="#ff6a3d" font-weight="700">PHASE 1</text>
+  <text x="28" y="62" font-family="system-ui,sans-serif" font-size="15" fill="#1a1a2e" font-weight="600">Content Portal</text>
+  <!-- Arrow 1 -->
+  <line x1="274" y1="48" x2="306" y2="48" stroke="url(#er-grad1)" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="304,42 314,48 304,54" fill="url(#er-grad1)"/>
+  <!-- Phase 2 -->
+  <rect x="314" y="16" width="260" height="64" rx="14" fill="#fff" stroke="#38b2a0" stroke-width="2" filter="url(#er-shadow)"/>
+  <text x="332" y="42" font-family="system-ui,sans-serif" font-size="11" fill="#38b2a0" font-weight="700">PHASE 2</text>
+  <text x="332" y="62" font-family="system-ui,sans-serif" font-size="15" fill="#1a1a2e" font-weight="600">Proof Layer</text>
+  <!-- Arrow 2 -->
+  <line x1="578" y1="48" x2="610" y2="48" stroke="url(#er-grad2)" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="608,42 618,48 608,54" fill="url(#er-grad2)"/>
+  <!-- Phase 3 -->
+  <rect x="618" y="16" width="260" height="64" rx="14" fill="#fff" stroke="#0cc4e2" stroke-width="2" filter="url(#er-shadow)"/>
+  <text x="636" y="42" font-family="system-ui,sans-serif" font-size="11" fill="#0cc4e2" font-weight="700">PHASE 3</text>
+  <text x="636" y="62" font-family="system-ui,sans-serif" font-size="15" fill="#1a1a2e" font-weight="600">Engineering Platform</text>
+  <!-- Phase 1 items -->
+  <circle cx="30" cy="108" r="4" fill="#ff6a3d"/>
+  <text x="42" y="112" font-family="system-ui,sans-serif" font-size="11" fill="#555">Training docs</text>
+  <circle cx="30" cy="130" r="4" fill="#ff6a3d"/>
+  <text x="42" y="134" font-family="system-ui,sans-serif" font-size="11" fill="#555">Service pages</text>
+  <circle cx="30" cy="152" r="4" fill="#ff6a3d"/>
+  <text x="42" y="156" font-family="system-ui,sans-serif" font-size="11" fill="#555">Tutorial library</text>
+  <circle cx="30" cy="174" r="4" fill="#ff6a3d"/>
+  <text x="42" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#555">Contact paths</text>
+  <!-- Phase 2 items -->
+  <circle cx="334" cy="108" r="4" fill="#38b2a0"/>
+  <text x="346" y="112" font-family="system-ui,sans-serif" font-size="11" fill="#555">Showcase apps</text>
+  <circle cx="334" cy="130" r="4" fill="#38b2a0"/>
+  <text x="346" y="134" font-family="system-ui,sans-serif" font-size="11" fill="#555">Case studies</text>
+  <circle cx="334" cy="152" r="4" fill="#38b2a0"/>
+  <text x="346" y="156" font-family="system-ui,sans-serif" font-size="11" fill="#555">Starter projects</text>
+  <circle cx="334" cy="174" r="4" fill="#38b2a0"/>
+  <text x="346" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#555">Pattern docs</text>
+  <!-- Phase 3 items -->
+  <circle cx="638" cy="108" r="4" fill="#0cc4e2"/>
+  <text x="650" y="112" font-family="system-ui,sans-serif" font-size="11" fill="#555">Cohort systems</text>
+  <circle cx="638" cy="130" r="4" fill="#0cc4e2"/>
+  <text x="650" y="134" font-family="system-ui,sans-serif" font-size="11" fill="#555">Lab environments</text>
+  <circle cx="638" cy="152" r="4" fill="#0cc4e2"/>
+  <text x="650" y="156" font-family="system-ui,sans-serif" font-size="11" fill="#555">Assessment tools</text>
+  <circle cx="638" cy="174" r="4" fill="#0cc4e2"/>
+  <text x="650" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#555">Client demos</text>
+</svg>

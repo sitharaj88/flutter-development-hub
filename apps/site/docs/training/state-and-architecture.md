@@ -111,21 +111,7 @@ class TodoController {
 
 ### 4. Feature-based structure
 
-```
-lib/features/
-├── auth/
-│   ├── data/           # AuthRepository, AuthApi
-│   ├── domain/         # User model, AuthState
-│   └── presentation/   # LoginScreen, SignUpScreen
-├── products/
-│   ├── data/           # ProductRepository
-│   ├── domain/         # Product model
-│   └── presentation/   # ProductListScreen, ProductDetail
-└── cart/
-    ├── data/           # CartRepository
-    ├── domain/         # CartItem, CartState
-    └── presentation/   # CartScreen, CheckoutScreen
-```
+![Feature-Based Project Structure — auth, products, cart with data/domain/presentation layers](/img/diagrams/feature-structure.svg)
 
 ### 5. Repository pattern
 

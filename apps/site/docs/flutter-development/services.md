@@ -25,26 +25,7 @@ Every engagement prioritizes **knowledge transfer** alongside delivery. The goal
 
 ### 🏗️ Architecture & technical planning
 
-```
-Typical decisions this service helps with:
-
-├── Application structure
-│   ├── Feature-based module organization
-│   ├── Shared vs. feature-specific code
-│   └── Navigation architecture
-├── State management
-│   ├── Provider / Riverpod / Bloc selection
-│   ├── Local vs. global state boundaries
-│   └── Reactive data flow patterns
-├── Data layer
-│   ├── API integration strategy
-│   ├── Repository pattern implementation
-│   └── Offline-first vs. online-first
-└── Quality
-    ├── Testing strategy and coverage goals
-    ├── CI/CD pipeline design
-    └── Performance budgets
-```
+![Architecture Decision Areas — App Structure, State Management, Data Layer, Quality, Navigation, UI Architecture](/img/diagrams/architecture-decisions.svg)
 
 ### ⚡ Delivery acceleration
 

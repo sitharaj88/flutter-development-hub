@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" fill="none">
+  <defs>
+    <filter id="sv-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Title -->
+  <text x="280" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1a1a2e" font-weight="700">Architecture Decision Areas</text>
+  <!-- Center hub -->
+  <circle cx="280" cy="190" r="52" fill="#1a1a2e" filter="url(#sv-shadow)"/>
+  <text x="280" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#fff" font-weight="700">Technical</text>
+  <text x="280" y="201" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#fff" font-weight="700">Planning</text>
+  <!-- Application structure (top left) -->
+  <line x1="244" y1="150" x2="148" y2="86" stroke="#ff6a3d" stroke-width="1.5"/>
+  <rect x="40" y="50" width="180" height="72" rx="12" fill="#fff" stroke="#ff6a3d" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="130" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#ff6a3d" font-weight="700">📁 App Structure</text>
+  <text x="130" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Feature modules</text>
+  <text x="130" y="106" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Shared vs feature code</text>
+  <!-- State management (top right) -->
+  <line x1="316" y1="150" x2="412" y2="86" stroke="#38b2a0" stroke-width="1.5"/>
+  <rect x="340" y="50" width="180" height="72" rx="12" fill="#fff" stroke="#38b2a0" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="430" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#38b2a0" font-weight="700">🔄 State Management</text>
+  <text x="430" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Provider / Riverpod / Bloc</text>
+  <text x="430" y="106" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Reactive data flow</text>
+  <!-- Data layer (middle right) -->
+  <line x1="332" y1="190" x2="370" y2="190" stroke="#0cc4e2" stroke-width="1.5"/>
+  <rect x="370" y="162" width="180" height="56" rx="12" fill="#fff" stroke="#0cc4e2" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="460" y="186" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#0cc4e2" font-weight="700">💾 Data Layer</text>
+  <text x="460" y="204" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">APIs, repos, persistence</text>
+  <!-- Quality (bottom right) -->
+  <line x1="316" y1="230" x2="412" y2="296" stroke="#7c5cbf" stroke-width="1.5"/>
+  <rect x="340" y="268" width="180" height="72" rx="12" fill="#fff" stroke="#7c5cbf" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="430" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#7c5cbf" font-weight="700">✅ Quality</text>
+  <text x="430" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Testing strategy</text>
+  <text x="430" y="324" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">CI/CD, performance</text>
+  <!-- Navigation (bottom left) -->
+  <line x1="244" y1="230" x2="148" y2="296" stroke="#c4a24e" stroke-width="1.5"/>
+  <rect x="40" y="268" width="180" height="72" rx="12" fill="#fff" stroke="#c4a24e" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="130" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#c4a24e" font-weight="700">🧭 Navigation</text>
+  <text x="130" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Route architecture</text>
+  <text x="130" y="324" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Deep linking strategy</text>
+  <!-- UI (middle left) -->
+  <line x1="228" y1="190" x2="190" y2="190" stroke="#e85d30" stroke-width="1.5"/>
+  <rect x="10" y="162" width="180" height="56" rx="12" fill="#fff" stroke="#e85d30" stroke-width="1.5" filter="url(#sv-shadow)"/>
+  <text x="100" y="186" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#e85d30" font-weight="700">🎨 UI Architecture</text>
+  <text x="100" y="204" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Design system, theming</text>
+</svg>

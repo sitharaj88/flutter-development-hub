@@ -43,15 +43,7 @@ Exercises practice individual concepts. The capstone brings **everything togethe
 
 ## Recommended process
 
-```
-1. Scope    →  Choose a project that can be completed well
-2. Plan     →  Map the user flow before writing code
-3. Design   →  Define screens, states, and data needs
-4. Build    →  Implement with regular checkpoints
-5. Review   →  Code review for quality and clarity
-6. Refine   →  Polish based on feedback
-7. Present  →  Explain decisions and trade-offs
-```
+![Capstone Process — Scope → Plan → Design → Build → Review → Refine → Present](/img/diagrams/capstone-process.svg)
 
 :::tip Build in checkpoints
 Don't wait until the end to review. Schedule checkpoints after:

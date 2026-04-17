@@ -16,28 +16,7 @@ These standards evolve as the practice grows. They are specific enough to guide 
 
 Use **feature-based folder organization**:
 
-```
-lib/
-├── app/
-│   ├── app.dart              # MaterialApp root
-│   ├── router.dart           # Route definitions
-│   └── theme.dart            # App-wide theme data
-├── features/
-│   ├── auth/
-│   │   ├── data/             # Repository, API client
-│   │   ├── domain/           # Models, entities
-│   │   └── presentation/     # Screens, widgets
-│   ├── home/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   └── presentation/
-│   └── settings/
-├── shared/
-│   ├── widgets/              # Reusable UI components
-│   ├── utils/                # Helpers, formatters
-│   └── constants/            # App-wide constants
-└── main.dart
-```
+![Project Structure — lib/ with app/, features/, shared/, and main.dart](/img/diagrams/project-structure.svg)
 
 ## Naming conventions
 

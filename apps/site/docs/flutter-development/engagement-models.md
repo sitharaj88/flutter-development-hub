@@ -99,13 +99,7 @@ Enablement is the highest-ROI engagement because every developer who improves ac
 
 ## Choosing your model
 
-```
- "We need direction"        → Advisory
- "We need to ship faster"   → Sprint delivery
- "We need a stronger team"  → Enablement
- "We need to fix things"    → Rescue
- "We need all of the above" → Blended
-```
+![Choosing your engagement model](/img/diagrams/engagement-models.svg)
 
 ## Next steps
 

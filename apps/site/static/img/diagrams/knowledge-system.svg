@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="ks-grad" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a3d" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0cc4e2" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="ks-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Outer container -->
+  <rect x="6" y="6" width="588" height="388" rx="20" fill="url(#ks-grad)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="300" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1a1a2e" font-weight="700">Public Portal</text>
+  <!-- Top row: 3 boxes -->
+  <rect x="30" y="52" width="164" height="56" rx="12" fill="#fff" stroke="#ff6a3d" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="112" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#ff6a3d" font-weight="700">📚 Training</text>
+  <text x="112" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Curriculum &amp; modules</text>
+  <rect x="218" y="52" width="164" height="56" rx="12" fill="#fff" stroke="#38b2a0" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="300" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#38b2a0" font-weight="700">📖 Tutorials</text>
+  <text x="300" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Deep-dive walkthroughs</text>
+  <rect x="406" y="52" width="164" height="56" rx="12" fill="#fff" stroke="#0cc4e2" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="488" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#0cc4e2" font-weight="700">🚀 Services</text>
+  <text x="488" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Consulting &amp; delivery</text>
+  <!-- Connector lines down -->
+  <line x1="112" y1="108" x2="112" y2="140" stroke="#ff6a3d" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="300" y1="108" x2="300" y2="140" stroke="#38b2a0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="488" y1="108" x2="488" y2="140" stroke="#0cc4e2" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Knowledge layer -->
+  <rect x="30" y="140" width="540" height="60" rx="14" fill="#fff" stroke="#7c5cbf" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="300" y="166" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#7c5cbf" font-weight="700">🧠 Knowledge Layer</text>
+  <text x="300" y="186" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#777">Standards · Patterns · References · Examples</text>
+  <!-- Connector lines down from knowledge -->
+  <line x1="112" y1="200" x2="112" y2="232" stroke="#7c5cbf" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="300" y1="200" x2="300" y2="232" stroke="#7c5cbf" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="488" y1="200" x2="488" y2="232" stroke="#7c5cbf" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Bottom row: 3 boxes -->
+  <rect x="30" y="232" width="164" height="56" rx="12" fill="#fff" stroke="#c4a24e" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="112" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#c4a24e" font-weight="700">🏆 Proof</text>
+  <text x="112" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Case studies &amp; outcomes</text>
+  <rect x="218" y="232" width="164" height="56" rx="12" fill="#fff" stroke="#e85d30" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="300" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#e85d30" font-weight="700">📱 Showcase Apps</text>
+  <text x="300" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Working examples</text>
+  <rect x="406" y="232" width="164" height="56" rx="12" fill="#fff" stroke="#555" stroke-width="1.5" filter="url(#ks-shadow)"/>
+  <text x="488" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#555" font-weight="700">📩 Contact</text>
+  <text x="488" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#777">Enquiry &amp; engagement</text>
+</svg>

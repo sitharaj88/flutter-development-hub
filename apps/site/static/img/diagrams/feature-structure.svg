@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 420" fill="none">
+  <defs>
+    <filter id="sa-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.07"/>
+    </filter>
+    <linearGradient id="sa-grad" x1="0" y1="0" x2="0" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a3d"/>
+      <stop offset="100%" stop-color="#0cc4e2"/>
+    </linearGradient>
+  </defs>
+  <!-- Title -->
+  <text x="290" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1a1a2e" font-weight="700">Feature-Based Project Structure</text>
+  <!-- lib/ root -->
+  <rect x="210" y="42" width="160" height="36" rx="10" fill="#1a1a2e" filter="url(#sa-shadow)"/>
+  <text x="290" y="65" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">📁 lib/</text>
+  <!-- Connector lines from lib -->
+  <line x1="240" y1="78" x2="240" y2="106" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="340" y1="78" x2="340" y2="106" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="462" y1="78" x2="462" y2="106" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="240" y1="90" x2="462" y2="90" stroke="#ccc" stroke-width="1.5"/>
+  <!-- app/ -->
+  <rect x="170" y="106" width="140" height="36" rx="10" fill="#fff" stroke="#7c5cbf" stroke-width="1.5" filter="url(#sa-shadow)"/>
+  <text x="240" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#7c5cbf" font-weight="600">📁 app/</text>
+  <!-- features/ -->
+  <rect x="270" y="106" width="140" height="36" rx="10" fill="#fff" stroke="#ff6a3d" stroke-width="1.5" filter="url(#sa-shadow)"/>
+  <text x="340" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#ff6a3d" font-weight="600">📁 features/</text>
+  <!-- shared/ -->
+  <rect x="392" y="106" width="140" height="36" rx="10" fill="#fff" stroke="#38b2a0" stroke-width="1.5" filter="url(#sa-shadow)"/>
+  <text x="462" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#38b2a0" font-weight="600">📁 shared/</text>
+  <!-- app/ children -->
+  <line x1="240" y1="142" x2="240" y2="166" stroke="#7c5cbf" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="190" y="178" font-family="system-ui,sans-serif" font-size="10" fill="#888">app.dart</text>
+  <text x="190" y="193" font-family="system-ui,sans-serif" font-size="10" fill="#888">router.dart</text>
+  <text x="190" y="208" font-family="system-ui,sans-serif" font-size="10" fill="#888">theme.dart</text>
+  <!-- features/ children (3 feature modules) -->
+  <line x1="340" y1="142" x2="340" y2="166" stroke="#ff6a3d" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- auth feature -->
+  <rect x="280" y="166" width="120" height="30" rx="8" fill="#fff4f0" stroke="#ff6a3d" stroke-width="1" filter="url(#sa-shadow)"/>
+  <text x="340" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#ff6a3d" font-weight="600">🔐 auth/</text>
+  <line x1="340" y1="196" x2="340" y2="212" stroke="#ff6a3d" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- auth sublayers -->
+  <rect x="270" y="212" width="48" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="294" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">data/</text>
+  <rect x="326" y="212" width="56" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="354" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">domain/</text>
+  <rect x="390" y="212" width="80" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="430" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">presentation/</text>
+  <!-- products feature -->
+  <rect x="280" y="252" width="120" height="30" rx="8" fill="#eef9fc" stroke="#0cc4e2" stroke-width="1" filter="url(#sa-shadow)"/>
+  <text x="340" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#0cc4e2" font-weight="600">🛍️ products/</text>
+  <line x1="340" y1="282" x2="340" y2="298" stroke="#0cc4e2" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="270" y="298" width="48" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="294" y="314" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">data/</text>
+  <rect x="326" y="298" width="56" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="354" y="314" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">domain/</text>
+  <rect x="390" y="298" width="80" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="430" y="314" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">presentation/</text>
+  <!-- cart feature -->
+  <rect x="280" y="338" width="120" height="30" rx="8" fill="#f0faf7" stroke="#38b2a0" stroke-width="1" filter="url(#sa-shadow)"/>
+  <text x="340" y="357" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#38b2a0" font-weight="600">🛒 cart/</text>
+  <line x1="340" y1="368" x2="340" y2="384" stroke="#38b2a0" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="270" y="384" width="48" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="294" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">data/</text>
+  <rect x="326" y="384" width="56" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="354" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">domain/</text>
+  <rect x="390" y="384" width="80" height="24" rx="6" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="430" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#888">presentation/</text>
+  <!-- shared/ children -->
+  <line x1="462" y1="142" x2="462" y2="166" stroke="#38b2a0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="432" y="178" font-family="system-ui,sans-serif" font-size="10" fill="#888">widgets/</text>
+  <text x="432" y="193" font-family="system-ui,sans-serif" font-size="10" fill="#888">utils/</text>
+  <text x="432" y="208" font-family="system-ui,sans-serif" font-size="10" fill="#888">constants/</text>
+</svg>

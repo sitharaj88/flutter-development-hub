@@ -14,11 +14,7 @@ Every engagement follows this framework, but the emphasis changes based on wheth
 
 ## The five stages
 
-```
-  ┌─────────────┐    ┌──────────────┐    ┌────────────┐    ┌───────────────┐    ┌────────────┐
-  │  Discovery   │───▶│ Scope Framing │───▶│ Execution  │───▶│ Stabilization │───▶│ Continuity │
-  └─────────────┘    └──────────────┘    └────────────┘    └───────────────┘    └────────────┘
-```
+![Delivery Process — Discovery → Scope Framing → Execution → Stabilization → Continuity](/img/diagrams/delivery-process.svg)
 
 ---
 

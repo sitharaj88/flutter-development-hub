@@ -54,15 +54,7 @@ Transform the portal into an operating system for the practice.
 
 ## Growth trajectory
 
-```
-Phase 1              Phase 2              Phase 3
-Content Portal  ───▶  Proof Layer    ───▶  Engineering Platform
-                      
-• Training docs       • Showcase apps       • Cohort systems
-• Service pages       • Case studies        • Lab environments  
-• Tutorial library    • Starter projects    • Assessment tools
-• Contact paths       • Pattern docs        • Client demos
-```
+![Engineering Roadmap — Content Portal → Proof Layer → Engineering Platform](/img/diagrams/engineering-roadmap.svg)
 
 ## What a mature version includes
 

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" fill="none">
+  <defs>
+    <linearGradient id="em-grad" x1="0" y1="0" x2="520" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a3d"/>
+      <stop offset="100%" stop-color="#0cc4e2"/>
+    </linearGradient>
+    <filter id="em-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Title -->
+  <text x="260" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1a1a2e" font-weight="700">Choose Your Engagement Model</text>
+  <!-- Row 1 -->
+  <rect x="10" y="44" width="240" height="40" rx="10" fill="#fff4f0" stroke="#ff6a3d" stroke-width="1.5" filter="url(#em-shadow)"/>
+  <text x="24" y="68" font-family="system-ui,sans-serif" font-size="12" fill="#555">"We need direction"</text>
+  <line x1="254" y1="64" x2="290" y2="64" stroke="#ff6a3d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="288,59 296,64 288,69" fill="#ff6a3d"/>
+  <rect x="296" y="44" width="210" height="40" rx="10" fill="#ff6a3d" filter="url(#em-shadow)"/>
+  <text x="401" y="69" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">Advisory</text>
+  <!-- Row 2 -->
+  <rect x="10" y="96" width="240" height="40" rx="10" fill="#fef6ee" stroke="#f28c5e" stroke-width="1.5" filter="url(#em-shadow)"/>
+  <text x="24" y="120" font-family="system-ui,sans-serif" font-size="12" fill="#555">"We need to ship faster"</text>
+  <line x1="254" y1="116" x2="290" y2="116" stroke="#f28c5e" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="288,111 296,116 288,121" fill="#f28c5e"/>
+  <rect x="296" y="96" width="210" height="40" rx="10" fill="#f28c5e" filter="url(#em-shadow)"/>
+  <text x="401" y="121" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">Sprint Delivery</text>
+  <!-- Row 3 -->
+  <rect x="10" y="148" width="240" height="40" rx="10" fill="#f0faf7" stroke="#38b2a0" stroke-width="1.5" filter="url(#em-shadow)"/>
+  <text x="24" y="172" font-family="system-ui,sans-serif" font-size="12" fill="#555">"We need a stronger team"</text>
+  <line x1="254" y1="168" x2="290" y2="168" stroke="#38b2a0" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="288,163 296,168 288,173" fill="#38b2a0"/>
+  <rect x="296" y="148" width="210" height="40" rx="10" fill="#38b2a0" filter="url(#em-shadow)"/>
+  <text x="401" y="173" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">Enablement</text>
+  <!-- Row 4 -->
+  <rect x="10" y="200" width="240" height="40" rx="10" fill="#eef9fc" stroke="#0cc4e2" stroke-width="1.5" filter="url(#em-shadow)"/>
+  <text x="24" y="224" font-family="system-ui,sans-serif" font-size="12" fill="#555">"We need to fix things"</text>
+  <line x1="254" y1="220" x2="290" y2="220" stroke="#0cc4e2" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="288,215 296,220 288,225" fill="#0cc4e2"/>
+  <rect x="296" y="200" width="210" height="40" rx="10" fill="#0cc4e2" filter="url(#em-shadow)"/>
+  <text x="401" y="225" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">Rescue</text>
+  <!-- Row 5 -->
+  <rect x="10" y="252" width="240" height="40" rx="10" fill="#f5f0ff" stroke="#7c5cbf" stroke-width="1.5" filter="url(#em-shadow)"/>
+  <text x="24" y="276" font-family="system-ui,sans-serif" font-size="12" fill="#555">"We need all of the above"</text>
+  <line x1="254" y1="272" x2="290" y2="272" stroke="#7c5cbf" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="288,267 296,272 288,277" fill="#7c5cbf"/>
+  <rect x="296" y="252" width="210" height="40" rx="10" fill="#7c5cbf" filter="url(#em-shadow)"/>
+  <text x="401" y="277" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#fff" font-weight="600">Blended</text>
+</svg>

@@ -14,24 +14,7 @@ Every page, tutorial, and reference is designed to serve multiple audiences. Tra
 
 ## System architecture
 
-```
-┌──────────────────────────────────────────────────────┐
-│                  Public Portal                        │
-│  ┌───────────┐  ┌────────────┐  ┌─────────────┐  │
-│  │  Training  │  │  Tutorials  │  │  Services    │  │
-│  └─────┬─────┘  └─────┬──────┘  └──────┬──────┘  │
-│        │              │               │            │
-│  ┌─────┴────────────┴──────────────┴──────┐  │
-│  │         Knowledge Layer                     │  │
-│  │  Standards · Patterns · References · Examples │  │
-│  └──────────────────────────────────────────┘  │
-│                                                      │
-│  ┌───────────┐  ┌────────────┐  ┌─────────────┐  │
-│  │ Proof &   │  │ Showcase   │  │ Contact &   │  │
-│  │ Case Study│  │ Apps       │  │ Enquiry     │  │
-│  └───────────┘  └────────────┘  └─────────────┘  │
-└──────────────────────────────────────────────────────┘
-```
+![Knowledge System Architecture — Portal, Training, Tutorials, Services, Knowledge Layer, Proof, Apps, Contact](/img/diagrams/knowledge-system.svg)
 
 ## What the system contains
 
